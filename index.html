@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,108 +6,268 @@
 <title>Ashish Yeshwantkar | Counselor & Trainer</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#263449;line-height:1.7}
-header{background:#142b4a;color:white;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-header h2{margin:0;font-size:21px}
-button,.btn{background:#edbd68;color:#142b4a;padding:11px 17px;border:0;border-radius:8px;font-weight:bold;text-decoration:none;cursor:pointer}
-.hero{padding:55px 8%;display:flex;align-items:center;justify-content:center;gap:35px;flex-wrap:wrap;background:white}
-.hero img{width:220px;height:250px;object-fit:cover;border-radius:18px;background:#e5eaf1}
-.hero div{max-width:570px}
-h1{font-size:35px;line-height:1.25;color:#142b4a}
-section{padding:35px 8%;max-width:1100px;margin:auto}
-h2{color:#142b4a}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-.card{background:white;padding:20px;border-radius:13px;box-shadow:0 4px 15px #142b4a12}
-footer{text-align:center;background:#142b4a;color:white;padding:22px}
-a{color:#1764a0;overflow-wrap:anywhere}
-.small{color:#64748b}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fa;color:#243247;line-height:1.7}
+header{background:#122b49;color:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header h2{margin:0}
+nav a{color:white;text-decoration:none;margin:0 8px}
+.hero{padding:65px 8%;background:linear-gradient(120deg,#e6f3f0,#fff);display:flex;gap:35px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.hero-text{flex:1;min-width:260px}
+.hero h1{font-size:42px;line-height:1.2;color:#122b49}
+.hero h1 span{color:#168078}
+.hero p{font-size:18px;color:#526276}
+.portrait{width:260px;height:300px;object-fit:cover;object-position:top;border-radius:22px;background:#dfe7ec}
+.btn{display:inline-block;background:#168078;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;margin:8px 6px 0 0;border:0;cursor:pointer;font-size:16px}
+.btn.alt{background:#122b49}
+section{padding:55px 8%}
+section h2{color:#122b49;font-size:30px;margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;padding:22px;border-radius:14px;border:1px solid #e0e6ec;box-shadow:0 5px 18px #122b490a}
+.card h3{color:#168078;margin-top:0}
+.dark{background:#122b49;color:white}
+.dark h2,.dark h3{color:white}
+.dark p{color:#e0e9f2}
+.tag{display:inline-block;background:#e5f2ef;color:#12645f;padding:7px 12px;border-radius:20px;margin:5px;font-size:14px}
+form{background:white;padding:24px;border-radius:14px;max-width:760px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{display:block;font-weight:bold;margin-bottom:5px;color:#122b49}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5df;border-radius:7px;font-size:15px}
+textarea{min-height:90px}
+.full{grid-column:1/-1}
+.small{font-size:13px;color:#64748b}
+footer{background:#0b1d32;color:white;padding:25px 8%;text-align:center}
+a{overflow-wrap:anywhere}
+@media(max-width:600px){
+header{gap:12px}
+nav a{display:inline-block;margin:5px}
+.hero h1{font-size:34px}
+.portrait{width:220px;height:250px}
+.formgrid{grid-template-columns:1fr}
+.full{grid-column:auto}
+section{padding:40px 6%}
+}
 </style>
 </head>
 <body>
+
 <header>
-<h2>Ashish Yeshwantkar</h2>
-<button onclick="toggleLanguage()">हिंदी / English</button>
+  <div>
+    <h2>Ashish Yeshwantkar</h2>
+    <small>Counselor | Trainer | Public Health</small>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#appointment">Appointment</a>
+  </nav>
 </header>
 
+<main>
 <div class="hero">
-<img src="profile.jpg" alt="Ashish Yeshwantkar">
-<div>
-<p class="small">COUNSELOR | TRAINER | PUBLIC HEALTH</p>
-<h1 id="heading">Empowering People Through Counseling & Training</h1>
-<p id="intro">I am Ashish Yeshwantkar, a counselor and trainer passionate about mental well-being, communication, emotional intelligence and public health.</p>
-<a class="btn" href="#contact" id="contactbtn">Contact Me</a>
-</div>
+  <div class="hero-text">
+    <p><strong>COUNSELING • TRAINING • PERSONAL GROWTH</strong></p>
+    <h1>A safe space to talk, understand and <span>grow.</span></h1>
+    <p>I'm Ashish Yeshwantkar, a counselor, trainer and public health professional. I believe in empathetic listening, respectful communication and helping people move forward with confidence.</p>
+    <a class="btn" href="#appointment">Request an Appointment</a>
+    <a class="btn alt" href="#about">Know More</a>
+  </div>
+
+  <!-- Upload your portrait to GitHub and name it profile.jpg -->
+  <img class="portrait" src="profile.jpg" alt="Ashish Yeshwantkar"
+       onerror="this.style.display='none'">
 </div>
 
-<section>
-<h2 id="abouttitle">About Me | मेरे बारे में</h2>
-<p id="abouttext">I hold a Master of Social Work (MSW) in Rural Development and a B.Sc. in Physics, Computer Science and Mathematics. My interests include counseling, soft skills training, active listening and public health awareness.</p>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a counseling and training professional with experience in public health support, counselor mentoring, communication skills and program facilitation. My approach focuses on empathy, active listening, confidentiality and treating every individual with dignity.</p>
+  <div>
+    <span class="tag">Active Listening</span>
+    <span class="tag">Counseling Support</span>
+    <span class="tag">Soft Skills Training</span>
+    <span class="tag">Emotional Intelligence</span>
+    <span class="tag">Public Health</span>
+  </div>
 </section>
 
-<section>
-<h2 id="skilltitle">My Expertise | मेरी विशेषज्ञता</h2>
-<div class="cards">
-<div class="card"><h3 id="s1">Counseling</h3><p id="p1">Empathy, active listening and supportive communication.</p></div>
-<div class="card"><h3 id="s2">Training & Facilitation</h3><p id="p2">Soft skills, communication and learning facilitation.</p></div>
-<div class="card"><h3 id="s3">Emotional Intelligence</h3><p id="p3">Self-awareness, empathy and relationship skills.</p></div>
-<div class="card"><h3 id="s4">Public Health</h3><p id="p4">Health awareness, guidance and community support.</p></div>
-</div>
+<section id="services" style="background:#fff">
+  <h2>My Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Individual Counseling</h3>
+      <p>A supportive, non-judgmental conversation to help you explore concerns and identify practical next steps.</p>
+    </div>
+    <div class="card">
+      <h3>Soft Skills Training</h3>
+      <p>Training in communication, interpersonal skills, active listening and professional development.</p>
+    </div>
+    <div class="card">
+      <h3>Emotional Intelligence</h3>
+      <p>Learn to understand emotions, respond thoughtfully and build healthier communication habits.</p>
+    </div>
+    <div class="card">
+      <h3>Counselor Mentoring</h3>
+      <p>Learning support for counselors in listening skills, professional communication and counseling practice.</p>
+    </div>
+    <div class="card">
+      <h3>Public Health Support</h3>
+      <p>Information, guidance and supportive communication related to public health services.</p>
+    </div>
+    <div class="card">
+      <h3>Training & Facilitation</h3>
+      <p>Structured learning sessions, group facilitation and practical skill-building activities.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2 id="edutitle">Education & Qualifications | शिक्षा</h2>
-<div class="cards">
-<div class="card"><h3>Master of Social Work (MSW)</h3><p>Rural Development</p></div>
-<div class="card"><h3>B.Sc.</h3><p>Physics, Computer Science and Mathematics</p></div>
-<div class="card"><h3>Training of Trainers</h3><p>Professional training qualification</p></div>
-</div>
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Public Health Counselor / SME / Trainer</h3>
+      <p>Experience supporting a NACO-related public health project, counseling support, counselor training, mentoring, quality processes and program facilitation.</p>
+    </div>
+    <div class="card">
+      <h3>Admissions Counselor</h3>
+      <p><strong>Kamble Education Sanstha, Kinwat</strong></p>
+      <p>July 2016 – June 2019</p>
+      <p>Student guidance, communication, admissions support and coordination.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2 id="certtitle">Certificates & Achievements | प्रमाणपत्र</h2>
-<div class="card">
-<p id="certtext">My certificates will be added here. मेरे प्रमाणपत्र यहाँ जोड़े जाएँगे।</p>
-<p class="small">Certificate files will be uploaded separately.</p>
-</div>
+<section style="background:#fff" id="education">
+  <h2>Education & Qualifications</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Master of Social Work (MSW)</h3>
+      <p>Specialization: Rural Development</p>
+      <p>Swami Ramanand Teerth Marathwada University</p>
+    </div>
+    <div class="card">
+      <h3>B.Sc.</h3>
+      <p>Physics, Computer Science and Mathematics</p>
+      <p>Swami Ramanand Teerth Marathwada University</p>
+    </div>
+    <div class="card">
+      <h3>Certificate in Women's Studies</h3>
+      <p>One-year certificate program, 2015.</p>
+    </div>
+    <div class="card">
+      <h3>Training of Trainers (ToT)</h3>
+      <p>Training certificate from Alison.</p>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
-<h2 id="contacttitle">Let's Connect | संपर्क करें</h2>
-<div class="card">
-<p>Email: <a href="mailto:ashishyeshwantkar@gmail.com">ashishyeshwantkar@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128/" target="_blank" rel="noopener">View My LinkedIn Profile</a></p>
-</div>
+<section id="certificates">
+  <h2>Certificates & Achievements</h2>
+  <div class="card">
+    <h3>Certificates will be added here</h3>
+    <p>We can add your actual certificate images or PDF files here after you upload them to the GitHub repository.</p>
+    <p class="small">This section is a placeholder for now. No certificates have been uploaded to this section yet.</p>
+  </div>
 </section>
+
+<section class="dark" id="appointment">
+  <h2>Request a Counseling Appointment</h2>
+  <p>Choose your preferred language, date, time and connection method.</p>
+
+  <form id="bookingForm">
+    <div class="formgrid">
+      <div>
+        <label for="name">Full Name *</label>
+        <input id="name" name="name" required>
+      </div>
+      <div>
+        <label for="phone">Mobile Number *</label>
+        <input id="phone" name="phone" type="tel" required>
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email">
+      </div>
+      <div>
+        <label for="language">Preferred Language *</label>
+        <select id="language" name="language" required>
+          <option value="">Choose language</option>
+          <option>Hindi</option>
+          <option>Marathi</option>
+        </select>
+      </div>
+      <div>
+        <label for="date">Preferred Date *</label>
+        <input id="date" name="date" type="date" required>
+      </div>
+      <div>
+        <label for="time">Preferred Time *</label>
+        <select id="time" name="time" required>
+          <option value="">Choose time</option>
+          <option>9:00 AM – 10:00 AM</option>
+          <option>10:00 AM – 11:00 AM</option>
+          <option>11:00 AM – 12:00 PM</option>
+          <option>12:00 PM – 1:00 PM</option>
+          <option>2:00 PM – 3:00 PM</option>
+          <option>3:00 PM – 4:00 PM</option>
+          <option>4:00 PM – 5:00 PM</option>
+          <option>5:00 PM – 6:00 PM</option>
+        </select>
+      </div>
+      <div class="full">
+        <label for="mode">Connection Method *</label>
+        <select id="mode" name="mode" required>
+          <option value="">Choose method</option>
+          <option>Phone Call</option>
+          <option>Google Meet</option>
+        </select>
+      </div>
+      <div class="full">
+        <label for="message">Optional Message</label>
+        <textarea id="message" name="message" maxlength="500"></textarea>
+      </div>
+      <div class="full">
+        <label>
+          <input type="checkbox" required style="width:auto">
+          I agree to be contacted about this appointment request.
+        </label>
+      </div>
+      <div class="full">
+        <button class="btn" type="submit">Request Appointment</button>
+      </div>
+    </div>
+    <p class="small">Important: This form is a design demo. It will not send or save appointments until we connect it to Google Forms or another form service.</p>
+  </form>
+</section>
+
+<section id="contact" style="background:#fff">
+  <h2>Contact Me</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Email</h3>
+      <a href="mailto:ashishyeshwantkar@gmail.com">ashishyeshwantkar@gmail.com</a>
+    </div>
+    <div class="card">
+      <h3>LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128/" target="_blank" rel="noopener">View LinkedIn Profile</a>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-<p>© 2026 Ashish Yeshwantkar</p>
-<p id="footertext">Counseling • Training • Public Health</p>
+  <p>© 2026 Ashish Yeshwantkar</p>
+  <p>Counseling • Training • Public Health</p>
 </footer>
 
 <script>
-let hindi=false;
-function toggleLanguage(){
-hindi=!hindi;
-document.getElementById('heading').textContent=hindi?'काउंसलिंग और प्रशिक्षण के माध्यम से लोगों को सशक्त बनाना':'Empowering People Through Counseling & Training';
-document.getElementById('intro').textContent=hindi?'मैं आशिष येशवंतकर हूँ। मैं काउंसलिंग, प्रशिक्षण, भावनात्मक बुद्धिमत्ता और सार्वजनिक स्वास्थ्य के क्षेत्र में काम करता हूँ।':'I am Ashish Yeshwantkar, a counselor and trainer passionate about mental well-being, communication, emotional intelligence and public health.';
-document.getElementById('contactbtn').textContent=hindi?'संपर्क करें':'Contact Me';
-document.getElementById('abouttitle').textContent=hindi?'मेरे बारे में':'About Me';
-document.getElementById('abouttext').textContent=hindi?'मैंने ग्रामीण विकास में मास्टर ऑफ सोशल वर्क (MSW) और भौतिकी, कंप्यूटर साइंस तथा गणित में B.Sc. किया है।':'I hold an MSW in Rural Development and a B.Sc. in Physics, Computer Science and Mathematics.';
-document.getElementById('skilltitle').textContent=hindi?'मेरी विशेषज्ञता':'My Expertise';
-document.getElementById('s1').textContent=hindi?'काउंसलिंग':'Counseling';
-document.getElementById('p1').textContent=hindi?'सहानुभूति, ध्यान से सुनना और सहयोगपूर्ण संवाद।':'Empathy, active listening and supportive communication.';
-document.getElementById('s2').textContent=hindi?'प्रशिक्षण':'Training & Facilitation';
-document.getElementById('p2').textContent=hindi?'सॉफ्ट स्किल्स, संवाद और प्रशिक्षण।':'Soft skills, communication and learning facilitation.';
-document.getElementById('s3').textContent=hindi?'भावनात्मक बुद्धिमत्ता':'Emotional Intelligence';
-document.getElementById('p3').textContent=hindi?'आत्म-जागरूकता, सहानुभूति और संबंध कौशल।':'Self-awareness, empathy and relationship skills.';
-document.getElementById('s4').textContent=hindi?'सार्वजनिक स्वास्थ्य':'Public Health';
-document.getElementById('p4').textContent=hindi?'स्वास्थ्य जागरूकता और सामुदायिक सहयोग।':'Health awareness, guidance and community support.';
-document.getElementById('edutitle').textContent=hindi?'शिक्षा और योग्यताएँ':'Education & Qualifications';
-document.getElementById('certtitle').textContent=hindi?'प्रमाणपत्र और उपलब्धियाँ':'Certificates & Achievements';
-document.getElementById('certtext').textContent=hindi?'मेरे प्रमाणपत्र यहाँ जोड़े जाएँगे।':'My certificates will be added here.';
-document.getElementById('contacttitle').textContent=hindi?'संपर्क करें':'Let’s Connect';
-document.getElementById('footertext').textContent=hindi?'काउंसलिंग • प्रशिक्षण • सार्वजनिक स्वास्थ्य':'Counseling • Training • Public Health';
-}
+document.getElementById("date").min =
+  new Date().toISOString().split("T")[0];
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  alert("This form is not connected yet. We need to connect Google Forms before accepting real appointment requests.");
+});
 </script>
+
 </body>
 </html>
