@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashish Yeshwantkar | Counselor & Trainer</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#263449;line-height:1.7}
+header{background:#142b4a;color:white;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header h2{margin:0;font-size:21px}
+button,.btn{background:#edbd68;color:#142b4a;padding:11px 17px;border:0;border-radius:8px;font-weight:bold;text-decoration:none;cursor:pointer}
+.hero{padding:55px 8%;display:flex;align-items:center;justify-content:center;gap:35px;flex-wrap:wrap;background:white}
+.hero img{width:220px;height:250px;object-fit:cover;border-radius:18px;background:#e5eaf1}
+.hero div{max-width:570px}
+h1{font-size:35px;line-height:1.25;color:#142b4a}
+section{padding:35px 8%;max-width:1100px;margin:auto}
+h2{color:#142b4a}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:white;padding:20px;border-radius:13px;box-shadow:0 4px 15px #142b4a12}
+footer{text-align:center;background:#142b4a;color:white;padding:22px}
+a{color:#1764a0;overflow-wrap:anywhere}
+.small{color:#64748b}
+</style>
+</head>
+<body>
+<header>
+<h2>Ashish Yeshwantkar</h2>
+<button onclick="toggleLanguage()">हिंदी / English</button>
+</header>
+
+<div class="hero">
+<img src="profile.jpg" alt="Ashish Yeshwantkar">
+<div>
+<p class="small">COUNSELOR | TRAINER | PUBLIC HEALTH</p>
+<h1 id="heading">Empowering People Through Counseling & Training</h1>
+<p id="intro">I am Ashish Yeshwantkar, a counselor and trainer passionate about mental well-being, communication, emotional intelligence and public health.</p>
+<a class="btn" href="#contact" id="contactbtn">Contact Me</a>
+</div>
+</div>
+
+<section>
+<h2 id="abouttitle">About Me | मेरे बारे में</h2>
+<p id="abouttext">I hold a Master of Social Work (MSW) in Rural Development and a B.Sc. in Physics, Computer Science and Mathematics. My interests include counseling, soft skills training, active listening and public health awareness.</p>
+</section>
+
+<section>
+<h2 id="skilltitle">My Expertise | मेरी विशेषज्ञता</h2>
+<div class="cards">
+<div class="card"><h3 id="s1">Counseling</h3><p id="p1">Empathy, active listening and supportive communication.</p></div>
+<div class="card"><h3 id="s2">Training & Facilitation</h3><p id="p2">Soft skills, communication and learning facilitation.</p></div>
+<div class="card"><h3 id="s3">Emotional Intelligence</h3><p id="p3">Self-awareness, empathy and relationship skills.</p></div>
+<div class="card"><h3 id="s4">Public Health</h3><p id="p4">Health awareness, guidance and community support.</p></div>
+</div>
+</section>
+
+<section>
+<h2 id="edutitle">Education & Qualifications | शिक्षा</h2>
+<div class="cards">
+<div class="card"><h3>Master of Social Work (MSW)</h3><p>Rural Development</p></div>
+<div class="card"><h3>B.Sc.</h3><p>Physics, Computer Science and Mathematics</p></div>
+<div class="card"><h3>Training of Trainers</h3><p>Professional training qualification</p></div>
+</div>
+</section>
+
+<section>
+<h2 id="certtitle">Certificates & Achievements | प्रमाणपत्र</h2>
+<div class="card">
+<p id="certtext">My certificates will be added here. मेरे प्रमाणपत्र यहाँ जोड़े जाएँगे।</p>
+<p class="small">Certificate files will be uploaded separately.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2 id="contacttitle">Let's Connect | संपर्क करें</h2>
+<div class="card">
+<p>Email: <a href="mailto:ashishyeshwantkar@gmail.com">ashishyeshwantkar@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128/" target="_blank" rel="noopener">View My LinkedIn Profile</a></p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Ashish Yeshwantkar</p>
+<p id="footertext">Counseling • Training • Public Health</p>
+</footer>
+
+<script>
+let hindi=false;
+function toggleLanguage(){
+hindi=!hindi;
+document.getElementById('heading').textContent=hindi?'काउंसलिंग और प्रशिक्षण के माध्यम से लोगों को सशक्त बनाना':'Empowering People Through Counseling & Training';
+document.getElementById('intro').textContent=hindi?'मैं आशिष येशवंतकर हूँ। मैं काउंसलिंग, प्रशिक्षण, भावनात्मक बुद्धिमत्ता और सार्वजनिक स्वास्थ्य के क्षेत्र में काम करता हूँ।':'I am Ashish Yeshwantkar, a counselor and trainer passionate about mental well-being, communication, emotional intelligence and public health.';
+document.getElementById('contactbtn').textContent=hindi?'संपर्क करें':'Contact Me';
+document.getElementById('abouttitle').textContent=hindi?'मेरे बारे में':'About Me';
+document.getElementById('abouttext').textContent=hindi?'मैंने ग्रामीण विकास में मास्टर ऑफ सोशल वर्क (MSW) और भौतिकी, कंप्यूटर साइंस तथा गणित में B.Sc. किया है।':'I hold an MSW in Rural Development and a B.Sc. in Physics, Computer Science and Mathematics.';
+document.getElementById('skilltitle').textContent=hindi?'मेरी विशेषज्ञता':'My Expertise';
+document.getElementById('s1').textContent=hindi?'काउंसलिंग':'Counseling';
+document.getElementById('p1').textContent=hindi?'सहानुभूति, ध्यान से सुनना और सहयोगपूर्ण संवाद।':'Empathy, active listening and supportive communication.';
+document.getElementById('s2').textContent=hindi?'प्रशिक्षण':'Training & Facilitation';
+document.getElementById('p2').textContent=hindi?'सॉफ्ट स्किल्स, संवाद और प्रशिक्षण।':'Soft skills, communication and learning facilitation.';
+document.getElementById('s3').textContent=hindi?'भावनात्मक बुद्धिमत्ता':'Emotional Intelligence';
+document.getElementById('p3').textContent=hindi?'आत्म-जागरूकता, सहानुभूति और संबंध कौशल।':'Self-awareness, empathy and relationship skills.';
+document.getElementById('s4').textContent=hindi?'सार्वजनिक स्वास्थ्य':'Public Health';
+document.getElementById('p4').textContent=hindi?'स्वास्थ्य जागरूकता और सामुदायिक सहयोग।':'Health awareness, guidance and community support.';
+document.getElementById('edutitle').textContent=hindi?'शिक्षा और योग्यताएँ':'Education & Qualifications';
+document.getElementById('certtitle').textContent=hindi?'प्रमाणपत्र और उपलब्धियाँ':'Certificates & Achievements';
+document.getElementById('certtext').textContent=hindi?'मेरे प्रमाणपत्र यहाँ जोड़े जाएँगे।':'My certificates will be added here.';
+document.getElementById('contacttitle').textContent=hindi?'संपर्क करें':'Let’s Connect';
+document.getElementById('footertext').textContent=hindi?'काउंसलिंग • प्रशिक्षण • सार्वजनिक स्वास्थ्य':'Counseling • Training • Public Health';
+}
+</script>
+</body>
+</html>
