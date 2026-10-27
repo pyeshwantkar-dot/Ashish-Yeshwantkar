@@ -388,6 +388,161 @@ a {
     min-width: 0;
   }
   }
+ 
+/* PREMIUM WEBSITE DESIGN */
+body {
+  background: #f5f8fc;
+  color: #243b53;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  background: linear-gradient(135deg, #102a43, #164e63);
+  padding: 20px 6%;
+  box-shadow: 0 6px 24px rgba(16, 42, 67, 0.16);
+}
+
+header h2 {
+  letter-spacing: -0.5px;
+}
+
+nav a {
+  border-radius: 8px;
+  transition: background 0.25s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.hero {
+  background: linear-gradient(135deg, #e4f7f5, #f5f8fc 60%, #e8efff);
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.hero h1 {
+  color: #102a43;
+  letter-spacing: -1px;
+}
+
+.hero h1 span {
+  color: #0f8b8d;
+}
+
+.portrait {
+  border: 6px solid #fff;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(16, 42, 67, 0.17);
+}
+
+section {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+section h2 {
+  color: #102a43;
+  letter-spacing: -0.6px;
+}
+
+.cards {
+  gap: 22px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 7px 24px rgba(16, 42, 67, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(16, 42, 67, 0.12);
+}
+
+.card h3 {
+  color: #087477;
+}
+
+.btn {
+  background: linear-gradient(135deg, #0f8b8d, #087477);
+  border-radius: 10px;
+  box-shadow: 0 5px 14px rgba(15, 139, 141, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 139, 141, 0.25);
+}
+
+form {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(16, 42, 67, 0.08);
+}
+
+input,
+select,
+textarea {
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0f8b8d;
+  box-shadow: 0 0 0 3px rgba(15, 139, 141, 0.13);
+  outline: none;
+}
+
+#certificates {
+  background: #f0f5fb !important;
+  border-radius: 22px;
+}
+
+#certificates img {
+  transition: transform 0.25s ease;
+}
+
+#certificates a:hover img {
+  transform: scale(1.025);
+}
+
+footer {
+  background: linear-gradient(135deg, #091d32, #164e63);
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 42px 6%;
+    gap: 24px;
+  }
+
+  section {
+    padding: 38px 6%;
+  }
+
+  .card {
+    border-radius: 15px;
+  }
+
+  #certificates {
+    border-radius: 16px;
+  }
+
+  .portrait {
+    border-radius: 18px;
+  }
+}
   
 </style>
 </head>
