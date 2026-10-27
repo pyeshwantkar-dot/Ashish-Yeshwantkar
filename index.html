@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashish Yeshwantkar | Counselling & Training</title>
+  <meta name="description" content="Ashish Yeshwantkar offers compassionate counselling, guidance, and training for emotional wellbeing, stress management, and personal growth." />
+  <meta name="theme-color" content="#0d2443" />
+  <title>Ashish Yeshwantkar | Counsellor & Training Professional</title>
   <style>
     :root {
-      --bg: #edf5f7;
+      --bg: #ecf4f7;
       --navy: #0d2443;
       --navy-2: #12365d;
       --blue: #2d7ef5;
       --gold: #f4d387;
       --gold-2: #d49f34;
       --card: #ffffff;
-      --muted: #596d7d;
+      --muted: #586f81;
       --line: rgba(19, 53, 93, 0.12);
       --shadow: 0 20px 35px rgba(15, 35, 60, 0.12);
       --success-bg: #eafaf2;
@@ -31,6 +33,7 @@
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
+    p { margin: 0; }
 
     .page {
       width: min(1180px, calc(100% - 24px));
@@ -78,7 +81,8 @@
       flex-wrap: wrap;
     }
 
-    .nav a, .nav button {
+    .nav a,
+    .nav button {
       border: none;
       background: rgba(255,255,255,0.06);
       color: white;
@@ -103,7 +107,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.35fr 0.95fr;
+      grid-template-columns: 1.4fr 0.9fr;
       gap: 30px;
       align-items: center;
     }
@@ -130,7 +134,7 @@
 
     .subtext {
       margin-top: 18px;
-      font-size: 1.02rem;
+      font-size: 1.04rem;
       line-height: 1.8;
       color: rgba(255,255,255,0.8);
       max-width: 620px;
@@ -231,33 +235,177 @@
       margin-bottom: 18px;
     }
 
-    .about-box {
+    .panel {
       background: white;
       border: 1px solid var(--line);
       border-radius: 22px;
-      padding: 26px 22px;
       box-shadow: 0 12px 20px rgba(18,36,58,0.03);
+      padding: 26px 22px;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .mini-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px 18px;
+      box-shadow: 0 10px 18px rgba(20,38,61,0.03);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      color: var(--navy);
+    }
+
+    .mini-card p {
+      line-height: 1.7;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .services {
+      margin-top: 30px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 18px;
+      box-shadow: 0 10px 20px rgba(18,36,58,0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 28px rgba(18,36,58,0.06);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(45,126,245,0.12), rgba(244,211,135,0.35));
+      color: var(--navy);
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .service-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
+    .story {
+      margin-top: 30px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 20px;
     }
 
     .about-box h3 {
-      margin: 0 0 14px;
+      margin: 0 0 16px;
       font-size: clamp(1.6rem, 2vw, 2.3rem);
       color: var(--navy);
     }
 
     .about-box p {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       color: var(--muted);
       line-height: 1.8;
       font-size: 1rem;
     }
 
-    .certs { margin-top: 28px; }
+    .trust-list {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .trust-list li {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .trust-list li::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(19,111,70,0.08);
+      color: var(--success-text);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .quote-box {
+      background: linear-gradient(135deg, #f3f8ff, #fffaf0);
+      border: 1px solid rgba(44, 105, 176, 0.1);
+      border-radius: 20px;
+      padding: 22px 20px;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .quote-box p {
+      font-size: 1.05rem;
+      color: var(--navy);
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .quote-box strong {
+      display: block;
+      margin-top: 16px;
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    .certs { margin-top: 30px; }
 
     .cert-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 18px;
+      margin-top: 16px;
     }
 
     .cert-card {
@@ -270,7 +418,7 @@
 
     .cert-card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
       background: #edf4fa;
     }
@@ -301,6 +449,38 @@
       color: var(--navy);
     }
 
+    .contact-row {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .contact-block {
+      background: #f8fbff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .contact-block h4 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      color: var(--navy);
+    }
+
+    .contact-block p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 8px;
+    }
+
+    .contact-block a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
@@ -327,6 +507,7 @@
       padding: 12px 14px;
       color: var(--navy);
       outline: none;
+      font-family: inherit;
     }
 
     .field textarea {
@@ -376,15 +557,23 @@
     .footer strong { color: white; }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .cert-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .hero-grid,
+      .story-grid,
+      .contact-row {
+        grid-template-columns: 1fr;
+      }
+      .service-grid,
+      .cert-grid,
+      .highlights {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
     }
 
     @media (max-width: 620px) {
       .page { width: min(100%, calc(100% - 16px)); }
       .topbar, .hero, .content { padding-left: 16px; padding-right: 16px; }
       .nav { width: 100%; justify-content: flex-start; }
-      .form-grid, .cert-grid { grid-template-columns: 1fr; }
+      .form-grid, .service-grid, .cert-grid, .highlights { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr; }
       .profile-card img { height: 330px; }
     }
@@ -399,10 +588,11 @@
           <span>Ashish Yeshwantkar</span>
         </div>
 
-        <nav class="nav" aria-label="Main Navigation">
+        <nav class="nav" aria-label="Main navigation">
           <a href="#about">About</a>
+          <a href="#services">Services</a>
           <a href="#certificates">Certificates</a>
-          <button type="button" class="primary" data-scroll-to="appointment">Appointment</button>
+          <button type="button" class="primary" data-scroll-to="appointment">Book Session</button>
         </nav>
       </div>
     </header>
@@ -411,29 +601,29 @@
       <div class="hero-grid">
         <div>
           <div class="hero-tag">Counselling • Training • Wellbeing</div>
-          <h1>A space that listens. Guidance that empowers.</h1>
+          <h1>Guidance that helps you feel stronger, calmer, and more confident.</h1>
           <div class="subtext">
             I am Ashish Yeshwantkar, a counsellor and training professional committed to emotional wellbeing,
-            mental health awareness, stress management and personal growth.
+            stress management, personal growth, and positive change through compassionate, practical support.
           </div>
 
           <div class="cta-row">
             <button type="button" class="btn btn-primary" data-scroll-to="appointment">Request an Appointment</button>
-            <button type="button" class="btn btn-secondary">Explore Services</button>
+            <button type="button" class="btn btn-secondary" data-scroll-to="services">Explore Services</button>
           </div>
 
           <div class="stats">
             <div class="stat-box">
-              <strong>10k+</strong>
-              <span>People Reached</span>
+              <strong>1:1</strong>
+              <span>Personal Support</span>
             </div>
             <div class="stat-box">
               <strong>12</strong>
-              <span>Certificates</span>
+              <span>Certifications</span>
             </div>
             <div class="stat-box">
-              <strong>1:1</strong>
-              <span>Support</span>
+              <strong>Wellbeing</strong>
+              <span>Focused Care</span>
             </div>
           </div>
         </div>
@@ -445,20 +635,76 @@
     </section>
 
     <main class="content">
-      <section id="about">
-        <div class="section-tag">About Me</div>
-        <div class="about-box">
-          <h3>Compassionate support for real life challenges.</h3>
-          <p>
-            I am a counselling and training professional with experience in emotional wellbeing, public health support,
-            social work and professional guidance. I believe in helping people understand themselves more deeply,
-            navigate stress with clarity and build resilience through practical support.
-          </p>
-          <p>
-            My work focuses on creating safe, respectful and non-judgmental spaces where clients can reflect, heal and grow.
-            Through counselling sessions, training and support activities, I aim to encourage healthier choices,
-            emotional balance and personal growth.
-          </p>
+      <section id="about" class="story">
+        <div class="section-tag">About</div>
+        <div class="story-grid">
+          <div class="panel about-box">
+            <h3>Compassionate support for everyday challenges.</h3>
+            <p>
+              I work with people who want to understand themselves more deeply, manage emotional stress more effectively,
+              and move forward with greater clarity and balance.
+            </p>
+            <p>
+              My approach combines empathy, practical guidance, and respectful conversation so that each person feels heard,
+              supported, and encouraged to make meaningful progress in life, work, and relationships.
+            </p>
+            <ul class="trust-list">
+              <li>Individual counselling with a safe, non-judgmental space</li>
+              <li>Support for emotional wellness, stress, and life transitions</li>
+              <li>Training solutions for personal and professional development</li>
+            </ul>
+          </div>
+
+          <div class="quote-box">
+            <p>
+              “Real growth begins when we create space to pause, reflect, and understand what we truly need.”
+            </p>
+            <strong>Ashish Yeshwantkar</strong>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <div class="mini-card">
+            <h3>Emotional Support</h3>
+            <p>Guidance for stress, overwhelm, relationship challenges, and personal wellbeing.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Practical Guidance</h3>
+            <p>Action-oriented support that helps build healthier habits and clearer thinking.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Positive Change</h3>
+            <p>Focused sessions that help you regain confidence and move ahead with purpose.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="section-tag">Services</div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">01</div>
+            <h3>Individual Counselling</h3>
+            <p>One-to-one support for emotional well-being, personal challenges, and better life balance.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">02</div>
+            <h3>Stress Management</h3>
+            <p>Simple, practical strategies to reduce tension, improve resilience, and restore calm.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">03</div>
+            <h3>Career Guidance</h3>
+            <p>Support to navigate uncertainty, build direction, and make confident life and career decisions.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">04</div>
+            <h3>Training & Workshops</h3>
+            <p>Interactive learning experiences focused on personal growth, wellbeing, and confidence-building.</p>
+          </article>
         </div>
       </section>
 
@@ -481,56 +727,65 @@
       </section>
 
       <section class="appointment-wrap" id="appointment">
-        <div class="section-tag">Appointment</div>
+        <div class="section-tag">Book a Session</div>
         <div class="appointment-box">
-          <h3>Book an Appointment</h3>
-          <form id="appointmentForm">
-            <div class="form-grid">
-              <label class="field">
-                <span>Full Name</span>
-                <input type="text" id="fullName" placeholder="Your name" required />
-              </label>
+          <h3>Request an appointment</h3>
 
-              <label class="field">
-                <span>Email</span>
-                <input type="email" placeholder="you@example.com" required />
-              </label>
-
-              <label class="field">
-                <span>Phone</span>
-                <input type="tel" placeholder="+91 98765 43210" required />
-              </label>
-
-              <label class="field">
-                <span>Service</span>
-                <select required>
-                  <option>Individual Counselling</option>
-                  <option>Career Guidance</option>
-                  <option>Stress Management</option>
-                  <option>Wellbeing Training</option>
-                </select>
-              </label>
-
-              <label class="field">
-                <span>Date</span>
-                <input type="date" required />
-              </label>
-
-              <label class="field">
-                <span>Time</span>
-                <input type="time" required />
-              </label>
-
-              <label class="field full">
-                <span>Message</span>
-                <textarea placeholder="Tell us about your concerns or goals..." required></textarea>
-              </label>
+          <div class="contact-row">
+            <div class="contact-block">
+              <h4>Let’s connect</h4>
+              <p>For counselling, guidance, and training support.</p>
+              <p>Share your concerns and preferred session details.</p>
             </div>
 
-            <div class="submit-row">
-              <button type="submit" class="submit-btn">Submit Request</button>
-            </div>
-          </form>
+            <form id="appointmentForm">
+              <div class="form-grid">
+                <label class="field">
+                  <span>Full Name</span>
+                  <input type="text" id="fullName" placeholder="Your name" required />
+                </label>
+
+                <label class="field">
+                  <span>Email</span>
+                  <input type="email" placeholder="you@example.com" required />
+                </label>
+
+                <label class="field">
+                  <span>Phone</span>
+                  <input type="tel" placeholder="+91 98765 43210" required />
+                </label>
+
+                <label class="field">
+                  <span>Service</span>
+                  <select required>
+                    <option>Individual Counselling</option>
+                    <option>Career Guidance</option>
+                    <option>Stress Management</option>
+                    <option>Wellbeing Training</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span>Date</span>
+                  <input type="date" required />
+                </label>
+
+                <label class="field">
+                  <span>Time</span>
+                  <input type="time" required />
+                </label>
+
+                <label class="field full">
+                  <span>Message</span>
+                  <textarea placeholder="Tell us about your concerns, goals, or preferred support..." required></textarea>
+                </label>
+              </div>
+
+              <div class="submit-row">
+                <button type="submit" class="submit-btn">Submit Request</button>
+              </div>
+            </form>
+          </div>
 
           <div id="formStatus" class="form-status" aria-live="polite"></div>
         </div>
@@ -538,15 +793,16 @@
     </main>
 
     <footer class="footer">
-      <div><strong>Ashish Yeshwantkar</strong> | Counsellor & Trainer</div>
+      <div><strong>Ashish Yeshwantkar</strong> | Counsellor & Training Professional</div>
     </footer>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('[data-scroll-to="appointment"]').forEach(function (button) {
+      document.querySelectorAll('[data-scroll-to]').forEach(function (button) {
         button.addEventListener('click', function () {
-          const target = document.getElementById('appointment');
+          const targetId = button.getAttribute('data-scroll-to');
+          const target = document.getElementById(targetId);
           if (target) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
@@ -555,6 +811,7 @@
 
       const form = document.getElementById('appointmentForm');
       const status = document.getElementById('formStatus');
+
       if (form && status) {
         form.addEventListener('submit', function (event) {
           event.preventDefault();
