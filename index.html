@@ -3,266 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashish Yeshwantkar | Portfolio + Appointment</title>
+  <title>Ashish Yeshwantkar | Counsellor & Trainer</title>
   <style>
     :root {
-      --bg: #edf3f5;
-      --navy: #0b1f39;
-      --navy-2: #163a5d;
-      --deep: #0d233c;
-      --blue: #4a96ff;
-      --blue-soft: #dfeefb;
-      --gold: #f2c66e;
-      --gold-2: #d49d33;
-      --card: #f3f8fb;
-      --text: #1e2d3f;
-      --muted: #6c7a8a;
-      --white: #ffffff;
-      --line: rgba(20, 45, 70, 0.1);
-      --shadow: 0 18px 35px rgba(14, 33, 54, 0.12);
+      --bg: #eef5f7;
+      --navy: #0d2443;
+      --navy-2: #13355d;
+      --blue: #2d7ef5;
+      --gold: #f0c56d;
+      --gold-dark: #d8992f;
+      --card: #ffffff;
+      --muted: #5d6f7d;
+      --line: rgba(19, 53, 93, 0.12);
+      --shadow: 0 18px 30px rgba(15, 35, 60, 0.12);
+      --success-bg: #eafaf2;
+      --success-text: #176c42;
     }
 
     * { box-sizing: border-box; }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #dfeaf0;
-      color: var(--text);
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      padding: 20px 0;
-    }
-
-    .phone {
-      width: 430px;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
-      border-radius: 28px;
-      overflow: hidden;
+      color: var(--navy);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+
+    .topbar {
+      background: linear-gradient(135deg, #071b2d, #123055 60%, #163d68);
+      border-radius: 20px 20px 0 0;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .status-bar {
-      height: 78px;
-      background: #05070d;
-      color: #fff;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 18px;
-      font-size: 18px;
-      letter-spacing: 0.04em;
-    }
-
-    .status-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .status-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 12px;
-      opacity: 0.95;
-    }
-
-    .signal {
-      font-size: 14px;
-      transform: translateY(-1px);
-    }
-
-    .battery {
-      width: 22px;
-      height: 12px;
-      border: 1.5px solid white;
-      border-radius: 3px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .battery::after {
-      content: "";
-      position: absolute;
-      right: -4px;
-      top: 3px;
-      width: 2px;
-      height: 4px;
-      border-radius: 2px;
-      background: white;
-    }
-
-    .battery::before {
-      content: "";
-      position: absolute;
-      inset: 2px;
-      background: #80e27d;
-      border-radius: 2px;
-    }
-
-    .header {
-      background: linear-gradient(180deg, #0d1b2c 0%, #0e233e 55%, #102b4d 100%);
-      padding: 14px 18px 20px;
       color: white;
+      padding: 18px 24px;
     }
 
-    .top-strip {
+    .topbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 14px;
+      gap: 12px;
+      font-size: 15px;
       font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     .brand-mark {
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #f3d078, #d39c2e);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.15);
-    }
-
-    .site-icon {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      display: grid;
-      place-items: center;
-      font-size: 14px;
+      background: linear-gradient(135deg, #f7d985, #cd972d);
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
     }
 
     .nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .nav-avatar {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #f4d177, #d39a2f);
-      border: 2px solid rgba(255,255,255,0.4);
-    }
-
-    .nav-right button {
-      border: none;
-      padding: 10px 16px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #69b4ff, #4d8efc);
-      color: white;
-      font-weight: 700;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, rgba(15, 32, 52, 1), rgba(19, 52, 73, 0.97));
-      padding: 20px 20px 18px;
-      color: white;
-      position: relative;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.14);
-      font-size: 12px;
-      color: #e6f0ff;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 30px;
-      line-height: 1.15;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .hero .sub {
-      margin-top: 14px;
-      color: rgba(255,255,255,0.78);
-      font-size: 15px;
-      line-height: 1.6;
-      max-width: 520px;
-    }
-
-    .cta-row {
-      margin-top: 18px;
-      display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
 
-    .primary-btn, .secondary-btn {
+    .nav a,
+    .nav button {
       border: none;
-      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: white;
+      border-radius: 12px;
+      padding: 10px 16px;
       font-size: 14px;
       font-weight: 700;
-      padding: 12px 20px;
       cursor: pointer;
     }
 
-    .primary-btn {
-      background: linear-gradient(135deg, #f3d181, #e3a54d);
-      color: #10233d;
-      box-shadow: 0 10px 20px rgba(218, 162, 82, 0.28);
+    .nav .primary {
+      background: linear-gradient(135deg, #66b0ff, #3c7ef7);
+      color: white;
     }
 
-    .secondary-btn {
-      background: rgba(255,255,255,0.04);
+    .hero {
+      background: linear-gradient(135deg, #10293f 0%, #0f365d 45%, #183c66 100%);
       color: white;
-      border: 1px solid rgba(255,255,255,0.16);
+      padding: 42px 24px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      color: #edf5ff;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 3vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    .subtext {
+      margin-top: 18px;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.8);
+      max-width: 620px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 800;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f7d684, #e0a64a);
+      color: #10233d;
+      box-shadow: 0 10px 20px rgba(214, 162, 72, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.18);
     }
 
     .stats {
-      margin-top: 22px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
+      margin-top: 28px;
+      max-width: 560px;
     }
 
     .stat-box {
+      padding: 18px 14px;
+      border-radius: 16px;
       background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      padding: 16px 10px;
+      border: 1px solid rgba(255,255,255,0.1);
       text-align: center;
     }
 
     .stat-box strong {
       display: block;
-      font-size: 20px;
+      font-size: 1.5rem;
       margin-bottom: 6px;
     }
 
@@ -273,83 +210,74 @@
       color: rgba(255,255,255,0.72);
     }
 
-    .portrait-wrap {
-      margin-top: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .profile-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 16px;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.18);
     }
 
-    .portrait {
+    .profile-card img {
       width: 100%;
-      max-width: 320px;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow: 0 18px 32px rgba(0,0,0,0.2);
-      background: linear-gradient(135deg, #ffefe0, #b8ccde);
-    }
-
-    .portrait img {
-      width: 100%;
-      display: block;
+      height: 420px;
       object-fit: cover;
-      height: 330px;
+      border-radius: 18px;
+      background: #dfeaf5;
     }
 
-    .about {
-      background: #eaf3f6;
-      padding: 22px 18px 14px;
+    .content {
+      background: #edf4f7;
+      padding: 30px 24px 40px;
+      box-shadow: var(--shadow);
     }
 
     .section-tag {
       display: inline-block;
-      background: rgba(72, 112, 172, 0.1);
-      color: #32679b;
+      background: rgba(45, 126, 245, 0.08);
+      color: #275ea8;
+      border-radius: 999px;
+      padding: 8px 12px;
       font-size: 11px;
+      font-weight: 800;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      font-weight: 700;
-      padding: 8px 12px;
-      border-radius: 999px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
-    .about-card {
-      background: #ffffff;
+    .about-box {
+      background: white;
       border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 16px 18px 18px;
-      box-shadow: 0 12px 20px rgba(18, 36, 58, 0.04);
+      border-radius: 22px;
+      padding: 26px 22px;
+      box-shadow: 0 12px 20px rgba(18, 36, 58, 0.03);
     }
 
-    .about-card h3 {
-      margin: 0 0 12px;
-      font-size: 22px;
+    .about-box h3 {
+      margin: 0 0 14px;
+      font-size: clamp(1.5rem, 2vw, 2.2rem);
       color: var(--navy);
     }
 
-    .about-card p {
+    .about-box p {
       margin: 0 0 12px;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #46596b;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
     }
 
-    .certificates {
-      background: #eaf3f6;
-      padding: 18px 18px 20px;
+    .certs {
+      margin-top: 28px;
     }
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .cert-card {
-      background: #fff;
+      background: white;
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
@@ -358,49 +286,47 @@
 
     .cert-card img {
       width: 100%;
-      display: block;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
-      background: #eef4f8;
+      background: #edf4fa;
     }
 
     .cert-card h4 {
       margin: 0;
-      padding: 12px 10px 10px;
-      font-size: 13px;
-      color: #183558;
+      padding: 12px 12px 14px;
       text-align: center;
+      color: var(--navy);
+      font-size: 14px;
     }
 
-    .appointment-block {
-      background: #eaf3f6;
-      padding: 22px 18px 36px;
+    .appointment-wrap {
+      margin-top: 30px;
     }
 
     .appointment-box {
-      background: #f9fbfc;
+      background: white;
       border: 1px solid var(--line);
       border-radius: 22px;
-      padding: 18px 16px 16px;
-      box-shadow: 0 12px 18px rgba(17, 33, 56, 0.04);
+      box-shadow: 0 12px 21px rgba(18, 36, 58, 0.04);
+      padding: 24px 22px;
     }
 
     .appointment-box h3 {
-      margin: 0 0 12px;
-      font-size: 24px;
+      margin: 0 0 16px;
+      font-size: clamp(1.6rem, 2vw, 2.3rem);
       color: var(--navy);
     }
 
     .form-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
 
     .field {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 7px;
       font-size: 12px;
       color: var(--muted);
       font-weight: 700;
@@ -410,12 +336,12 @@
     .field select,
     .field textarea {
       width: 100%;
-      border: 1px solid #dfe6ec;
-      background: white;
+      border: 1px solid #dfe7ee;
       border-radius: 12px;
-      padding: 12px 12px;
+      background: white;
       font-size: 14px;
-      color: var(--text);
+      padding: 12px 14px;
+      color: var(--navy);
       outline: none;
     }
 
@@ -429,261 +355,231 @@
     }
 
     .submit-row {
+      margin-top: 16px;
       display: flex;
       justify-content: flex-end;
-      margin-top: 14px;
     }
 
     .submit-btn {
       border: none;
-      padding: 12px 22px;
+      background: linear-gradient(135deg, #f5d57e, #cf972d);
+      color: #132c47;
       border-radius: 12px;
-      background: linear-gradient(135deg, #f2d078, #d49d2c);
-      color: #172f4d;
       font-weight: 800;
+      padding: 12px 22px;
       cursor: pointer;
     }
 
     .form-status {
       display: none;
-      margin-top: 12px;
-      font-size: 13px;
-      color: #1a6b4f;
-      background: #e7f9ef;
-      border: 1px solid #bfe8d2;
-      border-radius: 10px;
-      padding: 10px 12px;
+      margin-top: 14px;
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: var(--success-bg);
+      color: var(--success-text);
+      border: 1px solid #bce6cc;
+      font-size: 14px;
+      font-weight: 700;
     }
 
-    @media (max-width: 460px) {
-      .phone {
-        width: 100%;
-        border-radius: 0;
-      }
-
-      .form-grid {
+    @media (max-width: 900px) {
+      .hero-grid {
         grid-template-columns: 1fr;
       }
 
       .cert-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100%, calc(100% - 16px));
+      }
+
+      .topbar,
+      .hero,
+      .content {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .nav {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .form-grid,
+      .cert-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero h1 {
-        font-size: 26px;
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card img {
+        height: 330px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="phone">
-    <div class="status-bar">
-      <div class="status-left">
-        <span>20:53</span>
-      </div>
-      <div class="status-right">
-        <span class="signal">◔</span>
-        <span>WiFi</span>
-        <span class="battery"></span>
-      </div>
-    </div>
-
-    <header class="header">
-      <div class="top-strip">
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-inner">
         <div class="brand">
           <span class="brand-mark"></span>
           <span>Ashish Yeshwantkar</span>
         </div>
-        <div class="site-icon">◌</div>
-      </div>
 
-      <nav class="nav">
-        <div class="nav-left">
-          <span class="nav-avatar"></span>
-          <span>Ashish Yeshwantkar</span>
-        </div>
-        <div class="nav-right">
-          <button type="button" data-scroll-to="appointment">Appointment</button>
-        </div>
-      </nav>
+        <nav class="nav" aria-label="Main Navigation">
+          <a href="#about">About</a>
+          <a href="#certificates">Certificates</a>
+          <button type="button" class="primary" data-scroll-to="appointment">Appointment</button>
+        </nav>
+      </div>
     </header>
 
     <section class="hero">
-      <div class="hero-badge">Counselling • Training • Wellbeing</div>
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tag">Counselling • Training • Wellbeing</div>
+          <h1>A space that listens. Guidance that empowers.</h1>
+          <div class="subtext">
+            I am Ashish Yeshwantkar, a counsellor and training professional committed to emotional wellbeing,
+            mental health awareness, stress management and personal growth.
+          </div>
 
-      <h1>A space that listens. Guidance that empowers.</h1>
+          <div class="cta-row">
+            <button type="button" class="btn btn-primary" data-scroll-to="appointment">Request an Appointment</button>
+            <button type="button" class="btn btn-secondary">Explore Services</button>
+          </div>
 
-      <div class="sub">
-        I am Ashish Yeshwantkar, a counsellor and training professional committed to
-        emotional wellbeing, mental health awareness, stress management and personal growth.
-      </div>
-
-      <div class="cta-row">
-        <button type="button" class="primary-btn" data-scroll-to="appointment">Request an Appointment</button>
-        <button type="button" class="secondary-btn">Explore Services</button>
-      </div>
-
-      <div class="stats">
-        <div class="stat-box">
-          <strong>10k+</strong>
-          <span>People Reached</span>
+          <div class="stats">
+            <div class="stat-box">
+              <strong>10k+</strong>
+              <span>People Reached</span>
+            </div>
+            <div class="stat-box">
+              <strong>12</strong>
+              <span>Certificates</span>
+            </div>
+            <div class="stat-box">
+              <strong>1:1</strong>
+              <span>Support</span>
+            </div>
+          </div>
         </div>
-        <div class="stat-box">
-          <strong>12</strong>
-          <span>Certificates</span>
-        </div>
-        <div class="stat-box">
-          <strong>1:1</strong>
-          <span>Support</span>
-        </div>
-      </div>
 
-      <div class="portrait-wrap">
-        <div class="portrait">
+        <div class="profile-card">
           <img src="profile.jpg" alt="Ashish Yeshwantkar profile picture" />
         </div>
       </div>
     </section>
 
-    <section class="about">
-      <div class="section-tag">About Me</div>
-
-      <div class="about-card">
-        <h3>Compassionate support for real life challenges.</h3>
-        <p>
-          I am a counselling and training professional with experience in emotional wellbeing,
-          public health support, social work and professional guidance. I believe in helping
-          people understand themselves more deeply, navigate stress with clarity and build resilience
-          through practical support.
-        </p>
-        <p>
-          My work focuses on creating safe, respectful and non-judgmental spaces where clients can
-          reflect, heal and grow. Through counselling sessions, training and support activities, I aim
-          to encourage healthier choices, emotional balance and personal growth.
-        </p>
-      </div>
-    </section>
-
-    <section class="certificates">
-      <div class="section-tag">Certificates</div>
-
-      <div class="cert-grid">
-        <div class="cert-card">
-          <img src="certificate%201.png" alt="Certificate 1" />
-          <h4>Certificate 1</h4>
+    <main class="content">
+      <section id="about">
+        <div class="section-tag">About Me</div>
+        <div class="about-box">
+          <h3>Compassionate support for real life challenges.</h3>
+          <p>
+            I am a counselling and training professional with experience in emotional wellbeing, public health
+            support, social work and professional guidance. I believe in helping people understand themselves
+            more deeply, navigate stress with clarity and build resilience through practical support.
+          </p>
+          <p>
+            My work focuses on creating safe, respectful and non-judgmental spaces where clients can reflect,
+            heal and grow. Through counselling sessions, training and support activities, I aim to encourage
+            healthier choices, emotional balance and personal growth.
+          </p>
         </div>
-        <div class="cert-card">
-          <img src="certificate%202.png" alt="Certificate 2" />
-          <h4>Certificate 2</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%203.png" alt="Certificate 3" />
-          <h4>Certificate 3</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%204.png" alt="Certificate 4" />
-          <h4>Certificate 4</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%205.png" alt="Certificate 5" />
-          <h4>Certificate 5</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%206.png" alt="Certificate 6" />
-          <h4>Certificate 6</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%207.png" alt="Certificate 7" />
-          <h4>Certificate 7</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%208.png" alt="Certificate 8" />
-          <h4>Certificate 8</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%209.png" alt="Certificate 9" />
-          <h4>Certificate 9</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%2010.png" alt="Certificate 10" />
-          <h4>Certificate 10</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%2011.png" alt="Certificate 11" />
-          <h4>Certificate 11</h4>
-        </div>
-        <div class="cert-card">
-          <img src="certificate%2012.png" alt="Certificate 12" />
-          <h4>Certificate 12</h4>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="appointment-block" id="appointment">
-      <div class="appointment-box">
-        <h3>Book an Appointment</h3>
+      <section class="certs" id="certificates">
+        <div class="section-tag">Certificates</div>
+        <div class="cert-grid">
+          <div class="cert-card"><img src="certificate%201.png" alt="Certificate 1" /><h4>Certificate 1</h4></div>
+          <div class="cert-card"><img src="certificate%202.png" alt="Certificate 2" /><h4>Certificate 2</h4></div>
+          <div class="cert-card"><img src="certificate%203.png" alt="Certificate 3" /><h4>Certificate 3</h4></div>
+          <div class="cert-card"><img src="certificate%204.png" alt="Certificate 4" /><h4>Certificate 4</h4></div>
+          <div class="cert-card"><img src="certificate%205.png" alt="Certificate 5" /><h4>Certificate 5</h4></div>
+          <div class="cert-card"><img src="certificate%206.png" alt="Certificate 6" /><h4>Certificate 6</h4></div>
+          <div class="cert-card"><img src="certificate%207.png" alt="Certificate 7" /><h4>Certificate 7</h4></div>
+          <div class="cert-card"><img src="certificate%208.png" alt="Certificate 8" /><h4>Certificate 8</h4></div>
+          <div class="cert-card"><img src="certificate%209.png" alt="Certificate 9" /><h4>Certificate 9</h4></div>
+          <div class="cert-card"><img src="certificate%2010.png" alt="Certificate 10" /><h4>Certificate 10</h4></div>
+          <div class="cert-card"><img src="certificate%2011.png" alt="Certificate 11" /><h4>Certificate 11</h4></div>
+          <div class="cert-card"><img src="certificate%2012.png" alt="Certificate 12" /><h4>Certificate 12</h4></div>
+        </div>
+      </section>
 
-        <form id="appointmentForm">
-          <div class="form-grid">
-            <label class="field">
-              <span>Full Name</span>
-              <input type="text" id="fullName" placeholder="Your name" required />
-            </label>
+      <section class="appointment-wrap" id="appointment">
+        <div class="section-tag">Appointment</div>
+        <div class="appointment-box">
+          <h3>Book an Appointment</h3>
+          <form id="appointmentForm">
+            <div class="form-grid">
+              <label class="field">
+                <span>Full Name</span>
+                <input type="text" id="fullName" placeholder="Your name" required />
+              </label>
 
-            <label class="field">
-              <span>Email</span>
-              <input type="email" placeholder="you@example.com" required />
-            </label>
+              <label class="field">
+                <span>Email</span>
+                <input type="email" placeholder="you@example.com" required />
+              </label>
 
-            <label class="field">
-              <span>Phone</span>
-              <input type="tel" placeholder="+91 98765 43210" required />
-            </label>
+              <label class="field">
+                <span>Phone</span>
+                <input type="tel" placeholder="+91 98765 43210" required />
+              </label>
 
-            <label class="field">
-              <span>Service</span>
-              <select required>
-                <option>Individual Counselling</option>
-                <option>Career Guidance</option>
-                <option>Stress Management</option>
-                <option>Wellbeing Training</option>
-              </select>
-            </label>
+              <label class="field">
+                <span>Service</span>
+                <select required>
+                  <option>Individual Counselling</option>
+                  <option>Career Guidance</option>
+                  <option>Stress Management</option>
+                  <option>Wellbeing Training</option>
+                </select>
+              </label>
 
-            <label class="field">
-              <span>Date</span>
-              <input type="date" required />
-            </label>
+              <label class="field">
+                <span>Date</span>
+                <input type="date" required />
+              </label>
 
-            <label class="field">
-              <span>Time</span>
-              <input type="time" required />
-            </label>
+              <label class="field">
+                <span>Time</span>
+                <input type="time" required />
+              </label>
 
-            <label class="field full">
-              <span>Message</span>
-              <textarea placeholder="Tell us about your concerns or goals..." required></textarea>
-            </label>
-          </div>
+              <label class="field full">
+                <span>Message</span>
+                <textarea placeholder="Tell us about your concerns or goals..." required></textarea>
+              </label>
+            </div>
 
-          <div class="submit-row">
-            <button type="submit" class="submit-btn">Submit Request</button>
-          </div>
-        </form>
+            <div class="submit-row">
+              <button type="submit" class="submit-btn">Submit Request</button>
+            </div>
+          </form>
 
-        <div id="formStatus" class="form-status" aria-live="polite"></div>
-      </div>
-    </section>
+          <div id="formStatus" class="form-status" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const appointmentButtons = document.querySelectorAll('[data-scroll-to="appointment"]');
-      const target = document.getElementById('appointment');
-
-      appointmentButtons.forEach(function (button) {
+      document.querySelectorAll('[data-scroll-to="appointment"]').forEach(function (button) {
         button.addEventListener('click', function () {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const target = document.getElementById('appointment');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
       });
 
