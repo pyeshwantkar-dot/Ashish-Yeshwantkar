@@ -179,6 +179,12 @@
       border: 1px solid rgba(255,255,255,0.18);
     }
 
+    .btn-ghost {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
     .stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
@@ -488,6 +494,37 @@
       font-size: 0.92rem;
     }
 
+    .faq {
+      margin-top: 32px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px 18px;
+      box-shadow: 0 10px 18px rgba(20,38,61,0.04);
+    }
+
+    .faq-item h3 {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+      color: var(--navy);
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
     .certs { margin-top: 30px; }
 
     .cert-grid {
@@ -540,7 +577,7 @@
 
     .contact-row {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 300px 1fr;
       gap: 18px;
       align-items: start;
       margin-bottom: 18px;
@@ -568,6 +605,27 @@
     .contact-block a {
       color: var(--blue);
       font-weight: 700;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-list li {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
+    .number-note {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 10px;
     }
 
     .form-grid {
@@ -639,6 +697,9 @@
       right: 18px;
       bottom: 18px;
       z-index: 25;
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
 
     .floating-cta a {
@@ -669,7 +730,8 @@
     @media (max-width: 900px) {
       .hero-grid,
       .story-grid,
-      .contact-row {
+      .contact-row,
+      .faq-grid {
         grid-template-columns: 1fr;
       }
       .service-grid,
@@ -685,7 +747,7 @@
       .page { width: min(100%, calc(100% - 16px)); }
       .topbar, .hero, .content { padding-left: 16px; padding-right: 16px; }
       .nav { width: 100%; justify-content: flex-start; }
-      .form-grid, .service-grid, .cert-grid, .highlights, .testimonial-grid, .process-grid { grid-template-columns: 1fr; }
+      .form-grid, .service-grid, .cert-grid, .highlights, .testimonial-grid, .process-grid, .faq-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr; }
       .profile-card img { height: 330px; }
       .floating-cta { right: 14px; bottom: 14px; }
@@ -705,7 +767,7 @@
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#certificates">Certificates</a>
-          <button type="button" class="primary" data-scroll-to="appointment">Book Session</button>
+          <a class="primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener">Book Session</a>
         </nav>
       </div>
     </header>
@@ -721,8 +783,9 @@
           </div>
 
           <div class="cta-row">
-            <button type="button" class="btn btn-primary" data-scroll-to="appointment">Request an Appointment</button>
-            <button type="button" class="btn btn-secondary" data-scroll-to="services">Explore Services</button>
+            <a class="btn btn-primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20would%20like%20to%20request%20an%20appointment." target="_blank" rel="noopener">Request an Appointment</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+            <a class="btn btn-ghost" href="mailto:ashish@example.com">Email Me</a>
           </div>
 
           <div class="stats">
@@ -867,6 +930,28 @@
         </div>
       </section>
 
+      <section class="faq">
+        <div class="section-tag">FAQs</div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Is counselling confidential?</h3>
+            <p>Yes. The process is designed to be respectful, private, and supportive to help you feel safe and heard.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer online sessions?</h3>
+            <p>Yes, sessions can be arranged based on availability and personal preference, depending on your needs.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How long is a session?</h3>
+            <p>Most sessions are planned around a guided, supportive conversation tailored to your goals and comfort.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I book a first appointment quickly?</h3>
+            <p>Yes. You can reach out through WhatsApp or the contact form to request an initial consultation.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="certs" id="certificates">
         <div class="section-tag">Certificates</div>
         <div class="cert-grid">
@@ -892,9 +977,15 @@
 
           <div class="contact-row">
             <div class="contact-block">
-              <h4>Let’s connect</h4>
-              <p>For counselling, guidance, and training support.</p>
-              <p>Share your concerns and preferred session details.</p>
+              <h4>Contact details</h4>
+              <ul class="contact-list">
+                <li><strong>WhatsApp:</strong> +91 77098 83011</li>
+                <li><strong>Call:</strong> +91 77098 83011</li>
+                <li><strong>Email:</strong> hello@example.com</li>
+                <li><strong>Location:</strong> Hyderabad, Telangana, India</li>
+                <li><strong>Hours:</strong> Mon-Sat, 10:00 AM – 7:00 PM</li>
+              </ul>
+              <span class="number-note">Replace the demo email with your real email before final publishing.</span>
             </div>
 
             <form id="appointmentForm">
@@ -957,21 +1048,11 @@
   </div>
 
   <div class="floating-cta" aria-label="Book session">
-    <a href="#appointment" title="Book session">✆</a>
+    <a href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." title="Book session via WhatsApp" target="_blank" rel="noopener">✆</a>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('[data-scroll-to]').forEach(function (button) {
-        button.addEventListener('click', function () {
-          const targetId = button.getAttribute('data-scroll-to');
-          const target = document.getElementById(targetId);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-
       const form = document.getElementById('appointmentForm');
       const status = document.getElementById('formStatus');
 
