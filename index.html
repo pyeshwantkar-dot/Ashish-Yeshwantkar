@@ -131,6 +131,21 @@ section h2 {
     color: var(--muted);
     margin: 10px 0;
 }
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: center;
+}
+.profile-img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
+    display: block;
+    margin: auto;
+}
 .certificate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -185,6 +200,12 @@ footer {
     text-align: center;
     padding: 28px 6%;
 }
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
 @media (max-width: 600px) {
     header {
         padding: 15px 5%;
@@ -228,10 +249,15 @@ footer {
     </section>
 
     <section id="about" class="container">
-        <div class="section-intro">
-            <h2>About Me</h2>
-            <p>I am a counselling and training professional with a background in Social work and Rural Development. My focus on listening without judgment, helping people navigate stress, and supporting informed decisions about wellbeing and public health.</p>
-            <p>Through public health counselling and related work, I have contributed to reaching and supporting more than 10,000 people. I value empathy, confidentiality, respect and responsible guidance.</p>
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div>
+                <img src="profile.jpg" alt="Ashish Yeshwantkar Profile Photo" class="profile-img">
+            </div>
+            <div class="section-intro" style="max-width: 100%;">
+                <p>I am a counselling and training professional with a background in Social work and Rural Development. My focus on listening without judgment, helping people navigate stress, and supporting informed decisions about wellbeing and public health.</p>
+                <p>Through public health counselling and related work, I have contributed to reaching and supporting more than 10,000 people. I value empathy, confidentiality, respect and responsible guidance.</p>
+            </div>
         </div>
     </section>
 
@@ -312,63 +338,63 @@ footer {
         <p class="section-intro">Explore all 12 certificates below. Select a certificate to open its image.</p>
         <div class="certificate-grid">
             <!-- Certificate 1 -->
-            <a class="certificate-card" href="certificate1.png" target="_blank">
-                <img src="certificate1.png" alt="Certificate 1" loading="lazy">
+            <a class="certificate-card" href="certificate 1.png" target="_blank">
+                <img src="certificate 1.png" alt="Certificate 1" loading="lazy">
                 <h3>Certificate 1</h3>
             </a>
             <!-- Certificate 2 -->
-            <a class="certificate-card" href="certificate2.png" target="_blank">
-                <img src="certificate2.png" alt="Certificate 2" loading="lazy">
+            <a class="certificate-card" href="certificate 2.png" target="_blank">
+                <img src="certificate 2.png" alt="Certificate 2" loading="lazy">
                 <h3>Certificate 2</h3>
             </a>
             <!-- Certificate 3 -->
-            <a class="certificate-card" href="certificate3.png" target="_blank">
-                <img src="certificate3.png" alt="Certificate 3" loading="lazy">
+            <a class="certificate-card" href="certificate 3.png" target="_blank">
+                <img src="certificate 3.png" alt="Certificate 3" loading="lazy">
                 <h3>Certificate 3</h3>
             </a>
             <!-- Certificate 4 -->
-            <a class="certificate-card" href="certificate4.png" target="_blank">
-                <img src="certificate4.png" alt="Certificate 4" loading="lazy">
+            <a class="certificate-card" href="certificate 4.png" target="_blank">
+                <img src="certificate 4.png" alt="Certificate 4" loading="lazy">
                 <h3>Certificate 4</h3>
             </a>
             <!-- Certificate 5 -->
-            <a class="certificate-card" href="certificate5.png" target="_blank">
-                <img src="certificate5.png" alt="Certificate 5" loading="lazy">
+            <a class="certificate-card" href="certificate 5.png" target="_blank">
+                <img src="certificate 5.png" alt="Certificate 5" loading="lazy">
                 <h3>Certificate 5</h3>
             </a>
             <!-- Certificate 6 -->
-            <a class="certificate-card" href="certificate6.png" target="_blank">
-                <img src="certificate6.png" alt="Certificate 6" loading="lazy">
+            <a class="certificate-card" href="certificate 6.png" target="_blank">
+                <img src="certificate 6.png" alt="Certificate 6" loading="lazy">
                 <h3>Certificate 6</h3>
             </a>
             <!-- Certificate 7 -->
-            <a class="certificate-card" href="certificate7.png" target="_blank">
-                <img src="certificate7.png" alt="Certificate 7" loading="lazy">
+            <a class="certificate-card" href="certificate 7.png" target="_blank">
+                <img src="certificate 7.png" alt="Certificate 7" loading="lazy">
                 <h3>Certificate 7</h3>
             </a>
             <!-- Certificate 8 -->
-            <a class="certificate-card" href="certificate8.png" target="_blank">
-                <img src="certificate8.png" alt="Certificate 8" loading="lazy">
+            <a class="certificate-card" href="certificate 8.png" target="_blank">
+                <img src="certificate 8.png" alt="Certificate 8" loading="lazy">
                 <h3>Certificate 8</h3>
             </a>
             <!-- Certificate 9 -->
-            <a class="certificate-card" href="certificate9.png" target="_blank">
-                <img src="certificate9.png" alt="Certificate 9" loading="lazy">
+            <a class="certificate-card" href="certificate 9.png" target="_blank">
+                <img src="certificate 9.png" alt="Certificate 9" loading="lazy">
                 <h3>Certificate 9</h3>
             </a>
             <!-- Certificate 10 -->
-            <a class="certificate-card" href="certificate10.png" target="_blank">
-                <img src="certificate10.png" alt="Certificate 10" loading="lazy">
+            <a class="certificate-card" href="certificate 10.png" target="_blank">
+                <img src="certificate 10.png" alt="Certificate 10" loading="lazy">
                 <h3>Certificate 10</h3>
             </a>
             <!-- Certificate 11 -->
-            <a class="certificate-card" href="certificate11.png" target="_blank">
-                <img src="certificate11.png" alt="Certificate 11" loading="lazy">
+            <a class="certificate-card" href="certificate 11.png" target="_blank">
+                <img src="certificate 11.png" alt="Certificate 11" loading="lazy">
                 <h3>Certificate 11</h3>
             </a>
             <!-- Certificate 12 -->
-            <a class="certificate-card" href="certificate12.png" target="_blank">
-                <img src="certificate12.png" alt="Certificate 12" loading="lazy">
+            <a class="certificate-card" href="certificate 12.png" target="_blank">
+                <img src="certificate 12.png" alt="Certificate 12" loading="lazy">
                 <h3>Certificate 12</h3>
             </a>
         </div>
