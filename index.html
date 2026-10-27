@@ -1,82 +1,478 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#102a43">
-<meta name="description" content="Ashish Yeshwantkar — Counselor, Trainer and Public Health Professional. Empathy-led counseling, stress management, mental health awareness, professional training and appointment requests.">
-<title>Ashish Yeshwantkar | Counselor &amp; Trainer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ashish Yeshwantkar - Professional Counselling, Emotional Wellbeing, Stress Management and Soft Skills Training.">
+<title>Ashish Yeshwantkar | Counselling & Training</title>
+
 <style>
-:root{--navy:#102a43;--navy2:#164e63;--teal:#0f8b8d;--teal-dark:#087477;--text:#243b53;--muted:#627d98;--page:#f4f7fb;--surface:#fff;--soft:#e7f7f5;--border:#e2e8f0;--shadow:0 12px 32px rgba(16,42,67,.08)}
-body.dark-mode{--text:#e2e8f0;--muted:#b6c5d5;--page:#0b1725;--surface:#142538;--soft:#142f39;--border:#2a4055;--shadow:0 12px 32px rgba(0,0,0,.2)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--page);line-height:1.7;transition:background .2s,color .2s}img{max-width:100%}a{overflow-wrap:anywhere}button{font:inherit;cursor:pointer}.container{width:min(1120px,90%);margin:auto}
-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 5%;color:#fff;background:linear-gradient(120deg,var(--navy),var(--navy2));box-shadow:0 5px 24px #102a4325}.brand{color:#fff;text-decoration:none;flex-shrink:0}.brand h2{margin:0;font-size:21px;line-height:1.3}.brand small{color:#d5e5ef;font-size:12px}nav{display:flex;align-items:center;flex-wrap:wrap;gap:3px}nav a{color:#fff;text-decoration:none;font-size:12px;padding:8px 9px;border-radius:8px}nav a:hover{background:#ffffff20}.theme-toggle{border:1px solid #ffffff55;background:#ffffff12;color:#fff;border-radius:10px;padding:7px 11px}
-.hero{padding:68px 0;background:radial-gradient(circle at 85% 20%,#bcefe8 0,transparent 28%),linear-gradient(135deg,#e7f9f7,#f5f8ff 65%,#e5edff)}.dark-mode .hero{background:radial-gradient(circle at 85% 20%,#174b4c 0,transparent 30%),linear-gradient(135deg,#102a35,#142538 65%,#1a2b45)}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:55px}.hero-badge{display:inline-block;padding:7px 13px;border:1px solid #b9e8e3;border-radius:30px;background:#ffffffc9;color:#087477;font-size:12px;font-weight:bold}.hero h1{margin:20px 0;color:var(--navy);font-size:clamp(36px,5vw,59px);line-height:1.12;letter-spacing:-1.5px}.dark-mode .hero h1{color:#f1f5f9}.hero h1 span{color:var(--teal)}.hero-copy{max-width:650px;color:var(--muted);font-size:16px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;border-radius:10px;border:1px solid transparent;text-decoration:none;font-weight:bold;font-size:13px;color:#fff;background:linear-gradient(135deg,var(--teal),var(--teal-dark));box-shadow:0 5px 14px #0f8b8d25;transition:transform .2s}.btn:hover{transform:translateY(-2px)}.btn.alt{color:var(--navy);background:var(--surface);border-color:var(--border);box-shadow:none}.dark-mode .btn.alt{color:var(--text)}.trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:30px}.trust{border-left:3px solid var(--teal);padding-left:10px}.trust strong{display:block;font-size:13px;color:var(--navy)}.dark-mode .trust strong{color:#f1f5f9}.trust span{display:block;font-size:11px;color:var(--muted)}.hero-visual{max-width:320px;width:100%;justify-self:center}.portrait{display:block;width:100%;height:350px;object-fit:cover;object-position:top;border:7px solid #fff;border-radius:25px;background:#dce8f2;box-shadow:0 20px 50px #102a4325}.hero-note{position:relative;margin:-22px -15px 0 25px;padding:15px;display:flex;flex-direction:column;gap:3px;background:var(--surface);border:1px solid var(--border);border-radius:15px;box-shadow:var(--shadow);font-size:12px}.hero-note strong{color:var(--text);font-size:15px}.hero-note span{color:var(--muted)}
-section{padding:68px 0;scroll-margin-top:80px}.section-head{max-width:720px;margin:0 auto 32px;text-align:center}.eyebrow{color:var(--teal-dark);text-transform:uppercase;font-size:11px;font-weight:bold;letter-spacing:1.8px}section h2{color:var(--text);font-size:clamp(26px,3vw,35px);line-height:1.25;margin:9px 0 14px}.section-head p{margin:0;color:var(--muted)}.soft-section{background:var(--soft)}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:start}.about-copy p{color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{padding:6px 11px;border-radius:30px;background:var(--soft);color:var(--teal-dark);border:1px solid var(--border);font-size:12px;font-weight:bold}.highlight{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow)}.highlight h3{margin-top:0}.highlight p{color:var(--muted)}
-.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:0 0 28px}.filter-btn{padding:9px 14px;border-radius:30px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:12px}.filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{position:relative;min-width:0;padding:23px;background:var(--surface);border:1px solid var(--border);border-radius:17px;box-shadow:0 5px 22px #102a4308;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.card-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:13px;background:var(--soft);font-size:22px;margin-bottom:15px}.card h3{margin:0 0 9px;color:var(--text);font-size:17px;line-height:1.4}.card p{color:var(--muted);font-size:13px;margin:0 0 16px}.card-link{color:var(--teal-dark);text-decoration:none;font-weight:bold;font-size:12px}.badge{position:absolute;top:13px;right:13px;padding:4px 8px;border-radius:30px;color:#087477;background:#dff7f3;font-size:10px;font-weight:bold}
-.impact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.impact{padding:24px 12px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:16px}.impact strong{display:block;color:var(--teal-dark);font-size:19px}.impact span{display:block;color:var(--muted);font-size:12px}.timeline{display:grid;grid-template-columns:1fr 1fr;gap:18px}.timeline .card{border-top:4px solid var(--teal)}
-.certificate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.certificate-card{display:block;min-width:0;padding:12px;border:1px solid var(--border);border-radius:15px;background:var(--surface);text-decoration:none;color:var(--text);box-shadow:0 5px 18px #102a4310;transition:transform .2s}.certificate-card:hover{transform:translateY(-4px)}.certificate-card img{display:block;width:100%;height:190px;object-fit:contain;background:var(--page);border-radius:8px}.certificate-card p{font-size:13px;font-weight:bold;margin:10px 4px 3px}.certificate-card small{color:var(--muted);margin:0 4px 5px;display:block}
-.faq-list{max-width:820px;margin:auto}.faq-list details{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 19px;margin-bottom:11px}.faq-list summary{cursor:pointer;color:var(--text);font-weight:bold}.faq-list details p{color:var(--muted);margin-bottom:0}.appointment-panel{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;padding:30px;border-radius:22px;color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy2))}.appointment-panel h2{color:#fff}.appointment-panel p{color:#d5e5ef}.form-box{min-width:0;background:#fff;border-radius:13px;overflow:hidden;color:#243b53}.form-box iframe{display:block;width:100%;height:850px;border:0;background:#fff}.form-help{padding:0 15px 15px;font-size:12px;color:#627d98}.form-help a{color:#087477;font-weight:bold}
-footer{padding:30px 5%;text-align:center;color:#fff;background:linear-gradient(135deg,#091d32,#164e63)}footer p{margin:5px 0;color:#d5e5ef;font-size:12px}footer a{color:#fff}.floating-book{position:fixed;right:16px;bottom:16px;z-index:90;padding:12px 16px;border-radius:40px;color:#fff;text-decoration:none;font-size:12px;font-weight:bold;background:var(--teal);box-shadow:0 8px 25px #102a4340}
-@media(max-width:850px){header{position:relative;flex-wrap:wrap;padding:14px 5%}nav{width:100%}nav a{padding:7px 8px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero-visual{grid-row:1;max-width:235px}.portrait{height:270px}.about-grid,.appointment-panel{grid-template-columns:1fr}.cards,.certificate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.container{width:90%}.hero{padding:38px 0 45px}.hero h1{font-size:37px}.hero-copy{font-size:14px}section{padding:48px 0}.cards,.certificate-grid,.timeline{grid-template-columns:1fr}.impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:20px}.appointment-panel{padding:18px}.form-box iframe{height:900px}.floating-book{right:12px;bottom:12px}}
+:root {
+  --navy: #13243a;
+  --blue: #2563eb;
+  --teal: #0f766e;
+  --light: #f3f7fb;
+  --white: #ffffff;
+  --text: #243247;
+  --muted: #64748b;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+header {
+  background: var(--navy);
+  color: white;
+  padding: 15px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.brand { font-size: 21px; font-weight: bold; }
+nav { display: flex; flex-wrap: wrap; gap: 14px; }
+nav a { color: white; text-decoration: none; font-size: 14px; }
+nav a:hover { color: #7dd3fc; }
+.hero {
+  background: linear-gradient(135deg, #13243a, #145b75);
+  color: white;
+  padding: 65px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.hero-content { max-width: 650px; }
+.hero h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.2; margin: 0 0 18px; }
+.hero p { font-size: 17px; }
+.profile {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  background: #e2e8f0;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 21px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 7px 7px 7px 0;
+}
+.btn-primary { background: #0f766e; color: white; }
+.btn-light { background: white; color: #13243a; }
+section { padding: 48px 7%; scroll-margin-top: 20px; }
+section h2 { color: var(--navy); font-size: 29px; margin-top: 0; }
+.section-intro { color: var(--muted); max-width: 760px; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 13px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.07);
+  overflow: hidden;
+}
+.card h3 { color: var(--teal); margin-top: 0; }
+.about-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.certificate-card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+}
+.certificate-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #f8fafc;
+  border-radius: 7px;
+}
+.certificate-card h3 {
+  font-size: 16px;
+  text-align: center;
+  margin: 12px 0 4px;
+}
+.certificate-card a {
+  display: block;
+  text-align: center;
+  color: var(--blue);
+  text-decoration: none;
+  padding: 7px;
+}
+.appointment {
+  background: #e8f2f8;
+}
+.form-wrap {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 850px;
+  margin-top: 20px;
+}
+.form-wrap iframe {
+  width: 100%;
+  height: 850px;
+  border: 0;
+}
+.faq-item { margin-bottom: 14px; }
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 28px 6%;
+}
+footer a { color: #7dd3fc; }
+.floating-book {
+  position: fixed;
+  right: 15px;
+  bottom: 18px;
+  z-index: 10;
+  background: #0f766e;
+  color: white;
+  text-decoration: none;
+  padding: 13px 17px;
+  border-radius: 30px;
+  box-shadow: 0 4px 14px #0003;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  header { padding: 15px 5%; }
+  nav { gap: 10px; }
+  .hero { padding: 42px 6%; text-align: center; }
+  .profile { width: 160px; height: 160px; }
+  section { padding: 35px 5%; }
+  .form-wrap iframe { height: 900px; }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<a class="brand" href="#home"><h2>Ashish Yeshwantkar</h2><small>Counselor | Trainer | Public Health</small></a>
-<nav aria-label="Main navigation">
-<a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a href="#faq">FAQ</a><a href="#appointment">Appointment</a>
-<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">☾</button>
-</nav>
+  <div class="brand">Ashish Yeshwantkar</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#appointment">Appointment</a>
+  </nav>
 </header>
+
 <main>
-<section class="hero" id="home"><div class="container hero-grid"><div>
-<span class="hero-badge">✨ Counseling • Training • Personal Growth</span>
-<h1>A safe space to talk, understand and <span>grow.</span></h1>
-<p class="hero-copy">I'm Ashish Yeshwantkar, a counselor, trainer and public health professional. I believe in empathetic listening, respectful communication and helping people move forward with confidence. Through my public health counseling and support work, I have contributed to reaching and supporting more than 10,000 people.</p>
-<div class="actions"><a class="btn" href="#appointment">Request an Appointment →</a><a class="btn alt" href="#about">Know More ↓</a></div>
-<div class="trust-grid"><div class="trust"><strong>Empathy</strong><span>Active Listening</span></div><div class="trust"><strong>Respect</strong><span>Non-judgmental Support</span></div><div class="trust"><strong>Growth</strong><span>Practical Guidance</span></div></div>
-</div><div class="hero-visual"><img class="portrait" src="profile.jpg" alt="Ashish Yeshwantkar" onerror="this.style.display='none'"><div class="hero-note"><strong>Ashish Yeshwantkar</strong><span>Counselor &amp; Trainer</span><span>Public Health Professional</span><span>Learning &amp; Development</span></div></div></div></section>
-<section id="about"><div class="container about-grid"><div class="about-copy"><span class="eyebrow">Get to know me</span><h2>About Me</h2>
-<p>I am a counseling and training professional with experience in public health support, counselor mentoring, communication skills and program facilitation. My approach is built on empathy, active listening, privacy, emotional understanding and treating every individual with dignity.</p>
-<p>Through my public health counseling and support work, I have contributed to reaching and supporting 10,000+ people. I help people explore concerns, understand available information, manage stress and consider constructive next steps. I also support counselor learning and professional development through mentoring and training.</p>
-<p>My areas of professional interest include stress management, emotional intelligence, supportive communication, suicide prevention awareness, counselor mentoring and soft skills training. I aim to create respectful conversations while maintaining appropriate professional boundaries.</p>
-<div class="tags"><span class="tag">Empathy &amp; Active Listening</span><span class="tag">Stress Management</span><span class="tag">Emotional Intelligence</span><span class="tag">Suicide Prevention Awareness</span><span class="tag">Counselor Mentoring</span><span class="tag">Public Health</span></div></div>
-<aside class="highlight"><h3>My Counseling Approach</h3><p><strong>Listen without judgment.</strong> Create room for people to express their concerns with dignity and respect.</p><p><strong>Support practical coping.</strong> Explore helpful next steps and stress-management strategies suited to the person's situation.</p><p><strong>Encourage timely support.</strong> Promote mental health awareness and appropriate professional or crisis support when needed.</p></aside></div></section>
-<section class="soft-section" id="services"><div class="container"><div class="section-head"><span class="eyebrow">How I can help</span><h2>Services &amp; Professional Support</h2><p>Explore counseling support, training and mentoring services.</p></div>
-<div class="filters" aria-label="Filter services"><button class="filter-btn active" data-filter="all" type="button">All Services</button><button class="filter-btn" data-filter="individual" type="button">For Individuals</button><button class="filter-btn" data-filter="organization" type="button">For Organizations</button><button class="filter-btn" data-filter="counselor" type="button">For Counselors</button></div>
-<div class="cards" id="serviceCards">
-<article class="card" data-category="individual"><span class="badge">Featured</span><div class="card-icon">💬</div><h3>Individual Counseling</h3><p>A supportive, non-judgmental conversation to explore concerns and consider practical next steps.</p><a class="card-link" href="#appointment">Request an appointment →</a></article>
-<article class="card" data-category="individual"><div class="card-icon">🌿</div><h3>Stress Management</h3><p>Explore everyday stressors, coping strategies, emotional awareness and practical ways to respond.</p><a class="card-link" href="#appointment">Discuss support →</a></article>
-<article class="card" data-category="individual"><div class="card-icon">🧠</div><h3>Emotional Intelligence</h3><p>Understand emotions, respond thoughtfully and build healthier communication habits.</p><a class="card-link" href="#appointment">Learn more →</a></article>
-<article class="card" data-category="organization"><div class="card-icon">🎯</div><h3>Soft Skills Training</h3><p>Training in communication, interpersonal skills, active listening and professional development.</p><a class="card-link" href="#appointment">Discuss training →</a></article>
-<article class="card" data-category="counselor"><div class="card-icon">🤝</div><h3>Counselor Mentoring</h3><p>Learning support in listening skills, professional communication and counseling practice.</p><a class="card-link" href="#appointment">Discuss mentoring →</a></article>
-<article class="card" data-category="organization"><div class="card-icon">🩺</div><h3>Public Health Support</h3><p>Information, guidance and supportive communication related to public health services.</p><a class="card-link" href="#appointment">Make an inquiry →</a></article>
-<article class="card" data-category="organization"><div class="card-icon">📚</div><h3>Training &amp; Facilitation</h3><p>Structured learning sessions, group facilitation and practical skill-building activities.</p><a class="card-link" href="#appointment">Discuss a workshop →</a></article>
-<article class="card" data-category="individual"><div class="card-icon">🛟</div><h3>Mental Health Awareness</h3><p>Awareness and supportive conversations about seeking help, including suicide prevention awareness.</p><a class="card-link" href="#appointment">Make an inquiry →</a></article>
-</div></div></section>
-<section id="impact"><div class="container"><div class="section-head"><span class="eyebrow">Professional focus</span><h2>Impact Through Learning &amp; Support</h2><p>My work is guided by empathy, practical learning and responsible support.</p></div><div class="impact-grid">
-<div class="impact"><strong>10,000+</strong><span>People reached or supported through public health counseling work</span></div>
-<div class="impact"><strong>Empathy</strong><span>Active and non-judgmental listening</span></div>
-<div class="impact"><strong>Stress Management</strong><span>Coping skills and emotional awareness</span></div>
-<div class="impact"><strong>Suicide Prevention</strong><span>Awareness and supportive communication</span></div>
-</div></div></section>
-<section class="soft-section" id="experience"><div class="container"><div class="section-head"><span class="eyebrow">My professional journey</span><h2>Experience</h2><p>Roles focused on counseling, training, guidance and program support.</p></div><div class="timeline">
-<article class="card"><div class="card-icon">🩺</div><h3>Public Health Counselor / SME / Trainer</h3><p>Experience supporting a NACO-related public health project, counseling support, counselor training, mentoring, quality processes and program facilitation.</p></article>
-<article class="card"><div class="card-icon">🎓</div><h3>Admissions Counselor</h3><p><strong>Kamble Education Sanstha, Kinwat</strong></p><p>July 2016 – June 2019</p><p>Student guidance, communication, admissions support and coordination.</p></article>
-</div></div></section>
-<section id="education"><div class="container"><div class="section-head"><span class="eyebrow">Learning &amp; development</span><h2>Education &amp; Qualifications</h2><p>Academic learning and professional development.</p></div><div class="cards">
-<article class="card"><div class="card-icon">📘</div><h3>Master of Social Work (MSW)</h3><p>Specialization: Rural Development</p><p>Swami Ramanand Teerth Marathwada University</p></article>
-<article class="card"><div class="card-icon">🔬</div><h3>Bachelor of Science (B.Sc.)</h3><p>Physics, Computer Science and Mathematics</p><p>Swami Ramanand Teerth Marathwada University</p></article>
-<article class="card"><div class="card-icon">📜</div><h3>Certificate in Women's Studies</h3><p>One-year certificate program, 2015.</p></article>
-<article class="card"><div class="card-icon">🗣️</div><h3>Training of Trainers (ToT)</h3><p>Training certificate from Alison.</p></article>
-</div></div></section>
-<section class="soft-section" id="certificates"><div class="container"><div class="section-head"><span class="eyebrow">My learning journey</span><h2>Certificates &amp; Achievements</h2><p>Tap any certificate to open the full image. Ensure the matching PNG files are uploaded to the repository root.</p></div><div class="certificate-grid">
-<a class="certificate-card" href="certificate%201.png" target="_blank" rel="noopener"><img src="certificate%201.png" alt="Certificate 1" loading="lazy"><p>Certificate 1</p><small>View full image ↗</small></a>
-<a class="certificate-card" href="certificate%202.png" target="_blank" rel="noopener"><img src="certificate%202.png" alt="Certificate 2" loading="lazy"><p>Certificate 2</p><small>View full image ↗</small></a>
-<a class="certificate-card" href="certificate%203.png" target="_blank" rel="noopener"><img src="certificate%203.png" alt="Certificate 3" loading="lazy"><p>Certificate 3</p><small>View full image ↗</small></a>
-<a class="certificate-card" href="certificate%204.png" target="_blank" rel="noopener"><img src="certificate%204.png" alt="Certificate 4" loading="lazy"><p>Certificate 4</p><small>View full image ↗</small></a>
-<a class="certificate-card" href="certificate%205.png" target="_blank" rel="noopener"><img src="certificate%205.png" alt="Certificate 5" loading="lazy"><p>Certificate 5</p><small>View full image ↗</small></a>
-<a class="certificate-card" href="certificate%206.png" target="_blank" rel="noopener"><img src="certificate%206.png" alt="Certificate 6" loading="lazy"><p>Certificate 6</p><small>View full image ↗</small></a>
-<a class="certificate-card" href=
+<section class="hero">
+  <div class="hero-content">
+    <p>COUNSELLING • TRAINING • EMOTIONAL WELLBEING</p>
+    <h1>Empathy That Listens. Guidance That Empowers.</h1>
+    <p>
+      I am Ashish Yeshwantkar, a counsellor, public health professional
+      and trainer passionate about emotional wellbeing, active listening,
+      stress management and personal development.
+    </p>
+    <p>Supporting people with empathy, dignity and a non-judgmental approach.</p>
+    <a class="btn btn-primary" href="#appointment">Request an Appointment</a>
+    <a class="btn btn-light" href="#services">Explore Services</a>
+  </div>
+  <img class="profile" src="profile.jpg" alt="Ashish Yeshwantkar"
+       onerror="this.style.display='none'">
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-layout">
+    <div>
+      <p>
+        I am a counselling and training professional with a background in
+        Social Work and Rural Development. My work focuses on listening
+        without judgment, helping people navigate stress, and supporting
+        informed decisions about wellbeing and public health.
+      </p>
+      <p>
+        Through public health counselling and related work, I have contributed
+        to reaching and supporting more than 10,000 people. I value empathy,
+        confidentiality, respect and responsible guidance.
+      </p>
+    </div>
+    <div class="card">
+      <h3>My Approach</h3>
+      <p>Empathy and active listening</p>
+      <p>Respectful, non-judgmental communication</p>
+      <p>Stress management and emotional awareness</p>
+      <p>Public health education and responsible referrals</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>My Services</h2>
+  <p class="section-intro">
+    Support and training designed around individual needs. Appointment
+    availability can be discussed through the booking form.
+  </p>
+  <div class="cards">
+    <div class="card">
+      <h3>Personal Counselling</h3>
+      <p>A supportive space to discuss concerns, emotions and everyday challenges.</p>
+    </div>
+    <div class="card">
+      <h3>Stress Management</h3>
+      <p>Practical approaches to understanding stress and developing healthier coping skills.</p>
+    </div>
+    <div class="card">
+      <h3>Emotional Intelligence</h3>
+      <p>Build emotional awareness, self-regulation and healthier communication.</p>
+    </div>
+    <div class="card">
+      <h3>Soft Skills Training</h3>
+      <p>Training in communication, active listening, empathy and interpersonal skills.</p>
+    </div>
+    <div class="card">
+      <h3>Public Health Counselling</h3>
+      <p>Health education, guidance and support to make informed decisions.</p>
+    </div>
+    <div class="card">
+      <h3>Counsellor Mentoring</h3>
+      <p>Learning support for counsellors in communication and counselling practice.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Public Health Counselling & Training</h3>
+      <p>
+        Experience in public health counselling, helpline support,
+        counsellor training, soft skills, mentoring, program facilitation
+        and quality documentation.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Admissions Counselling</h3>
+      <p>
+        Previous experience in admissions counselling, student guidance
+        and communication support.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education & Qualifications</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Master of Social Work (MSW)</h3>
+      <p>Specialization: Rural Development</p>
+      <p>Swami Ramanand Teerth Marathwada University</p>
+    </div>
+    <div class="card">
+      <h3>B.Sc.</h3>
+      <p>Physics, Computer Science and Mathematics</p>
+      <p>Swami Ramanand Teerth Marathwada University</p>
+    </div>
+    <div class="card">
+      <h3>Certificate in Women's Studies</h3>
+      <p>Additional learning in women's studies.</p>
+    </div>
+    <div class="card">
+      <h3>Training of Trainers</h3>
+      <p>Training of Trainers certificate.</p>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>My Certificates</h2>
+  <p class="section-intro">
+    Explore all 12 certificates below. Select a certificate to open its image.
+  </p>
+
+  <div class="certificate-grid">
+
+    <div class="certificate-card">
+      <a href="certificate%201.png" target="_blank">
+        <img src="certificate%201.png" alt="Certificate 1" loading="lazy">
+      </a>
+      <h3>Certificate 1</h3>
+      <a href="certificate%201.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%202.png" target="_blank">
+        <img src="certificate%202.png" alt="Certificate 2" loading="lazy">
+      </a>
+      <h3>Certificate 2</h3>
+      <a href="certificate%202.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%203.png" target="_blank">
+        <img src="certificate%203.png" alt="Certificate 3" loading="lazy">
+      </a>
+      <h3>Certificate 3</h3>
+      <a href="certificate%203.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%204.png" target="_blank">
+        <img src="certificate%204.png" alt="Certificate 4" loading="lazy">
+      </a>
+      <h3>Certificate 4</h3>
+      <a href="certificate%204.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%205.png" target="_blank">
+        <img src="certificate%205.png" alt="Certificate 5" loading="lazy">
+      </a>
+      <h3>Certificate 5</h3>
+      <a href="certificate%205.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%206.png" target="_blank">
+        <img src="certificate%206.png" alt="Certificate 6" loading="lazy">
+      </a>
+      <h3>Certificate 6</h3>
+      <a href="certificate%206.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%207.png" target="_blank">
+        <img src="certificate%207.png" alt="Certificate 7" loading="lazy">
+      </a>
+      <h3>Certificate 7</h3>
+      <a href="certificate%207.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%208.png" target="_blank">
+        <img src="certificate%208.png" alt="Certificate 8" loading="lazy">
+      </a>
+      <h3>Certificate 8</h3>
+      <a href="certificate%208.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%209.png" target="_blank">
+        <img src="certificate%209.png" alt="Certificate 9" loading="lazy">
+      </a>
+      <h3>Certificate 9</h3>
+      <a href="certificate%209.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%2010.png" target="_blank">
+        <img src="certificate%2010.png" alt="Certificate 10" loading="lazy">
+      </a>
+      <h3>Certificate 10</h3>
+      <a href="certificate%2010.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%2011.png" target="_blank">
+        <img src="certificate%2011.png" alt="Certificate 11" loading="lazy">
+      </a>
+      <h3>Certificate 11</h3>
+      <a href="certificate%2011.png" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="certificate%2012.png" target="_blank">
+        <img src="certificate%2012.png" alt="Certificate 12" loading="lazy">
+      </a>
+      <h3>Certificate 12</h3>
+      <a href="certificate%2012.png" target="_blank">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="card faq-item">
+    <h3>How do I request an appointment?</h3>
+    <p>Complete the Google Appointment Form in the section below.</p>
+  </div>
+  <div class="card faq-item">
+    <h3>Which languages can I request?</h3>
+    <p>You can indicate your preferred language in the appointment form, subject to availability.</p>
+  </div>
+  <div class="card faq-item">
+    <h3>Is this an emergency service?</h3>
+    <p>No. For immediate danger or a mental health emergency, contact local emergency services or a qualified professional.</p>
+  </div>
+</section>
+
+<section id="appointment" class="appointment">
+  <h2>Request an Appointment</h2>
+  <p>
+    Use the form below to submit your appointment request. Fill in the
+    details requested by Google Forms.
+  </p>
+
+  <a class="btn btn-primary"
+     href="https://docs.google.com/forms/d/e/1FAIpQLScqI0tx2ZifD4GqpyWd3D9wpJzQHvox6NPIreYnHRAnuYeYxQ/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    Open Appointment Form
+  </a>
+
+  <div class="form-wrap">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScqI0tx2ZifD4GqpyWd3D9wpJzQHvox6NPIreYnHRAnuYeYxQ/viewform?embedded=true"
+      title="Google Appointment Form"
+      loading="lazy">
+      Loading…
+    </iframe>
+  </div>
+
+  <p>
+    If the form does not display inside this page,
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScqI0tx2ZifD4GqpyWd3D9wpJzQHvox6NPIreYnHRAnuYeYxQ/viewform?usp=dialog"
+       target="_blank" rel="noopener">open the appointment form directly here</a>.
+  </p>
+</section>
+</main>
+
+<footer>
+  <p><strong>Ashish Yeshwantkar</strong></p>
+  <p>Counselling • Public Health • Training • Emotional Wellbeing</p>
+  <p>Empathy, respect and responsible support.</p>
+  <p>© <span id="year"></span> Ashish Yeshwantkar</p>
+</footer>
+
+<a class="floating-book" href="#appointment">Book Appointment</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
