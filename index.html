@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio + Appointment</title>
+  <title>Ashish Yeshwantkar | Portfolio + Appointment</title>
   <style>
     :root {
       --bg: #edf3f5;
@@ -49,7 +49,6 @@
       border: 1px solid rgba(0,0,0,0.08);
     }
 
-    /* top status bar */
     .status-bar {
       height: 78px;
       background: #05070d;
@@ -105,12 +104,11 @@
     .battery::before {
       content: "";
       position: absolute;
-      inset: 2px 2px 2px 2px;
+      inset: 2px;
       background: #80e27d;
       border-radius: 2px;
     }
 
-    /* site header */
     .header {
       background: linear-gradient(180deg, #0d1b2c 0%, #0e233e 55%, #102b4d 100%);
       padding: 14px 18px 20px;
@@ -184,7 +182,6 @@
       cursor: pointer;
     }
 
-    /* hero */
     .hero {
       background: linear-gradient(135deg, rgba(15, 32, 52, 1), rgba(19, 52, 73, 0.97));
       padding: 20px 20px 18px;
@@ -300,7 +297,6 @@
       height: 330px;
     }
 
-    /* about section */
     .about {
       background: #eaf3f6;
       padding: 22px 18px 14px;
@@ -340,7 +336,6 @@
       color: #46596b;
     }
 
-    /* certificates */
     .certificates {
       background: #eaf3f6;
       padding: 18px 18px 20px;
@@ -348,7 +343,7 @@
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
       margin-top: 10px;
     }
@@ -357,37 +352,26 @@
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 18px;
-      padding: 16px 12px;
+      overflow: hidden;
       box-shadow: 0 10px 18px rgba(20, 38, 61, 0.04);
     }
 
-    .cert-icon {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #f5d27c, #d5a139);
-      color: #17375c;
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 12px;
+    .cert-card img {
+      width: 100%;
+      display: block;
+      height: 180px;
+      object-fit: cover;
+      background: #eef4f8;
     }
 
     .cert-card h4 {
-      margin: 0 0 8px;
-      font-size: 15px;
-      color: #183558;
-    }
-
-    .cert-card p {
       margin: 0;
-      font-size: 12px;
-      line-height: 1.5;
-      color: var(--muted);
+      padding: 12px 10px 10px;
+      font-size: 13px;
+      color: #183558;
+      text-align: center;
     }
 
-    /* appointment form */
     .appointment-block {
       background: #eaf3f6;
       padding: 22px 18px 36px;
@@ -460,6 +444,17 @@
       cursor: pointer;
     }
 
+    .form-status {
+      display: none;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #1a6b4f;
+      background: #e7f9ef;
+      border: 1px solid #bfe8d2;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
     @media (max-width: 460px) {
       .phone {
         width: 100%;
@@ -497,7 +492,7 @@
       <div class="top-strip">
         <div class="brand">
           <span class="brand-mark"></span>
-          <span>Abhishek Yeshwantkar</span>
+          <span>Ashish Yeshwantkar</span>
         </div>
         <div class="site-icon">◌</div>
       </div>
@@ -505,10 +500,10 @@
       <nav class="nav">
         <div class="nav-left">
           <span class="nav-avatar"></span>
-          <span>Abhishek Yeshwantkar</span>
+          <span>Ashish Yeshwantkar</span>
         </div>
         <div class="nav-right">
-          <button>Appointment</button>
+          <button type="button" data-scroll-to="appointment">Appointment</button>
         </div>
       </nav>
     </header>
@@ -519,13 +514,13 @@
       <h1>A space that listens. Guidance that empowers.</h1>
 
       <div class="sub">
-        I am Abhishek Yeshwantkar, a counsellor and training professional committed to
+        I am Ashish Yeshwantkar, a counsellor and training professional committed to
         emotional wellbeing, mental health awareness, stress management and personal growth.
       </div>
 
       <div class="cta-row">
-        <button class="primary-btn">Request an Appointment</button>
-        <button class="secondary-btn">Explore Services</button>
+        <button type="button" class="primary-btn" data-scroll-to="appointment">Request an Appointment</button>
+        <button type="button" class="secondary-btn">Explore Services</button>
       </div>
 
       <div class="stats">
@@ -545,7 +540,7 @@
 
       <div class="portrait-wrap">
         <div class="portrait">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Profile pic" />
+          <img src="profile.jpg" alt="Ashish Yeshwantkar profile picture" />
         </div>
       </div>
     </section>
@@ -574,49 +569,80 @@
 
       <div class="cert-grid">
         <div class="cert-card">
-          <div class="cert-icon">✓</div>
-          <h4>Certified Life Coach</h4>
-          <p>International Coaching Institute</p>
+          <img src="certificate%201.png" alt="Certificate 1" />
+          <h4>Certificate 1</h4>
         </div>
-
         <div class="cert-card">
-          <div class="cert-icon">✓</div>
-          <h4>Mental Health Awareness</h4>
-          <p>Wellbeing and Emotional Support</p>
+          <img src="certificate%202.png" alt="Certificate 2" />
+          <h4>Certificate 2</h4>
         </div>
-
         <div class="cert-card">
-          <div class="cert-icon">✓</div>
-          <h4>Stress Management Trainer</h4>
-          <p>Professional Development Program</p>
+          <img src="certificate%203.png" alt="Certificate 3" />
+          <h4>Certificate 3</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%204.png" alt="Certificate 4" />
+          <h4>Certificate 4</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%205.png" alt="Certificate 5" />
+          <h4>Certificate 5</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%206.png" alt="Certificate 6" />
+          <h4>Certificate 6</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%207.png" alt="Certificate 7" />
+          <h4>Certificate 7</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%208.png" alt="Certificate 8" />
+          <h4>Certificate 8</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%209.png" alt="Certificate 9" />
+          <h4>Certificate 9</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%2010.png" alt="Certificate 10" />
+          <h4>Certificate 10</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%2011.png" alt="Certificate 11" />
+          <h4>Certificate 11</h4>
+        </div>
+        <div class="cert-card">
+          <img src="certificate%2012.png" alt="Certificate 12" />
+          <h4>Certificate 12</h4>
         </div>
       </div>
     </section>
 
-    <section class="appointment-block">
+    <section class="appointment-block" id="appointment">
       <div class="appointment-box">
         <h3>Book an Appointment</h3>
 
-        <form>
+        <form id="appointmentForm">
           <div class="form-grid">
             <label class="field">
               <span>Full Name</span>
-              <input type="text" placeholder="Your name" />
+              <input type="text" id="fullName" placeholder="Your name" required />
             </label>
 
             <label class="field">
               <span>Email</span>
-              <input type="email" placeholder="you@example.com" />
+              <input type="email" placeholder="you@example.com" required />
             </label>
 
             <label class="field">
               <span>Phone</span>
-              <input type="tel" placeholder="+91 98765 43210" />
+              <input type="tel" placeholder="+91 98765 43210" required />
             </label>
 
             <label class="field">
               <span>Service</span>
-              <select>
+              <select required>
                 <option>Individual Counselling</option>
                 <option>Career Guidance</option>
                 <option>Stress Management</option>
@@ -626,17 +652,17 @@
 
             <label class="field">
               <span>Date</span>
-              <input type="date" />
+              <input type="date" required />
             </label>
 
             <label class="field">
               <span>Time</span>
-              <input type="time" />
+              <input type="time" required />
             </label>
 
             <label class="field full">
               <span>Message</span>
-              <textarea placeholder="Tell us about your concerns or goals..."></textarea>
+              <textarea placeholder="Tell us about your concerns or goals..." required></textarea>
             </label>
           </div>
 
@@ -644,8 +670,34 @@
             <button type="submit" class="submit-btn">Submit Request</button>
           </div>
         </form>
+
+        <div id="formStatus" class="form-status" aria-live="polite"></div>
       </div>
     </section>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const appointmentButtons = document.querySelectorAll('[data-scroll-to="appointment"]');
+      const target = document.getElementById('appointment');
+
+      appointmentButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      const form = document.getElementById('appointmentForm');
+      const status = document.getElementById('formStatus');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const name = document.getElementById('fullName').value.trim() || 'Client';
+        status.textContent = 'Thank you, ' + name + '. Your appointment request has been received.';
+        status.style.display = 'block';
+        form.reset();
+      });
+    });
+  </script>
 </body>
 </html>
