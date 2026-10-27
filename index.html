@@ -21,6 +21,8 @@
       --success-bg: #eafaf2;
       --success-text: #136f46;
       --footer-bg: #081d2f;
+      --soft-blue: #edf4ff;
+      --warm: #fff4d8;
     }
 
     * { box-sizing: border-box; }
@@ -47,6 +49,9 @@
       box-shadow: var(--shadow);
       color: white;
       padding: 18px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .topbar-inner {
@@ -107,7 +112,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.4fr 0.9fr;
+      grid-template-columns: 1.45fr 0.9fr;
       gap: 30px;
       align-items: center;
     }
@@ -127,17 +132,17 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.3rem, 4vw, 4rem);
+      font-size: clamp(2.5rem, 4vw, 4.2rem);
       line-height: 1.08;
       letter-spacing: -0.05em;
     }
 
     .subtext {
       margin-top: 18px;
-      font-size: 1.04rem;
+      font-size: 1.06rem;
       line-height: 1.8;
       color: rgba(255,255,255,0.8);
-      max-width: 620px;
+      max-width: 630px;
     }
 
     .cta-row {
@@ -155,6 +160,9 @@
       font-size: 14px;
       cursor: pointer;
       transition: transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .btn:hover { transform: translateY(-1px); }
@@ -399,6 +407,87 @@
       color: var(--muted);
     }
 
+    .process {
+      margin-top: 32px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .process-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 18px;
+      position: relative;
+      box-shadow: 0 10px 18px rgba(20,38,61,0.04);
+    }
+
+    .process-number {
+      position: absolute;
+      right: 18px;
+      top: 16px;
+      font-size: 2rem;
+      font-weight: 800;
+      color: rgba(13,36,67,0.08);
+    }
+
+    .process-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.08rem;
+      color: var(--navy);
+      padding-right: 28px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
+    .testimonials {
+      margin-top: 32px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 18px rgba(20,38,61,0.04);
+      padding: 20px 18px;
+    }
+
+    .stars {
+      color: #f5b642;
+      letter-spacing: 0.14em;
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-card p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 0.96rem;
+    }
+
+    .testimonial-card strong {
+      display: block;
+      margin-top: 16px;
+      color: var(--navy);
+      font-size: 0.92rem;
+    }
+
     .certs { margin-top: 30px; }
 
     .cert-grid {
@@ -545,6 +634,27 @@
       font-weight: 700;
     }
 
+    .floating-cta {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 25;
+    }
+
+    .floating-cta a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25d366, #0dbf5d);
+      color: white;
+      box-shadow: 0 14px 24px rgba(22, 170, 90, 0.35);
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+
     .footer {
       background: var(--footer-bg);
       color: rgba(255,255,255,0.8);
@@ -564,7 +674,9 @@
       }
       .service-grid,
       .cert-grid,
-      .highlights {
+      .highlights,
+      .testimonial-grid,
+      .process-grid {
         grid-template-columns: repeat(2, minmax(0,1fr));
       }
     }
@@ -573,9 +685,10 @@
       .page { width: min(100%, calc(100% - 16px)); }
       .topbar, .hero, .content { padding-left: 16px; padding-right: 16px; }
       .nav { width: 100%; justify-content: flex-start; }
-      .form-grid, .service-grid, .cert-grid, .highlights { grid-template-columns: 1fr; }
+      .form-grid, .service-grid, .cert-grid, .highlights, .testimonial-grid, .process-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr; }
       .profile-card img { height: 330px; }
+      .floating-cta { right: 14px; bottom: 14px; }
     }
   </style>
 </head>
@@ -708,6 +821,52 @@
         </div>
       </section>
 
+      <section class="process">
+        <div class="section-tag">How It Works</div>
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-number">1</div>
+            <h3>Share Your Need</h3>
+            <p>Start with a simple conversation about what you are feeling, facing, or trying to improve.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">2</div>
+            <h3>Build a Safe Plan</h3>
+            <p>We create a supportive path with clarity, empathy, and practical goal-setting.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">3</div>
+            <h3>Move Forward</h3>
+            <p>With guided support and consistent action, you can feel more confident and balanced.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="section-tag">Client Feedback</div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“The guidance was calm, thoughtful, and genuinely helpful. It made me feel heard and more confident about my next steps.”</p>
+            <strong>— Client</strong>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“The support I received helped me manage stress in a practical way and gave me clarity during a difficult phase.”</p>
+            <strong>— Client</strong>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“A compassionate and professional experience that felt personal, respectful, and empowering from the start.”</p>
+            <strong>— Client</strong>
+          </div>
+        </div>
+      </section>
+
       <section class="certs" id="certificates">
         <div class="section-tag">Certificates</div>
         <div class="cert-grid">
@@ -795,6 +954,10 @@
     <footer class="footer">
       <div><strong>Ashish Yeshwantkar</strong> | Counsellor & Training Professional</div>
     </footer>
+  </div>
+
+  <div class="floating-cta" aria-label="Book session">
+    <a href="#appointment" title="Book session">✆</a>
   </div>
 
   <script>
