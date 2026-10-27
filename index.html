@@ -3,54 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashish Yeshwantkar | Counsellor & Trainer</title>
+  <title>Ashish Yeshwantkar | Counselling & Training</title>
   <style>
     :root {
-      --bg: #eef5f7;
+      --bg: #edf5f7;
       --navy: #0d2443;
-      --navy-2: #13355d;
+      --navy-2: #12365d;
       --blue: #2d7ef5;
-      --gold: #f0c56d;
-      --gold-dark: #d8992f;
+      --gold: #f4d387;
+      --gold-2: #d49f34;
       --card: #ffffff;
-      --muted: #5d6f7d;
+      --muted: #596d7d;
       --line: rgba(19, 53, 93, 0.12);
-      --shadow: 0 18px 30px rgba(15, 35, 60, 0.12);
+      --shadow: 0 20px 35px rgba(15, 35, 60, 0.12);
       --success-bg: #eafaf2;
-      --success-text: #176c42;
+      --success-text: #136f46;
+      --footer-bg: #081d2f;
     }
 
     * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--navy);
     }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
 
     .page {
-      width: min(1200px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 24px));
       margin: 0 auto;
-      padding: 24px 0 40px;
+      padding: 22px 0 40px;
     }
 
     .topbar {
-      background: linear-gradient(135deg, #071b2d, #123055 60%, #163d68);
+      background: linear-gradient(135deg, #081d2f, #12365d 60%, #183e67);
       border-radius: 20px 20px 0 0;
       box-shadow: var(--shadow);
       color: white;
@@ -70,7 +59,7 @@
       align-items: center;
       gap: 12px;
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.02em;
     }
 
@@ -78,19 +67,18 @@
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #f7d985, #cd972d);
+      background: linear-gradient(135deg, #f7d985, #d6992f);
       box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
-    .nav a,
-    .nav button {
+    .nav a, .nav button {
       border: none;
       background: rgba(255,255,255,0.06);
       color: white;
@@ -102,7 +90,7 @@
     }
 
     .nav .primary {
-      background: linear-gradient(135deg, #66b0ff, #3c7ef7);
+      background: linear-gradient(135deg, #63aefd, #387ef7);
       color: white;
     }
 
@@ -116,7 +104,7 @@
     .hero-grid {
       display: grid;
       grid-template-columns: 1.35fr 0.95fr;
-      gap: 28px;
+      gap: 30px;
       align-items: center;
     }
 
@@ -135,9 +123,9 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.1rem, 3vw, 4rem);
-      line-height: 1.1;
-      letter-spacing: -0.04em;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.05em;
     }
 
     .subtext {
@@ -165,9 +153,7 @@
       transition: transform 0.2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       background: linear-gradient(135deg, #f7d684, #e0a64a);
@@ -183,7 +169,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 12px;
       margin-top: 28px;
       max-width: 560px;
@@ -199,7 +185,7 @@
 
     .stat-box strong {
       display: block;
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       margin-bottom: 6px;
     }
 
@@ -207,7 +193,7 @@
       font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.72);
+      color: rgba(255,255,255,0.74);
     }
 
     .profile-card {
@@ -250,12 +236,12 @@
       border: 1px solid var(--line);
       border-radius: 22px;
       padding: 26px 22px;
-      box-shadow: 0 12px 20px rgba(18, 36, 58, 0.03);
+      box-shadow: 0 12px 20px rgba(18,36,58,0.03);
     }
 
     .about-box h3 {
       margin: 0 0 14px;
-      font-size: clamp(1.5rem, 2vw, 2.2rem);
+      font-size: clamp(1.6rem, 2vw, 2.3rem);
       color: var(--navy);
     }
 
@@ -266,13 +252,11 @@
       font-size: 1rem;
     }
 
-    .certs {
-      margin-top: 28px;
-    }
+    .certs { margin-top: 28px; }
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 18px;
     }
 
@@ -281,7 +265,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 10px 18px rgba(20, 38, 61, 0.04);
+      box-shadow: 0 10px 18px rgba(20,38,61,0.04);
     }
 
     .cert-card img {
@@ -307,19 +291,19 @@
       background: white;
       border: 1px solid var(--line);
       border-radius: 22px;
-      box-shadow: 0 12px 21px rgba(18, 36, 58, 0.04);
+      box-shadow: 0 12px 21px rgba(18,36,58,0.04);
       padding: 24px 22px;
     }
 
     .appointment-box h3 {
       margin: 0 0 16px;
-      font-size: clamp(1.6rem, 2vw, 2.3rem);
+      font-size: clamp(1.7rem, 2vw, 2.4rem);
       color: var(--navy);
     }
 
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0,1fr));
       gap: 14px;
     }
 
@@ -350,9 +334,7 @@
       resize: vertical;
     }
 
-    .full {
-      grid-column: 1 / -1;
-    }
+    .full { grid-column: 1 / -1; }
 
     .submit-row {
       margin-top: 16px;
@@ -382,45 +364,29 @@
       font-weight: 700;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
+    .footer {
+      background: var(--footer-bg);
+      color: rgba(255,255,255,0.8);
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      border-radius: 0 0 20px 20px;
+      text-align: center;
+    }
 
-      .cert-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    .footer strong { color: white; }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
 
     @media (max-width: 620px) {
-      .page {
-        width: min(100%, calc(100% - 16px));
-      }
-
-      .topbar,
-      .hero,
-      .content {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .nav {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .form-grid,
-      .cert-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .profile-card img {
-        height: 330px;
-      }
+      .page { width: min(100%, calc(100% - 16px)); }
+      .topbar, .hero, .content { padding-left: 16px; padding-right: 16px; }
+      .nav { width: 100%; justify-content: flex-start; }
+      .form-grid, .cert-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .profile-card img { height: 330px; }
     }
   </style>
 </head>
@@ -484,14 +450,14 @@
         <div class="about-box">
           <h3>Compassionate support for real life challenges.</h3>
           <p>
-            I am a counselling and training professional with experience in emotional wellbeing, public health
-            support, social work and professional guidance. I believe in helping people understand themselves
-            more deeply, navigate stress with clarity and build resilience through practical support.
+            I am a counselling and training professional with experience in emotional wellbeing, public health support,
+            social work and professional guidance. I believe in helping people understand themselves more deeply,
+            navigate stress with clarity and build resilience through practical support.
           </p>
           <p>
-            My work focuses on creating safe, respectful and non-judgmental spaces where clients can reflect,
-            heal and grow. Through counselling sessions, training and support activities, I aim to encourage
-            healthier choices, emotional balance and personal growth.
+            My work focuses on creating safe, respectful and non-judgmental spaces where clients can reflect, heal and grow.
+            Through counselling sessions, training and support activities, I aim to encourage healthier choices,
+            emotional balance and personal growth.
           </p>
         </div>
       </section>
@@ -570,6 +536,10 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div><strong>Ashish Yeshwantkar</strong> | Counsellor & Trainer</div>
+    </footer>
   </div>
 
   <script>
@@ -585,14 +555,15 @@
 
       const form = document.getElementById('appointmentForm');
       const status = document.getElementById('formStatus');
-
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const name = document.getElementById('fullName').value.trim() || 'Client';
-        status.textContent = 'Thank you, ' + name + '. Your appointment request has been received.';
-        status.style.display = 'block';
-        form.reset();
-      });
+      if (form && status) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          const name = document.getElementById('fullName').value.trim() || 'Client';
+          status.textContent = 'Thank you, ' + name + '. Your appointment request has been received.';
+          status.style.display = 'block';
+          form.reset();
+        });
+      }
     });
   </script>
 </body>
