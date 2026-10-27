@@ -32,268 +32,388 @@ body.dark-mode {
   --shadow:0 12px 32px rgba(0,0,0,.2);
 }
 * { box-sizing:border-box; }
-html { scroll-behavior:smooth; scroll-padding-top:90px; }
+html { scroll-behavior:smooth; scroll-padding-top:100px; }
 body {
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
   color:var(--text);
   background:var(--page);
   line-height:1.7;
-  transition:background .25s,color .25s;
 }
 a { overflow-wrap:anywhere; }
-button,input,select,textarea { font:inherit; }
-button,a { -webkit-tap-highlight-color:transparent; }
+button { font:inherit; cursor:pointer; }
 img { max-width:100%; }
-.container { width:min(1120px,88%); margin:auto; }
+.container { width:min(1120px,90%); margin:auto; }
+section { padding:76px 0; scroll-margin-top:90px; }
+.soft-section { background:var(--soft); }
+.white-section { background:var(--surface); }
 
+/* Header */
 header {
-  position:sticky; top:0; z-index:100;
-  display:flex; align-items:center; justify-content:space-between;
-  gap:18px; flex-wrap:wrap;
-  padding:15px 6%;
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  padding:14px 5%;
   color:white;
   background:linear-gradient(120deg,var(--navy),var(--navy2));
   box-shadow:0 5px 24px #102a4325;
 }
-.brand { text-decoration:none; color:white; }
-.brand h2 { margin:0; font-size:22px; line-height:1.3; }
+.brand { color:white; text-decoration:none; }
+.brand h2 { margin:0; font-size:21px; line-height:1.35; }
 .brand small { color:#d5e5ef; font-size:12px; }
-nav { display:flex; align-items:center; flex-wrap:wrap; gap:5px; }
+nav { display:flex; align-items:center; flex-wrap:wrap; gap:4px; }
 nav a {
-  color:white; text-decoration:none; font-size:13px;
-  padding:8px 10px; border-radius:8px;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  padding:8px 9px;
+  border-radius:8px;
 }
 nav a:hover { background:#ffffff20; }
 .theme-toggle {
-  border:1px solid #ffffff55; background:#ffffff12; color:white;
-  border-radius:10px; padding:8px 11px; cursor:pointer;
+  border:1px solid #ffffff55;
+  background:#ffffff12;
+  color:white;
+  border-radius:10px;
+  padding:7px 11px;
 }
 
+/* Hero */
 .hero {
-  position:relative; overflow:hidden;
+  padding:75px 0;
   background:
     radial-gradient(circle at 85% 20%,#bcefe8 0,transparent 28%),
     linear-gradient(135deg,#e7f9f7,#f5f8ff 65%,#e5edff);
-  padding:72px 0;
 }
 .dark-mode .hero {
-  background:radial-gradient(circle at 85% 20%,#174b4c 0,transparent 30%),
-             linear-gradient(135deg,#102a35,#142538 65%,#1a2b45);
+  background:
+    radial-gradient(circle at 85% 20%,#174b4c 0,transparent 30%),
+    linear-gradient(135deg,#102a35,#142538 65%,#1a2b45);
 }
 .hero-grid {
-  display:grid; grid-template-columns:1.35fr .65fr;
-  align-items:center; gap:60px;
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  align-items:center;
+  gap:55px;
 }
 .hero-badge {
-  display:inline-block; padding:8px 14px;
-  border:1px solid #b9e8e3; border-radius:30px;
-  background:#ffffffc9; color:#087477;
-  font-size:12px; font-weight:bold;
+  display:inline-block;
+  padding:7px 13px;
+  border:1px solid #b9e8e3;
+  border-radius:30px;
+  background:#ffffffd9;
+  color:#087477;
+  font-size:12px;
+  font-weight:bold;
 }
 .hero h1 {
-  margin:20px 0; color:var(--navy);
-  font-size:clamp(36px,5vw,60px); line-height:1.1;
-  letter-spacing:-1.5px;
+  margin:20px 0;
+  color:var(--navy);
+  font-size:clamp(36px,5vw,59px);
+  line-height:1.12;
+  letter-spacing:-1.4px;
 }
 .dark-mode .hero h1 { color:#f1f5f9; }
 .hero h1 span { color:var(--teal); }
-.hero-copy { max-width:640px; color:var(--muted); font-size:17px; }
-.hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.hero-copy { max-width:650px; color:var(--muted); font-size:16px; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:25px; }
 .btn {
-  display:inline-flex; align-items:center; justify-content:center;
-  gap:8px; padding:13px 20px; border-radius:10px;
-  border:1px solid transparent; text-decoration:none;
-  font-weight:bold; font-size:14px; cursor:pointer;
-  color:white; background:linear-gradient(135deg,var(--teal),var(--teal-dark));
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:10px;
+  border:1px solid transparent;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:13px;
+  color:white;
+  background:linear-gradient(135deg,var(--teal),var(--teal-dark));
   box-shadow:0 5px 14px #0f8b8d25;
-  transition:transform .2s,box-shadow .2s;
 }
-.btn:hover { transform:translateY(-2px); box-shadow:0 9px 20px #0f8b8d35; }
 .btn.alt {
-  color:var(--navy); background:var(--surface);
-  border-color:var(--border); box-shadow:none;
+  color:var(--navy);
+  background:var(--surface);
+  border-color:var(--border);
+  box-shadow:none;
 }
 .dark-mode .btn.alt { color:var(--text); }
 .hero-trust {
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px; margin-top:34px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:13px;
+  margin-top:30px;
 }
-.trust-item { border-left:3px solid var(--teal); padding-left:11px; }
-.trust-item strong { display:block; color:var(--navy); font-size:14px; }
+.trust-item { border-left:3px solid var(--teal); padding-left:10px; }
+.trust-item strong { display:block; color:var(--navy); font-size:13px; }
 .dark-mode .trust-item strong { color:#f1f5f9; }
-.trust-item span { display:block; color:var(--muted); font-size:12px; }
-.hero-visual { position:relative; width:100%; max-width:320px; justify-self:center; }
+.trust-item span { display:block; color:var(--muted); font-size:11px; }
+.hero-visual { max-width:320px; width:100%; justify-self:center; }
 .portrait {
-  display:block; width:100%; height:360px; object-fit:cover;
-  object-position:top; border:7px solid white; border-radius:28px;
-  background:#dce8f2; box-shadow:0 20px 50px #102a4325;
+  display:block;
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  object-position:top;
+  border:7px solid white;
+  border-radius:25px;
+  background:#dce8f2;
+  box-shadow:0 20px 50px #102a4325;
 }
 .hero-note {
-  position:relative; margin:-25px -22px 0 25px; padding:17px;
-  display:flex; flex-direction:column; gap:4px;
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:16px; box-shadow:var(--shadow); font-size:13px;
+  margin:-20px -15px 0 20px;
+  position:relative;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:15px;
+  box-shadow:var(--shadow);
+  font-size:12px;
 }
-.hero-note strong { color:var(--text); font-size:16px; }
+.hero-note strong { color:var(--text); font-size:15px; }
 .hero-note span { color:var(--muted); }
 
-section { padding:70px 0; scroll-margin-top:85px; }
+/* Section headings */
 .section-head { max-width:720px; margin:0 auto 35px; text-align:center; }
 .eyebrow {
-  color:var(--teal-dark); text-transform:uppercase;
-  font-size:12px; font-weight:bold; letter-spacing:1.8px;
+  color:var(--teal-dark);
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:1.7px;
 }
 section h2 {
-  color:var(--text); font-size:clamp(27px,3vw,36px);
-  line-height:1.25; margin:9px 0 15px; letter-spacing:-.6px;
+  color:var(--text);
+  font-size:clamp(27px,3vw,36px);
+  line-height:1.3;
+  margin:9px 0 14px;
+  letter-spacing:-.5px;
 }
 .section-head p { margin:0; color:var(--muted); }
-.soft-section { background:var(--soft); }
-.white-section { background:var(--surface); }
-.about-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:35px; align-items:start; }
-.about-copy p { color:var(--muted); }
+.section-copy { color:var(--muted); }
+
+/* About */
+.about-grid {
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:35px;
+  align-items:start;
+}
 .tag-list { display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; }
 .tag {
-  padding:7px 12px; border-radius:30px;
-  background:var(--soft); color:var(--teal-dark);
-  border:1px solid var(--border); font-size:12px; font-weight:bold;
+  padding:7px 12px;
+  border-radius:30px;
+  background:var(--soft);
+  color:var(--teal-dark);
+  border:1px solid var(--border);
+  font-size:12px;
+  font-weight:bold;
 }
 .about-highlight {
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:20px; padding:25px; box-shadow:var(--shadow);
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:25px;
+  box-shadow:var(--shadow);
 }
-.about-highlight h3 { margin-top:0; color:var(--text); }
-.about-highlight p { color:var(--muted); margin-bottom:0; }
+.about-highlight h3 { margin-top:0; }
+.about-highlight p { color:var(--muted); }
 
+/* Cards and filters */
 .filter-tabs {
-  display:flex; flex-wrap:wrap; justify-content:center;
-  gap:9px; margin:0 0 28px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:9px;
+  margin:0 0 28px;
 }
 .filter-tab {
-  padding:9px 15px; border-radius:30px; cursor:pointer;
-  border:1px solid var(--border); background:var(--surface);
-  color:var(--text); font-size:13px;
+  padding:9px 14px;
+  border-radius:30px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  font-size:12px;
 }
 .filter-tab.active { background:var(--navy); color:white; border-color:var(--navy); }
 .cards {
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:20px;
 }
 .card {
-  position:relative; min-width:0; padding:25px;
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:18px; box-shadow:0 5px 22px #102a4308;
-  transition:transform .25s,box-shadow .25s;
+  min-width:0;
+  padding:24px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 5px 22px #102a4308;
 }
-.card:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
 .card-icon {
-  display:grid; place-items:center; width:48px; height:48px;
-  border-radius:14px; background:var(--soft); font-size:23px;
-  margin-bottom:16px;
+  display:grid;
+  place-items:center;
+  width:47px;
+  height:47px;
+  border-radius:14px;
+  background:var(--soft);
+  font-size:23px;
+  margin-bottom:15px;
 }
-.card h3 { margin:0 0 10px; color:var(--text); font-size:18px; line-height:1.4; }
-.card p { color:var(--muted); font-size:14px; margin:0 0 18px; }
-.card-link { color:var(--teal-dark); text-decoration:none; font-weight:bold; font-size:13px; }
+.card h3 { margin:0 0 9px; font-size:17px; line-height:1.4; }
+.card p { color:var(--muted); font-size:13px; margin:0 0 15px; }
+.card-link { color:var(--teal-dark); text-decoration:none; font-weight:bold; font-size:12px; }
 .popular-badge {
-  position:absolute; top:15px; right:15px;
-  padding:5px 9px; border-radius:30px;
-  color:#087477; background:#dff7f3; font-size:10px; font-weight:bold;
+  display:inline-block;
+  padding:4px 9px;
+  border-radius:30px;
+  color:#087477;
+  background:#dff7f3;
+  font-size:10px;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
+/* Professional focus */
 .impact-grid {
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
 }
 .impact {
-  padding:26px 15px; text-align:center;
-  background:var(--surface); border:1px solid var(--border); border-radius:18px;
+  padding:25px 15px;
+  text-align:center;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:17px;
 }
-.impact strong { display:block; color:var(--teal-dark); font-size:20px; }
-.impact span { display:block; color:var(--muted); font-size:13px; }
+.impact strong { display:block; color:var(--teal-dark); font-size:19px; }
+.impact span { display:block; color:var(--muted); font-size:12px; }
 
+/* Experience */
 .timeline { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 .timeline .card { border-top:4px solid var(--teal); }
 
+/* Certificates */
 .certificate-grid {
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
 }
 .certificate-card {
-  display:block; min-width:0; padding:12px;
-  border:1px solid var(--border); border-radius:15px;
-  background:var(--surface); text-decoration:none; color:var(--text);
-  box-shadow:0 5px 18px #102a4310; transition:transform .2s;
+  display:block;
+  min-width:0;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:15px;
+  background:var(--surface);
+  text-decoration:none;
+  color:var(--text);
 }
-.certificate-card:hover { transform:translateY(-4px); }
 .certificate-card img {
-  width:100%; height:190px; object-fit:contain;
-  background:var(--page); border-radius:8px;
+  display:block;
+  width:100%;
+  height:190px;
+  object-fit:contain;
+  background:var(--page);
+  border-radius:8px;
 }
 .certificate-card p { font-size:13px; font-weight:bold; margin:10px 4px 3px; }
+.certificate-card:hover { border-color:var(--teal); }
 
+/* FAQ */
 .faq-list { max-width:820px; margin:auto; }
 .faq-list details {
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:12px; padding:17px 20px; margin-bottom:12px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:16px 19px;
+  margin-bottom:12px;
 }
 .faq-list summary { cursor:pointer; color:var(--text); font-weight:bold; }
-.faq-list details p { color:var(--muted); margin-bottom:0; }
+.faq-list details p { color:var(--muted); margin-bottom:0; font-size:14px; }
 
+/* Appointment */
 .appointment-panel {
-  display:grid; grid-template-columns:.8fr 1.2fr; gap:35px;
-  padding:35px; border-radius:24px;
-  color:white; background:linear-gradient(135deg,var(--navy),var(--navy2));
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:30px;
+  align-items:center;
+  padding:35px;
+  border-radius:24px;
+  color:white;
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
 }
 .appointment-panel h2 { color:white; }
 .appointment-panel p { color:#d5e5ef; }
 .appointment-panel .btn.alt { color:var(--navy); }
-.appointment-panel .btn { margin-top:12px; }
-.appointment-note { font-size:13px; color:#d5e5ef; }
+.appointment-note { font-size:12px; color:#d5e5ef; }
+.appointment-benefits {
+  border:1px solid #ffffff30;
+  border-radius:16px;
+  padding:22px;
+}
+.appointment-benefits h3 { margin-top:0; }
+.appointment-benefits li { color:#e4eef5; margin:8px 0; }
 
+/* Footer */
 footer {
-  padding:32px 6%; text-align:center; color:white;
+  padding:32px 6%;
+  text-align:center;
+  color:white;
   background:linear-gradient(135deg,#091d32,#164e63);
 }
-footer p { margin:5px 0; color:#d5e5ef; font-size:13px; }
+footer p { margin:5px 0; color:#d5e5ef; font-size:12px; }
 footer a { color:white; }
-
 .floating-book {
-  position:fixed; right:18px; bottom:18px; z-index:90;
-  padding:13px 17px; border-radius:40px; color:white;
-  text-decoration:none; font-size:13px; font-weight:bold;
-  background:var(--teal); box-shadow:0 8px 25px #102a4340;
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:90;
+  padding:12px 16px;
+  border-radius:40px;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:bold;
+  background:var(--teal);
+  box-shadow:0 8px 25px #102a4340;
 }
-.reveal { opacity:0; transform:translateY(18px); transition:opacity .6s,transform .6s; }
-.reveal.visible { opacity:1; transform:translateY(0); }
+[hidden] { display:none !important; }
 
-@media(prefers-reduced-motion:reduce) {
-  html { scroll-behavior:auto; }
-  *,*::before,*::after { transition:none!important; animation:none!important; }
-  .reveal { opacity:1; transform:none; }
-}
+/* Mobile */
 @media(max-width:850px) {
-  header { position:relative; padding:16px 5%; }
+  header { position:relative; padding:14px 5%; }
   nav { width:100%; }
   nav a { padding:7px 8px; }
-  .hero-grid { grid-template-columns:1fr; gap:35px; }
-  .hero-visual { grid-row:1; max-width:240px; }
-  .portrait { height:270px; }
-  .hero-copy { font-size:16px; }
+  .hero { padding:45px 0 55px; }
+  .hero-grid { grid-template-columns:1fr; gap:28px; }
+  .hero-visual { max-width:230px; }
+  .portrait { height:260px; }
   .about-grid,.appointment-panel { grid-template-columns:1fr; }
   .cards,.certificate-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media(max-width:560px) {
-  .container { width:88%; }
-  .hero { padding:40px 0 48px; }
-  .hero h1 { font-size:38px; }
-  .hero-trust { gap:10px; }
-  .trust-item strong { font-size:12px; }
-  .trust-item span { font-size:11px; }
   section { padding:48px 0; }
+  .hero h1 { font-size:37px; }
+  .hero-trust { gap:8px; }
+  .trust-item strong { font-size:12px; }
+  .trust-item span { font-size:10px; }
   .cards,.certificate-grid,.timeline { grid-template-columns:1fr; }
   .impact-grid { grid-template-columns:1fr; }
   .card { padding:21px; }
   .appointment-panel { padding:22px; }
   .floating-book { right:12px; bottom:12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
 }
 </style>
 </head>
@@ -316,9 +436,10 @@ footer a { color:white; }
 </header>
 
 <main>
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="container hero-grid">
-    <div class="hero-text reveal">
+    <div class="hero-text">
       <span class="hero-badge">✨ Counseling • Training • Personal Growth</span>
       <h1>A safe space to talk, understand and <span>grow.</span></h1>
       <p class="hero-copy">
@@ -336,8 +457,8 @@ footer a { color:white; }
         <div class="trust-item"><strong>Growth</strong><span>Practical Guidance</span></div>
       </div>
     </div>
-    <div class="hero-visual reveal">
-      <img class="portrait" src="profile.jpg" alt="Ashish Yeshwantkar"
+    <div class="hero-visual">
+      <img class="portrait" src="profile.jpg" alt="Ashish Yeshwantkar portrait"
            onerror="this.style.display='none'">
       <div class="hero-note">
         <strong>Ashish Yeshwantkar</strong>
@@ -349,18 +470,19 @@ footer a { color:white; }
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="container about-grid">
-    <div class="reveal">
+    <div>
       <span class="eyebrow">Get to know me</span>
       <h2>About Me</h2>
-      <p>
+      <p class="section-copy">
         I am a counseling and training professional with experience in
         public health support, counselor mentoring, communication skills
         and program facilitation. My approach focuses on empathy, active
         listening, privacy and treating every individual with dignity.
       </p>
-      <p>
+      <p class="section-copy">
         I value practical learning, supportive conversations and
         respectful communication that helps people explore their concerns
         and identify useful next steps.
@@ -373,62 +495,61 @@ footer a { color:white; }
         <span class="tag">Public Health</span>
       </div>
     </div>
-    <aside class="about-highlight reveal">
+    <aside class="about-highlight">
       <h3>My approach</h3>
       <p>Listen with empathy. Communicate with respect. Support learning and personal growth.</p>
-      <p>Each conversation should be approached with dignity, care and clear boundaries.</p>
+      <p>Every conversation should be approached with dignity, care and clear boundaries.</p>
     </aside>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="soft-section" id="services">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-head">
       <span class="eyebrow">How I can help</span>
       <h2>Services &amp; Professional Support</h2>
       <p>Explore counseling support, training and mentoring services.</p>
     </div>
-
     <div class="filter-tabs" aria-label="Filter services">
       <button class="filter-tab active" data-filter="all" type="button">All Services</button>
       <button class="filter-tab" data-filter="individual" type="button">For Individuals</button>
       <button class="filter-tab" data-filter="organization" type="button">For Organizations</button>
       <button class="filter-tab" data-filter="counselor" type="button">For Counselors</button>
     </div>
-
-    <div class="cards">
-      <article class="card reveal" data-category="individual">
+    <div class="cards" id="serviceCards">
+      <article class="card" data-category="individual">
         <span class="popular-badge">Featured Service</span>
         <div class="card-icon">💬</div>
         <h3>Individual Counseling</h3>
         <p>A supportive, non-judgmental conversation to explore concerns and consider practical next steps.</p>
         <a class="card-link" href="#appointment">Request an appointment →</a>
       </article>
-      <article class="card reveal" data-category="organization">
+      <article class="card" data-category="organization">
         <div class="card-icon">🎯</div>
         <h3>Soft Skills Training</h3>
         <p>Training in communication, interpersonal skills, active listening and professional development.</p>
         <a class="card-link" href="#appointment">Discuss training →</a>
       </article>
-      <article class="card reveal" data-category="individual">
+      <article class="card" data-category="individual">
         <div class="card-icon">🧠</div>
         <h3>Emotional Intelligence</h3>
         <p>Learn ways to understand emotions, respond thoughtfully and build healthier communication habits.</p>
         <a class="card-link" href="#appointment">Learn more →</a>
       </article>
-      <article class="card reveal" data-category="counselor">
+      <article class="card" data-category="counselor">
         <div class="card-icon">🤝</div>
         <h3>Counselor Mentoring</h3>
         <p>Learning support for counselors in listening skills, professional communication and counseling practice.</p>
         <a class="card-link" href="#appointment">Discuss mentoring →</a>
       </article>
-      <article class="card reveal" data-category="organization">
+      <article class="card" data-category="organization">
         <div class="card-icon">🌿</div>
         <h3>Public Health Support</h3>
         <p>Information, guidance and supportive communication related to public health services.</p>
         <a class="card-link" href="#appointment">Make an inquiry →</a>
       </article>
-      <article class="card reveal" data-category="organization">
+      <article class="card" data-category="organization">
         <div class="card-icon">📚</div>
         <h3>Training &amp; Facilitation</h3>
         <p>Structured learning sessions, group facilitation and practical skill-building activities.</p>
@@ -438,35 +559,37 @@ footer a { color:white; }
   </div>
 </section>
 
+<!-- PROFESSIONAL FOCUS -->
 <section id="impact">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-head">
       <span class="eyebrow">Professional focus</span>
       <h2>Impact Through Learning &amp; Support</h2>
       <p>Key areas that guide my counseling and training work.</p>
     </div>
     <div class="impact-grid">
-      <div class="impact reveal"><strong>Empathy</strong><span>Supportive communication</span></div>
-      <div class="impact reveal"><strong>Mentoring</strong><span>Counselor learning support</span></div>
-      <div class="impact reveal"><strong>Public Health</strong><span>Guidance and awareness</span></div>
+      <div class="impact"><strong>Empathy</strong><span>Supportive communication</span></div>
+      <div class="impact"><strong>Mentoring</strong><span>Counselor learning support</span></div>
+      <div class="impact"><strong>Public Health</strong><span>Guidance and awareness</span></div>
     </div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section class="soft-section" id="experience">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-head">
       <span class="eyebrow">My professional journey</span>
       <h2>Experience</h2>
       <p>Roles focused on counseling, training, guidance and program support.</p>
     </div>
     <div class="timeline">
-      <article class="card reveal">
+      <article class="card">
         <div class="card-icon">🩺</div>
         <h3>Public Health Counselor / SME / Trainer</h3>
         <p>Experience supporting a NACO-related public health project, counseling support, counselor training, mentoring, quality processes and program facilitation.</p>
       </article>
-      <article class="card reveal">
+      <article class="card">
         <div class="card-icon">🎓</div>
         <h3>Admissions Counselor</h3>
         <p><strong>Kamble Education Sanstha, Kinwat</strong></p>
@@ -477,31 +600,33 @@ footer a { color:white; }
   </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-head">
       <span class="eyebrow">Learning &amp; development</span>
       <h2>Education &amp; Qualifications</h2>
+      <p>Academic learning and professional development.</p>
     </div>
     <div class="cards">
-      <article class="card reveal">
+      <article class="card">
         <div class="card-icon">📘</div>
         <h3>Master of Social Work (MSW)</h3>
         <p>Specialization: Rural Development</p>
         <p>Swami Ramanand Teerth Marathwada University</p>
       </article>
-      <article class="card reveal">
+      <article class="card">
         <div class="card-icon">🔬</div>
         <h3>Bachelor of Science (B.Sc.)</h3>
         <p>Physics, Computer Science and Mathematics</p>
         <p>Swami Ramanand Teerth Marathwada University</p>
       </article>
-      <article class="card reveal">
+      <article class="card">
         <div class="card-icon">📜</div>
         <h3>Certificate in Women's Studies</h3>
         <p>One-year certificate program, 2015.</p>
       </article>
-      <article class="card reveal">
+      <article class="card">
         <div class="card-icon">🗣️</div>
         <h3>Training of Trainers (ToT)</h3>
         <p>Training certificate from Alison.</p>
@@ -510,12 +635,14 @@ footer a { color:white; }
   </div>
 </section>
 
+<!-- CERTIFICATES -->
 <section class="soft-section" id="certificates">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-head">
       <span class="eyebrow">My learning journey</span>
       <h2>Certificates &amp; Achievements</h2>
       <p>Professional learning in counseling, communication, training and public health.</p>
     </div>
-
-    <div class="filter-tabs" ar
+    <div class="filter-tabs" aria-label="Filter certificates">
+      <button class="filter-tab active" data-cert-filter="all" type="button">All Certificates</button>
+      <button class="filter-tab" data-cert-fi
