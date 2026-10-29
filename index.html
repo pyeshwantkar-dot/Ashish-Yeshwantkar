@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ashish Yeshwantkar offers compassionate counselling, emotional wellness support, and training for personal and professional growth." />
-  <meta name="theme-color" content="#0b1f36" />
+  <meta name="description" content="Ashish Yeshwantkar offers compassionate counselling, emotional wellness support, and personal/professional growth training." />
+  <meta name="theme-color" content="#0d2443" />
   <title>Ashish Yeshwantkar | Counsellor & Training Professional</title>
   <style>
     :root {
-      --bg: #edf3f7;
-      --bg-2: #f5f8fb;
-      --navy: #0b1f36;
-      --navy-2: #12365d;
+      --bg: #edf4f8;
+      --bg-2: #f9fbff;
+      --navy: #0d2443;
+      --navy-2: #163d63;
       --blue: #2d7ef5;
-      --blue-soft: #edf5ff;
+      --blue-2: #6bb8ff;
       --gold: #f4d387;
-      --gold-strong: #cf972d;
+      --gold-2: #dca63a;
       --card: #ffffff;
-      --muted: #5c7083;
-      --line: rgba(11, 31, 54, 0.12);
-      --shadow: 0 20px 40px rgba(11, 31, 54, 0.12);
+      --muted: #5f7388;
+      --line: rgba(13, 36, 67, 0.1);
+      --shadow: 0 22px 45px rgba(13, 36, 67, 0.12);
       --success-bg: #ebfaf0;
       --success-text: #137243;
-      --footer-bg: #071a2a;
-      --green: #1ea76a;
-      --green-dark: #0dbf5d;
+      --footer-bg: #071b2c;
+      --invert: #f7fbff;
+      --green: #1da76d;
+      --green-2: #0dbf5d;
     }
 
     * { box-sizing: border-box; }
@@ -32,7 +33,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, #edf4f8 0%, #f5f9fc 100%);
       color: var(--navy);
       line-height: 1.6;
     }
@@ -42,13 +43,13 @@
     ul { margin-bottom: 0; }
 
     .page {
-      width: min(1180px, calc(100% - 26px));
+      width: min(1200px, calc(100% - 26px));
       margin: 0 auto;
       padding: 22px 0 36px;
     }
 
     .topbar {
-      background: linear-gradient(135deg, #071a2a 0%, #10355a 48%, #153f6b 100%);
+      background: linear-gradient(135deg, #071b2c 0%, #123b63 52%, #1a4070 100%);
       border-radius: 22px 22px 0 0;
       box-shadow: var(--shadow);
       color: #fff;
@@ -57,7 +58,6 @@
       top: 0;
       z-index: 50;
     }
-
     .topbar-inner {
       display: flex;
       align-items: center;
@@ -70,16 +70,16 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      font-size: 15px;
       font-weight: 800;
       letter-spacing: 0.02em;
-      font-size: 15px;
     }
     .brand-mark {
-      width: 14px;
-      height: 14px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #f9dd95, #dba63b);
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.18);
+      background: linear-gradient(135deg, #f8dd94, #d9a13a);
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.16);
     }
 
     .nav {
@@ -92,18 +92,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 12px;
       padding: 10px 15px;
+      border-radius: 12px;
       font-size: 14px;
       font-weight: 700;
       background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: 0.2s ease;
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: transform 0.2s ease;
     }
     .nav a:hover { transform: translateY(-1px); }
     .nav .primary {
-      background: linear-gradient(135deg, #7fc0ff, #3a7cf7);
-      color: #fff;
+      background: linear-gradient(135deg, #7bc4ff, #3d7df6);
       border: none;
     }
     .nav .linkedin-btn {
@@ -112,43 +111,39 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, #0a1d33 0%, #123760 50%, #193f69 100%);
-      color: #fff;
+      background: linear-gradient(135deg, #0b1d33 0%, #123b63 42%, #183f69 100%);
+      color: white;
       padding: 42px 24px 32px;
       box-shadow: var(--shadow);
     }
-
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.45fr 0.9fr;
+      grid-template-columns: 1.5fr 0.9fr;
       gap: 28px;
       align-items: center;
     }
-
     .hero-tag {
       display: inline-block;
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 999px;
       padding: 9px 14px;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #edf6ff;
-      margin-bottom: 18px;
       font-weight: 700;
+      margin-bottom: 18px;
     }
-
     h1 {
       margin: 0;
-      font-size: clamp(2.5rem, 4vw, 4.2rem);
+      font-size: clamp(2.7rem, 4vw, 4.5rem);
       line-height: 1.08;
       letter-spacing: -0.05em;
     }
-
     .subtext {
       margin-top: 18px;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,0.85);
       font-size: 1.08rem;
       line-height: 1.8;
       max-width: 640px;
@@ -160,29 +155,27 @@
       flex-wrap: wrap;
       margin-top: 24px;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       border-radius: 999px;
       padding: 14px 22px;
-      border: none;
       font-size: 14px;
       font-weight: 800;
+      border: none;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .btn:hover { transform: translateY(-1px); }
-
     .btn-primary {
-      background: linear-gradient(135deg, #f7da8d, #dca33a);
-      color: #102541;
-      box-shadow: 0 12px 20px rgba(214, 163, 58, 0.3);
+      background: linear-gradient(135deg, #f7db90, #dca43c);
+      color: #0f2745;
+      box-shadow: 0 14px 20px rgba(216,164,60,0.28);
     }
     .btn-secondary {
       background: rgba(255,255,255,0.05);
-      color: white;
+      color: #fff;
       border: 1px solid rgba(255,255,255,0.18);
     }
     .btn-ghost {
@@ -198,7 +191,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 12px;
       max-width: 560px;
       margin-top: 28px;
@@ -227,14 +220,14 @@
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 24px;
       padding: 16px;
-      box-shadow: 0 18px 28px rgba(0,0,0,0.18);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.18);
     }
     .profile-card img {
       width: 100%;
       height: 420px;
       object-fit: cover;
       border-radius: 18px;
-      background: #dfeaf6;
+      background: #dfeaf5;
     }
 
     .content {
@@ -256,21 +249,20 @@
       margin-bottom: 18px;
     }
 
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 20px;
+    }
     .panel {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 22px;
-      box-shadow: 0 12px 22px rgba(11, 31, 54, 0.04);
+      box-shadow: 0 12px 22px rgba(13,36,67,0.04);
       padding: 26px 22px;
     }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 20px;
-    }
     .about-box h3 {
-      font-size: clamp(1.6rem, 2vw, 2.3rem);
+      font-size: clamp(1.7rem, 2vw, 2.3rem);
       color: var(--navy);
       margin-bottom: 16px;
     }
@@ -303,15 +295,15 @@
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: rgba(19, 114, 67, 0.08);
+      background: rgba(19,114,67,0.08);
       color: var(--success-text);
       font-size: 0.8rem;
       flex-shrink: 0;
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
     .quote-box {
-      background: linear-gradient(135deg, #f2f7ff, #fff8e8);
+      background: linear-gradient(135deg, #f2f7ff, #fff7e6);
       border: 1px solid rgba(45, 126, 245, 0.12);
       border-radius: 20px;
       padding: 22px 20px;
@@ -344,7 +336,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 20px 18px;
-      box-shadow: 0 10px 18px rgba(11,31,54,0.03);
+      box-shadow: 0 12px 18px rgba(13,36,67,0.03);
     }
     .mini-card h3 {
       margin-bottom: 10px;
@@ -372,12 +364,12 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 22px 18px;
-      box-shadow: 0 10px 20px rgba(11,31,54,0.03);
+      box-shadow: 0 12px 22px rgba(13,36,67,0.03);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .service-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 28px rgba(11,31,54,0.06);
+      box-shadow: 0 18px 28px rgba(13,36,67,0.06);
     }
     .service-icon {
       width: 48px;
@@ -388,7 +380,7 @@
       margin-bottom: 16px;
       background: linear-gradient(135deg, rgba(45,126,245,0.12), rgba(244,211,135,0.38));
       color: var(--navy);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 800;
     }
     .service-card h3 { margin-bottom: 10px; font-size: 1.08rem; }
@@ -410,14 +402,14 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 22px 18px;
-      box-shadow: 0 10px 18px rgba(11,31,54,0.04);
+      box-shadow: 0 12px 18px rgba(13,36,67,0.04);
     }
     .process-number {
       position: absolute;
-      top: 14px;
+      top: 12px;
       right: 18px;
-      color: rgba(11, 31, 54, 0.08);
-      font-size: 2.1rem;
+      color: rgba(13,36,67,0.08);
+      font-size: 2rem;
       font-weight: 800;
     }
     .process-card h3 {
@@ -443,7 +435,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 20px 18px;
-      box-shadow: 0 10px 18px rgba(11,31,54,0.04);
+      box-shadow: 0 12px 18px rgba(13,36,67,0.04);
     }
     .stars { color: #f5b642; letter-spacing: 0.14em; font-size: 1rem; margin-bottom: 14px; }
     .testimonial-card p {
@@ -469,7 +461,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 20px 18px;
-      box-shadow: 0 10px 18px rgba(11,31,54,0.04);
+      box-shadow: 0 12px 18px rgba(13,36,67,0.04);
     }
     .faq-item h3 {
       margin: 0 0 12px;
@@ -493,7 +485,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 10px 18px rgba(11,31,54,0.04);
+      box-shadow: 0 10px 18px rgba(13,36,67,0.04);
     }
     .cert-card img {
       width: 100%;
@@ -513,7 +505,7 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 22px;
-      box-shadow: 0 12px 21px rgba(11,31,54,0.04);
+      box-shadow: 0 12px 21px rgba(13,36,67,0.04);
       padding: 24px 22px;
     }
     .appointment-box h3 {
@@ -580,10 +572,7 @@
       outline: none;
       font-family: inherit;
     }
-    .field textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
+    .field textarea { min-height: 110px; resize: vertical; }
     .full { grid-column: 1 / -1; }
     .submit-row {
       display: flex;
@@ -687,8 +676,8 @@
           <div class="hero-tag">Counselling • Training • Wellbeing</div>
           <h1>Guidance that helps you feel stronger, calmer, and more confident.</h1>
           <div class="subtext">
-            I am Ashish Yeshwantkar, a counsellor and training professional committed to emotional wellbeing,
-            stress management, personal growth, and positive change through compassionate, practical support.
+            I am Ashish Yeshwantkar, a counsellor and training professional dedicated to emotional wellbeing,
+            stress management, personal growth, and positive transformation through compassionate, practical support.
           </div>
 
           <div class="cta-row">
