@@ -82,6 +82,13 @@
       box-shadow: 0 0 0 2px rgba(255,255,255,0.16);
     }
 
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .nav {
       display: flex;
       align-items: center;
@@ -108,6 +115,32 @@
     .nav .linkedin-btn {
       background: #0a66c2;
       border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 5px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      font-weight: 700;
+      font-size: 12px;
+      border-radius: 999px;
+      padding: 7px 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: rgba(255,255,255,0.14);
+      color: white;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
     }
 
     .hero {
@@ -643,6 +676,7 @@
 
     @media (max-width: 620px) {
       .page { width: min(100%, calc(100% - 16px)); }
+      .nav-wrap { width: 100%; justify-content: space-between; }
       .nav { width: 100%; justify-content: flex-start; }
       .topbar, .hero, .content { padding-left: 16px; padding-right: 16px; }
       .service-grid, .cert-grid, .highlights, .testimonial-grid, .process-grid, .faq-grid, .stats, .form-grid { grid-template-columns: 1fr; }
@@ -657,48 +691,56 @@
       <div class="topbar-inner">
         <div class="brand">
           <span class="brand-mark"></span>
-          <span>Ashish Yeshwantkar</span>
+          <span data-i18n="brandName">Ashish Yeshwantkar</span>
         </div>
 
-        <nav class="nav" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#certificates">Certificates</a>
-          <a class="primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener">Book Session</a>
-          <a class="linkedin-btn" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener">LinkedIn</a>
-        </nav>
+        <div class="nav-wrap">
+          <nav class="nav" aria-label="Main navigation">
+            <a href="#about" data-i18n="navAbout">About</a>
+            <a href="#services" data-i18n="navServices">Services</a>
+            <a href="#certificates" data-i18n="navCertificates">Certificates</a>
+            <a class="primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener" data-i18n="navBook">Book Session</a>
+            <a class="linkedin-btn" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener" data-i18n="navLinkedin">LinkedIn</a>
+          </nav>
+
+          <div class="lang-switcher" aria-label="Language selector">
+            <button class="lang-btn active" type="button" data-lang="en" aria-label="English">EN</button>
+            <button class="lang-btn" type="button" data-lang="hi" aria-label="Hindi">हिं</button>
+            <button class="lang-btn" type="button" data-lang="mr" aria-label="Marathi">मर</button>
+          </div>
+        </div>
       </div>
     </header>
 
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="hero-tag">Counselling • Training • Wellbeing</div>
-          <h1>Guidance that helps you feel stronger, calmer, and more confident.</h1>
-          <div class="subtext">
-            I am Ashish Yeshwantkar, a counsellor and training professional dedicated to emotional wellbeing,
-            stress management, personal growth, and positive transformation through compassionate, practical support.
+          <div class="hero-tag" data-i18n="heroTag">Counselling • Training • Wellbeing</div>
+          <h1 data-i18n="heroTitle">Guidance that helps you feel stronger, calmer, and more confident.</h1>
+          <div class="subtext" data-i18n="heroText">
+            I am Ashish Yeshwantkar, a counsellor and training professional committed to emotional wellbeing,
+            stress management, personal growth, and positive change through compassionate, practical support.
           </div>
 
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20would%20like%20to%20request%20an%20appointment." target="_blank" rel="noopener">Request an Appointment</a>
-            <a class="btn btn-secondary" href="#services">Explore Services</a>
-            <a class="btn btn-ghost" href="mailto:ashishyeshwantkar23@gmail.com">Email Me</a>
-            <a class="btn btn-linkedin" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20would%20like%20to%20request%20an%20appointment." target="_blank" rel="noopener" data-i18n="ctaAppointment">Request an Appointment</a>
+            <a class="btn btn-secondary" href="#services" data-i18n="ctaServices">Explore Services</a>
+            <a class="btn btn-ghost" href="mailto:ashishyeshwantkar23@gmail.com" data-i18n="ctaEmail">Email Me</a>
+            <a class="btn btn-linkedin" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener" data-i18n="ctaLinkedin">LinkedIn</a>
           </div>
 
           <div class="stats">
             <div class="stat-box">
-              <strong>1:1</strong>
-              <span>Personal Support</span>
+              <strong data-i18n="statOne">1:1</strong>
+              <span data-i18n="statOneLabel">Personal Support</span>
             </div>
             <div class="stat-box">
-              <strong>12+</strong>
-              <span>Certifications</span>
+              <strong data-i18n="statTwo">12+</strong>
+              <span data-i18n="statTwoLabel">Certifications</span>
             </div>
             <div class="stat-box">
-              <strong>Wellbeing</strong>
-              <span>Focused Care</span>
+              <strong data-i18n="statThree">Wellbeing</strong>
+              <span data-i18n="statThreeLabel">Focused Care</span>
             </div>
           </div>
         </div>
@@ -711,148 +753,146 @@
 
     <main class="content">
       <section id="about" class="story">
-        <div class="section-tag">About</div>
+        <div class="section-tag" data-i18n="sectionAbout">About</div>
         <div class="story-grid">
           <div class="panel about-box">
-            <h3>Compassionate support for everyday challenges.</h3>
-            <p>
+            <h3 data-i18n="aboutTitle">Compassionate support for everyday challenges.</h3>
+            <p data-i18n="aboutText1">
               I work with people who want to understand themselves more deeply, manage emotional stress more effectively,
               and move forward with greater clarity and balance.
             </p>
-            <p>
+            <p data-i18n="aboutText2">
               My approach combines empathy, practical guidance, and respectful conversation so that each person feels heard,
               supported, and encouraged to make meaningful progress in life, work, and relationships.
             </p>
             <ul class="trust-list">
-              <li>Individual counselling in a safe, non-judgmental space</li>
-              <li>Support for emotional wellness, stress, and life transitions</li>
-              <li>Training solutions for personal and professional development</li>
+              <li data-i18n="aboutList1">Individual counselling in a safe, non-judgmental space</li>
+              <li data-i18n="aboutList2">Support for emotional wellness, stress, and life transitions</li>
+              <li data-i18n="aboutList3">Training solutions for personal and professional development</li>
             </ul>
           </div>
 
           <div class="quote-box">
-            <p>
-              “Real growth begins when we create space to pause, reflect, and understand what we truly need.”
-            </p>
-            <strong>Ashish Yeshwantkar</strong>
+            <p data-i18n="quoteText">“Real growth begins when we create space to pause, reflect, and understand what we truly need.”</p>
+            <strong data-i18n="quoteAuthor">Ashish Yeshwantkar</strong>
           </div>
         </div>
 
         <div class="highlights">
           <div class="mini-card">
-            <h3>Emotional Support</h3>
-            <p>Guidance for stress, overwhelm, relationship challenges, and personal wellbeing.</p>
+            <h3 data-i18n="highlightTitle1">Emotional Support</h3>
+            <p data-i18n="highlightText1">Guidance for stress, overwhelm, relationship challenges, and personal wellbeing.</p>
           </div>
           <div class="mini-card">
-            <h3>Practical Guidance</h3>
-            <p>Action-oriented support to build healthier habits and clearer thinking.</p>
+            <h3 data-i18n="highlightTitle2">Practical Guidance</h3>
+            <p data-i18n="highlightText2">Action-oriented support to build healthier habits and clearer thinking.</p>
           </div>
           <div class="mini-card">
-            <h3>Positive Change</h3>
-            <p>Focused sessions that help you regain confidence and move ahead with purpose.</p>
+            <h3 data-i18n="highlightTitle3">Positive Change</h3>
+            <p data-i18n="highlightText3">Focused sessions that help you regain confidence and move ahead with purpose.</p>
           </div>
         </div>
       </section>
 
       <section id="services" class="services">
-        <div class="section-tag">Services</div>
+        <div class="section-tag" data-i18n="sectionServices">Services</div>
         <div class="service-grid">
           <article class="service-card">
             <div class="service-icon">01</div>
-            <h3>Individual Counselling</h3>
-            <p>One-to-one support for emotional well-being, personal challenges, and life balance.</p>
+            <h3 data-i18n="service1Title">Individual Counselling</h3>
+            <p data-i18n="service1Text">One-to-one support for emotional well-being, personal challenges, and life balance.</p>
           </article>
 
           <article class="service-card">
             <div class="service-icon">02</div>
-            <h3>Stress Management</h3>
-            <p>Practical strategies to reduce tension, build resilience, and restore calm.</p>
+            <h3 data-i18n="service2Title">Stress Management</h3>
+            <p data-i18n="service2Text">Practical strategies to reduce tension, build resilience, and restore calm.</p>
           </article>
 
           <article class="service-card">
             <div class="service-icon">03</div>
-            <h3>Career Guidance</h3>
-            <p>Support to navigate uncertainty and make confident life and career decisions.</p>
+            <h3 data-i18n="service3Title">Career Guidance</h3>
+            <p data-i18n="service3Text">Support to navigate uncertainty and make confident life and career decisions.</p>
           </article>
 
           <article class="service-card">
             <div class="service-icon">04</div>
-            <h3>Training & Workshops</h3>
-            <p>Interactive learning experiences focused on growth, wellbeing, and confidence-building.</p>
+            <h3 data-i18n="service4Title">Training & Workshops</h3>
+            <p data-i18n="service4Text">Interactive learning experiences focused on growth, wellbeing, and confidence-building.</p>
           </article>
         </div>
       </section>
 
       <section class="process">
-        <div class="section-tag">How It Works</div>
+        <div class="section-tag" data-i18n="sectionProcess">How It Works</div>
         <div class="process-grid">
           <div class="process-card">
             <div class="process-number">1</div>
-            <h3>Share Your Need</h3>
-            <p>Start with a simple conversation about what you are feeling, facing, or trying to improve.</p>
+            <h3 data-i18n="process1Title">Share Your Need</h3>
+            <p data-i18n="process1Text">Start with a simple conversation about what you are feeling, facing, or trying to improve.</p>
           </div>
 
           <div class="process-card">
             <div class="process-number">2</div>
-            <h3>Build a Safe Plan</h3>
-            <p>We create a supportive path with clarity, empathy, and practical goal-setting.</p>
+            <h3 data-i18n="process2Title">Build a Safe Plan</h3>
+            <p data-i18n="process2Text">We create a supportive path with clarity, empathy, and practical goal-setting.</p>
           </div>
 
           <div class="process-card">
             <div class="process-number">3</div>
-            <h3>Move Forward</h3>
-            <p>With guided support and steady action, you can feel more confident and balanced.</p>
+            <h3 data-i18n="process3Title">Move Forward</h3>
+            <p data-i18n="process3Text">With guided support and steady action, you can feel more confident and balanced.</p>
           </div>
         </div>
       </section>
 
       <section class="testimonials">
-        <div class="section-tag">Client Feedback</div>
+        <div class="section-tag" data-i18n="sectionFeedback">Client Feedback</div>
         <div class="testimonial-grid">
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>“The guidance was calm, thoughtful, and genuinely helpful. It made me feel heard and more confident about my next steps.”</p>
-            <strong>— Client</strong>
+            <p data-i18n="testimonial1">“The guidance was calm, thoughtful, and genuinely helpful. It made me feel heard and more confident about my next steps.”</p>
+            <strong data-i18n="testimonialAuthor">— Client</strong>
           </div>
 
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>“The support I received helped me manage stress in a practical way and gave me clarity during a difficult phase.”</p>
-            <strong>— Client</strong>
+            <p data-i18n="testimonial2">“The support I received helped me manage stress in a practical way and gave me clarity during a difficult phase.”</p>
+            <strong data-i18n="testimonialAuthor2">— Client</strong>
           </div>
 
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>“A compassionate and professional experience that felt personal, respectful, and empowering from the start.”</p>
-            <strong>— Client</strong>
+            <p data-i18n="testimonial3">“A compassionate and professional experience that felt personal, respectful, and empowering from the start.”</p>
+            <strong data-i18n="testimonialAuthor3">— Client</strong>
           </div>
         </div>
       </section>
 
       <section class="faq">
-        <div class="section-tag">FAQs</div>
+        <div class="section-tag" data-i18n="sectionFaq">FAQs</div>
         <div class="faq-grid">
           <div class="faq-item">
-            <h3>Is counselling confidential?</h3>
-            <p>Yes. The process is designed to be respectful, private, and supportive so you feel safe and heard.</p>
+            <h3 data-i18n="faq1Title">Is counselling confidential?</h3>
+            <p data-i18n="faq1Text">Yes. The process is designed to be respectful, private, and supportive so you feel safe and heard.</p>
           </div>
           <div class="faq-item">
-            <h3>Do you offer online sessions?</h3>
-            <p>Yes, sessions can be arranged based on availability and personal preference depending on your needs.</p>
+            <h3 data-i18n="faq2Title">Do you offer online sessions?</h3>
+            <p data-i18n="faq2Text">Yes, sessions can be arranged based on availability and personal preference depending on your needs.</p>
           </div>
           <div class="faq-item">
-            <h3>How long is a session?</h3>
-            <p>Most sessions are planned around a guided, supportive conversation tailored to your goals and comfort.</p>
+            <h3 data-i18n="faq3Title">How long is a session?</h3>
+            <p data-i18n="faq3Text">Most sessions are planned around a guided, supportive conversation tailored to your goals and comfort.</p>
           </div>
           <div class="faq-item">
-            <h3>Can I book a first appointment quickly?</h3>
-            <p>Yes. You can reach out through WhatsApp or the contact form to request an initial consultation.</p>
+            <h3 data-i18n="faq4Title">Can I book a first appointment quickly?</h3>
+            <p data-i18n="faq4Text">Yes. You can reach out through WhatsApp or the contact form to request an initial consultation.</p>
           </div>
         </div>
       </section>
 
       <section class="certs" id="certificates">
-        <div class="section-tag">Certificates</div>
+        <div class="section-tag" data-i18n="sectionCertificates">Certificates</div>
         <div class="cert-grid">
           <div class="cert-card"><img src="certificate%201.png" alt="Certificate 1" /><h4>Certificate 1</h4></div>
           <div class="cert-card"><img src="certificate%202.png" alt="Certificate 2" /><h4>Certificate 2</h4></div>
@@ -870,60 +910,60 @@
       </section>
 
       <section class="appointment-wrap" id="appointment">
-        <div class="section-tag">Book a Session</div>
+        <div class="section-tag" data-i18n="sectionBook">Book a Session</div>
         <div class="appointment-box">
-          <h3>Request an appointment</h3>
+          <h3 data-i18n="appointmentTitle">Request an appointment</h3>
 
           <div class="contact-row">
             <div class="contact-block">
-              <h4>Contact details</h4>
+              <h4 data-i18n="contactTitle">Contact details</h4>
               <ul class="contact-list">
-                <li><strong>WhatsApp:</strong> +91 77098 83011</li>
-                <li><strong>Call:</strong> +91 77098 83011</li>
-                <li><strong>Email:</strong> ashishyeshwantkar23@gmail.com</li>
-                <li><strong>Location:</strong> Hyderabad, Telangana, India</li>
-                <li><strong>Hours:</strong> Mon-Sat, 10:00 AM – 7:00 PM</li>
+                <li><strong data-i18n="contactWhatsApp">WhatsApp:</strong> +91 77098 83011</li>
+                <li><strong data-i18n="contactCall">Call:</strong> +91 77098 83011</li>
+                <li><strong data-i18n="contactEmail">Email:</strong> ashishyeshwantkar23@gmail.com</li>
+                <li><strong data-i18n="contactLocation">Location:</strong> Hyderabad, Telangana, India</li>
+                <li><strong data-i18n="contactHours">Hours:</strong> Mon-Sat, 10:00 AM – 7:00 PM</li>
               </ul>
             </div>
 
             <form id="appointmentForm">
               <div class="form-grid">
                 <label class="field">
-                  <span>Full Name</span>
+                  <span data-i18n="fieldName">Full Name</span>
                   <input type="text" name="name" placeholder="Your full name" required />
                 </label>
 
                 <label class="field">
-                  <span>Email</span>
+                  <span data-i18n="fieldEmail">Email</span>
                   <input type="email" name="email" placeholder="your@email.com" required />
                 </label>
 
                 <label class="field">
-                  <span>Phone</span>
+                  <span data-i18n="fieldPhone">Phone</span>
                   <input type="tel" name="phone" placeholder="+91 98765 43210" required />
                 </label>
 
                 <label class="field">
-                  <span>Service</span>
+                  <span data-i18n="fieldService">Service</span>
                   <select name="service" required>
-                    <option value="">Select a service</option>
-                    <option>Individual Counselling</option>
-                    <option>Stress Management</option>
-                    <option>Career Guidance</option>
-                    <option>Training & Workshops</option>
+                    <option value="" data-i18n="selectService">Select a service</option>
+                    <option data-i18n="optionCounselling">Individual Counselling</option>
+                    <option data-i18n="optionStress">Stress Management</option>
+                    <option data-i18n="optionCareer">Career Guidance</option>
+                    <option data-i18n="optionWorkshop">Training & Workshops</option>
                   </select>
                 </label>
 
                 <label class="field full">
-                  <span>Message</span>
+                  <span data-i18n="fieldMessage">Message</span>
                   <textarea name="message" placeholder="Tell us how we can help you..." required></textarea>
                 </label>
               </div>
 
               <div class="submit-row">
-                <button class="submit-btn" type="submit">Send Request</button>
+                <button class="submit-btn" type="submit" data-i18n="submitButton">Send Request</button>
               </div>
-              <div id="formStatus" class="form-status">Thank you! Your request has been noted. Please contact the counsellor on WhatsApp or email for confirmation.</div>
+              <div id="formStatus" class="form-status" data-i18n="formStatusText">Thank you! Your request has been noted. Please contact the counsellor on WhatsApp or email for confirmation.</div>
             </form>
           </div>
         </div>
@@ -935,11 +975,335 @@
     </div>
 
     <footer class="footer">
-      <strong>Ashish Yeshwantkar</strong> | Counsellor & Training Professional
+      <strong>Ashish Yeshwantkar</strong> | <span data-i18n="footerTitle">Counsellor & Training Professional</span>
     </footer>
   </div>
 
   <script>
+    const translations = {
+      en: {
+        brandName: 'Ashish Yeshwantkar',
+        navAbout: 'About',
+        navServices: 'Services',
+        navCertificates: 'Certificates',
+        navBook: 'Book Session',
+        navLinkedin: 'LinkedIn',
+        heroTag: 'Counselling • Training • Wellbeing',
+        heroTitle: 'Guidance that helps you feel stronger, calmer, and more confident.',
+        heroText: 'I am Ashish Yeshwantkar, a counsellor and training professional committed to emotional wellbeing, stress management, personal growth, and positive change through compassionate, practical support.',
+        ctaAppointment: 'Request an Appointment',
+        ctaServices: 'Explore Services',
+        ctaEmail: 'Email Me',
+        ctaLinkedin: 'LinkedIn',
+        statOne: '1:1',
+        statOneLabel: 'Personal Support',
+        statTwo: '12+',
+        statTwoLabel: 'Certifications',
+        statThree: 'Wellbeing',
+        statThreeLabel: 'Focused Care',
+        sectionAbout: 'About',
+        aboutTitle: 'Compassionate support for everyday challenges.',
+        aboutText1: 'I work with people who want to understand themselves more deeply, manage emotional stress more effectively, and move forward with greater clarity and balance.',
+        aboutText2: 'My approach combines empathy, practical guidance, and respectful conversation so that each person feels heard, supported, and encouraged to make meaningful progress in life, work, and relationships.',
+        aboutList1: 'Individual counselling in a safe, non-judgmental space',
+        aboutList2: 'Support for emotional wellness, stress, and life transitions',
+        aboutList3: 'Training solutions for personal and professional development',
+        quoteText: '“Real growth begins when we create space to pause, reflect, and understand what we truly need.”',
+        quoteAuthor: 'Ashish Yeshwantkar',
+        highlightTitle1: 'Emotional Support',
+        highlightText1: 'Guidance for stress, overwhelm, relationship challenges, and personal wellbeing.',
+        highlightTitle2: 'Practical Guidance',
+        highlightText2: 'Action-oriented support to build healthier habits and clearer thinking.',
+        highlightTitle3: 'Positive Change',
+        highlightText3: 'Focused sessions that help you regain confidence and move ahead with purpose.',
+        sectionServices: 'Services',
+        service1Title: 'Individual Counselling',
+        service1Text: 'One-to-one support for emotional well-being, personal challenges, and life balance.',
+        service2Title: 'Stress Management',
+        service2Text: 'Practical strategies to reduce tension, build resilience, and restore calm.',
+        service3Title: 'Career Guidance',
+        service3Text: 'Support to navigate uncertainty and make confident life and career decisions.',
+        service4Title: 'Training & Workshops',
+        service4Text: 'Interactive learning experiences focused on growth, wellbeing, and confidence-building.',
+        sectionProcess: 'How It Works',
+        process1Title: 'Share Your Need',
+        process1Text: 'Start with a simple conversation about what you are feeling, facing, or trying to improve.',
+        process2Title: 'Build a Safe Plan',
+        process2Text: 'We create a supportive path with clarity, empathy, and practical goal-setting.',
+        process3Title: 'Move Forward',
+        process3Text: 'With guided support and steady action, you can feel more confident and balanced.',
+        sectionFeedback: 'Client Feedback',
+        testimonial1: '“The guidance was calm, thoughtful, and genuinely helpful. It made me feel heard and more confident about my next steps.”',
+        testimonial2: '“The support I received helped me manage stress in a practical way and gave me clarity during a difficult phase.”',
+        testimonial3: '“A compassionate and professional experience that felt personal, respectful, and empowering from the start.”',
+        testimonialAuthor: '— Client',
+        testimonialAuthor2: '— Client',
+        testimonialAuthor3: '— Client',
+        sectionFaq: 'FAQs',
+        faq1Title: 'Is counselling confidential?',
+        faq1Text: 'Yes. The process is designed to be respectful, private, and supportive so you feel safe and heard.',
+        faq2Title: 'Do you offer online sessions?',
+        faq2Text: 'Yes, sessions can be arranged based on availability and personal preference depending on your needs.',
+        faq3Title: 'How long is a session?',
+        faq3Text: 'Most sessions are planned around a guided, supportive conversation tailored to your goals and comfort.',
+        faq4Title: 'Can I book a first appointment quickly?',
+        faq4Text: 'Yes. You can reach out through WhatsApp or the contact form to request an initial consultation.',
+        sectionCertificates: 'Certificates',
+        sectionBook: 'Book a Session',
+        appointmentTitle: 'Request an appointment',
+        contactTitle: 'Contact details',
+        contactWhatsApp: 'WhatsApp:',
+        contactCall: 'Call:',
+        contactEmail: 'Email:',
+        contactLocation: 'Location:',
+        contactHours: 'Hours:',
+        fieldName: 'Full Name',
+        fieldEmail: 'Email',
+        fieldPhone: 'Phone',
+        fieldService: 'Service',
+        selectService: 'Select a service',
+        optionCounselling: 'Individual Counselling',
+        optionStress: 'Stress Management',
+        optionCareer: 'Career Guidance',
+        optionWorkshop: 'Training & Workshops',
+        fieldMessage: 'Message',
+        submitButton: 'Send Request',
+        formStatusText: 'Thank you! Your request has been noted. Please contact the counsellor on WhatsApp or email for confirmation.',
+        footerTitle: 'Counsellor & Training Professional'
+      },
+      hi: {
+        brandName: 'आशिष येश्वंतकर',
+        navAbout: 'परिचय',
+        navServices: 'सेवाएँ',
+        navCertificates: 'प्रमाणपत्र',
+        navBook: 'बुक करें',
+        navLinkedin: 'लिंक्डइन',
+        heroTag: 'काउंसलिंग • प्रशिक्षण • कल्याण',
+        heroTitle: 'ऐसी मार्गदर्शना जो आपको मजबूत, शांत और अधिक आत्मविश्वासी बनाती है।',
+        heroText: 'मैं आशिष येश्वंतकर हूँ, एक परामर्शदाता और प्रशिक्षण विशेषज्ञ जो भावनात्मक कल्याण, तनाव प्रबंधन, व्यक्तिगत विकास और सकारात्मक परिवर्तन के लिए सहानुभूतिपूर्ण, व्यावहारिक सहायता देता हूँ।',
+        ctaAppointment: 'अपॉइंटमेंट मांगें',
+        ctaServices: 'सेवाएँ देखें',
+        ctaEmail: 'ईमेल करें',
+        ctaLinkedin: 'लिंक्डइन',
+        statOne: '1:1',
+        statOneLabel: 'व्यक्तिगत सहायता',
+        statTwo: '12+',
+        statTwoLabel: 'प्रमाणपत्र',
+        statThree: 'कल्याण',
+        statThreeLabel: 'सतत देखभाल',
+        sectionAbout: 'परिचय',
+        aboutTitle: 'हर दिन की चुनौतियों के लिए सहानुभूतिपूर्ण सहायता।',
+        aboutText1: 'मैं उन लोगों के साथ काम करता हूँ जो अपने आप को गहराई से समझना चाहते हैं, भावनात्मक तनाव को बेहतर तरीके से संभालना चाहते हैं और स्पष्टता और संतुलन के साथ आगे बढ़ना चाहते हैं।',
+        aboutText2: 'मेरी शैक्षिक और सहयोगात्मक दृष्टि सहानुभूति, व्यावहारिक मार्गदर्शन और सम्मानपूर्ण बातचीत पर आधारित है, ताकि हर व्यक्ति महसूस करे कि उसे सुना गया है और उसकी प्रगति का मार्ग ढूंढा गया है।',
+        aboutList1: 'सुरक्षित, गैर-न्यायपूर्ण वातावरण में व्यक्तिगत परामर्श',
+        aboutList2: 'भावनात्मक कल्याण, तनाव और जीवन परिवर्तन के लिए सहायता',
+        aboutList3: 'व्यक्तिगत और व्यावसायिक विकास के लिए प्रशिक्षण समाधान',
+        quoteText: '“वास्तविक विकास तब शुरू होता है जब हम रुककर, réfléchirकर, और समझकर अपने सच को पहचानते हैं।”',
+        quoteAuthor: 'आशिष येश्वंतकर',
+        highlightTitle1: 'भावनात्मक सहायता',
+        highlightText1: 'तनाव, अधिकता, रिश्तों की चुनौतियों और व्यक्तिगत कल्याण के लिए मार्गदर्शन।',
+        highlightTitle2: 'व्यावहारिक मार्गदर्शन',
+        highlightText2: 'स्वस्थ आदतें और स्पष्ट सोच बनाने के लिए लक्ष्य-उन्मुख सहायता।',
+        highlightTitle3: 'सकारात्मक परिवर्तन',
+        highlightText3: 'विशेष सत्र जो आत्मविश्वास बहाल करते हैं और उद्देश्यपूर्ण आगे बढ़ने में मदद करते हैं।',
+        sectionServices: 'सेवाएँ',
+        service1Title: 'व्यक्तिगत परामर्श',
+        service1Text: 'भावनात्मक कल्याण, व्यक्तिगत चुनौतियों और जीवन संतुलन के लिए एक-पर-एक सहायता।',
+        service2Title: 'तनाव प्रबंधन',
+        service2Text: 'तनाव कम करने, लचीलापन बढ़ाने और शांति लौटाने के लिए व्यावहारिक रणनीतियाँ।',
+        service3Title: 'करियर मार्गदर्शन',
+        service3Text: 'अस्पष्टता से निकलने और जीवन तथा करियर के सही निर्णय लेने में सहायता।',
+        service4Title: 'प्रशिक्षण और कार्यशालाएँ',
+        service4Text: 'विकास, कल्याण और आत्मविश्वास पर आधारित इंटरैक्टिव सीखने के अनुभव।',
+        sectionProcess: 'यह कैसे काम करता है',
+        process1Title: 'अपनी आवश्यकता साझा करें',
+        process1Text: 'एक सरल बातचीत से शुरू करें कि आप क्या महसूस कर रहे हैं, क्या सामना कर रहे हैं और क्या सुधार चाहते हैं।',
+        process2Title: 'सुरक्षित योजना बनाएं',
+        process2Text: 'हम स्पष्टता, सहानुभूति और व्यावहारिक लक्ष्य-निर्धारण के साथ एक सहायक रास्ता बनाते हैं।',
+        process3Title: 'आगे बढ़ें',
+        process3Text: 'मार्गदर्शन और निरंतर प्रयास से आप अधिक आत्मविश्वास और संतुलन महसूस करेंगे।',
+        sectionFeedback: 'ग्राहक प्रतिक्रिया',
+        testimonial1: '“मार्गदर्शन शांत, विचारशील और वास्तव में उपयोगी था। इससे मुझे सुना गया महसूस हुआ और मेरे अगले कदमों के लिए आत्मविश्वास मिला।”',
+        testimonial2: '“मुझे मिली सहायता ने तनाव को व्यावहारिक तरीके से संभालने में मदद की और कठिन समय में स्पष्टता दी।”',
+        testimonial3: '“एक सहानुभूतिपूर्ण और पेशेवर अनुभव था, जो शुरू से ही व्यक्तिगत, सम्मानजनक और सशक्त महसूस हुआ।”',
+        testimonialAuthor: '— ग्राहक',
+        testimonialAuthor2: '— ग्राहक',
+        testimonialAuthor3: '— ग्राहक',
+        sectionFaq: 'सामान्य प्रश्न',
+        faq1Title: 'क्या परामर्श गोपनीय है?',
+        faq1Text: 'हाँ। प्रक्रिया सुरक्षित, निजी और सहायक रूप से डिज़ाइन की गई है ताकि आपको महसूस हो कि आप सुरक्षित और सुने गए हैं।',
+        faq2Title: 'क्या आप ऑनलाइन सत्र देते हैं?',
+        faq2Text: 'हाँ, उपलब्धता और व्यक्तिगत पसंद के अनुसार ऑनलाइन सत्र आयोजित किए जा सकते हैं।',
+        faq3Title: 'एक सत्र कितने समय का होता है?',
+        faq3Text: 'अधिकांश सत्र आपकी आवश्यकताओं और आराम के अनुसार एक मार्गदर्शक, सहायक बातचीत के रूप में निर्धारित किए जाते हैं।',
+        faq4Title: 'क्या मैं जल्दी पहला अपॉइंटमेंट बुक कर सकता हूँ?',
+        faq4Text: 'हाँ। आप WhatsApp या संपर्क फॉर्म के माध्यम से प्रारंभिक परामर्श के लिए अनुरोध भेज सकते हैं।',
+        sectionCertificates: 'प्रमाणपत्र',
+        sectionBook: 'सत्र बुक करें',
+        appointmentTitle: 'अपॉइंटमेंट का अनुरोध करें',
+        contactTitle: 'संपर्क विवरण',
+        contactWhatsApp: 'व्हाट्सऐप:',
+        contactCall: 'कॉल:',
+        contactEmail: 'ईमेल:',
+        contactLocation: 'स्थान:',
+        contactHours: 'समय:',
+        fieldName: 'पूरा नाम',
+        fieldEmail: 'ईमेल',
+        fieldPhone: 'फोन',
+        fieldService: 'सेवा',
+        selectService: 'सेवा चुनें',
+        optionCounselling: 'व्यक्तिगत परामर्श',
+        optionStress: 'तनाव प्रबंधन',
+        optionCareer: 'करियर मार्गदर्शन',
+        optionWorkshop: 'प्रशिक्षण और कार्यशालाएँ',
+        fieldMessage: 'संदेश',
+        submitButton: 'अनुरोध भेजें',
+        formStatusText: 'धन्यवाद! आपका अनुरोध दर्ज हो गया है। पुष्टि के लिए कृपया WhatsApp या ईमेल के माध्यम से परामर्शदाता से संपर्क करें।',
+        footerTitle: 'परामर्शदाता और प्रशिक्षण विशेषज्ञ'
+      },
+      mr: {
+        brandName: 'आशिष येश्वंतकर',
+        navAbout: 'माहिती',
+        navServices: 'सेवा',
+        navCertificates: 'प्रमाणपत्रे',
+        navBook: 'बुक करा',
+        navLinkedin: 'लिंक्डइन',
+        heroTag: 'सल्लाह • प्रशिक्षण • आरोग्य',
+        heroTitle: 'अशी मार्गदर्शना जी आपल्याला अधिक मजबूत, शांत आणि आत्मविश्वासपूर्ण बनवते.',
+        heroText: 'मी आशिष येश्वंतकर, एक सल्लागार आणि प्रशिक्षणतज्ञ आहे. भावनिक आरोग्य, ताण व्यवस्थापन, वैयक्तिक विकास आणि सकारात्मक बदलासाठी दयाळू, व्यावहारिक मदत देतो.',
+        ctaAppointment: 'अपॉइंटमेंट मागा',
+        ctaServices: 'सेवा पहा',
+        ctaEmail: 'ईमेल करा',
+        ctaLinkedin: 'लिंक्डइन',
+        statOne: '1:1',
+        statOneLabel: 'वैयक्तिक सहाय्य',
+        statTwo: '12+',
+        statTwoLabel: 'प्रमाणपत्रे',
+        statThree: 'आरोग्य',
+        statThreeLabel: 'केंद्रित काळजी',
+        sectionAbout: 'माहिती',
+        aboutTitle: 'दररोजच्या आव्हानांसाठी दयाळू सहाय्य.',
+        aboutText1: 'मी अशा लोकांशी काम करतो ज्यांना स्वतःची अधिक खोलवर समजून घेण्याची इच्छा असते, भावनिक ताण अधिक प्रभावीपणे व्यवस्थापित करायचा असतो आणि स्पष्टता आणि संतुलनाने पुढे जाण्याची इच्छा असते.',
+        aboutText2: 'माझा दृष्टीकोन सहानुभूती, व्यावहारिक मार्गदर्शन आणि आदरयुक्त संवादावर आधारित आहे, जेणेकरून प्रत्येक व्यक्ती अनुभवेल की तिला ऐकले गेले आहे आणि प्रगतीसाठी योग्य दिशा मिळाली आहे.',
+        aboutList1: 'सुरक्षित, गैर-न्याय्य वातावरणात वैयक्तिक सल्ला',
+        aboutList2: 'भावनिक आरोग्य, ताण आणि जीवन बदलांसाठी सहाय्य',
+        aboutList3: 'वैयक्तिक आणि व्यावसायिक विकासासाठी प्रशिक्षण उपाय',
+        quoteText: '“वास्तविक विकास तेव्हाच सुरू होतो जेव्हा आपण थांबतो, चिंतन करतो आणि आपली खरी गरज समजतो.”',
+        quoteAuthor: 'आशिष येश्वंतकर',
+        highlightTitle1: 'भावनिक सहाय्य',
+        highlightText1: 'ताण, अतिरिक्त दबाव, नातेसंबंधातील आव्हाने आणि वैयक्तिक आरोग्यासाठी मार्गदर्शन.',
+        highlightTitle2: 'व्यावहारिक मार्गदर्शन',
+        highlightText2: 'सुसंस्कृत सवयी आणि स्पष्ट विचारासाठी प्रभावी मदत.',
+        highlightTitle3: 'सकारात्मक बदल',
+        highlightText3: 'विशेष सत्र जे आत्मविश्वास पुन्हा मिळवून देतात आणि उद्देशपूर्ण प्रगतीस मदत करतात.',
+        sectionServices: 'सेवा',
+        service1Title: 'वैयक्तिक सल्ला',
+        service1Text: 'भावनिक आरोग्य, वैयक्तिक आव्हाने आणि जीवन संतुलनासाठी एक-ते-एक सहाय्य.',
+        service2Title: 'ताण व्यवस्थापन',
+        service2Text: 'ताण कमी करण्यासाठी, लवचिकता वाढवण्यासाठी आणि शांतता परत आणण्यासाठी व्यावहारिक रणनीती.',
+        service3Title: 'करिअर मार्गदर्शन',
+        service3Text: 'अनिश्चिततेतून बाहेर पडण्यासाठी आणि जीवन व करिअरवर आत्मविश्वासपूर्ण निर्णय घेण्यासाठी मदत.',
+        service4Title: 'प्रशिक्षण आणि कार्यशाळा',
+        service4Text: 'विकास, आरोग्य आणि आत्मविश्वासावर केंद्रित इंटरॅक्टिव शिकण्याचा अनुभव.',
+        sectionProcess: 'हे कसे काम करते',
+        process1Title: 'तुमची गरज सांगा',
+        process1Text: 'सोप्या संभाषणाने सुरुवात करा की तुम्हाला काय वाटते, काय समोर आहे किंवा सुधारायचे आहे.',
+        process2Title: 'सुरक्षित योजना तयार करा',
+        process2Text: 'आम्ही स्पष्टता, सहानुभूती आणि व्यावहारिक लक्ष्यनिश्चिती सह एक सुरक्षित मार्ग तयार करतो.',
+        process3Title: 'पुढे जा',
+        process3Text: 'मार्गदर्शन आणि सतत कृतीमुळे तुम्हाला अधिक आत्मविश्वास आणि संतुलन वाटेल.',
+        sectionFeedback: 'ग्राहक प्रतिक्रिया',
+        testimonial1: '“मार्गदर्शन शांत, विचारशील आणि खरोखर उपयुक्त होते. त्यामुळे मला ऐकले गेले आहे असे वाटले आणि पुढील पावलांवर आत्मविश्वास मिळाला.”',
+        testimonial2: '“मला मिळालेली मदत ताणावर व्यावहारिक पद्धतीने नियंत्रण ठेवण्यात मदत झाली आणि कठीण काळात स्पष्टता मिळाली.”',
+        testimonial3: '“एक दयाळू आणि व्यावसायिक अनुभव होता, जो सुरुवातीपासूनच वैयक्तिक, आदरयुक्त आणि आत्मविश्वासदायक वाटला.”',
+        testimonialAuthor: '— ग्राहक',
+        testimonialAuthor2: '— ग्राहक',
+        testimonialAuthor3: '— ग्राहक',
+        sectionFaq: 'वारंवार विचारले जाणारे प्रश्न',
+        faq1Title: 'सल्ला गोपनीय आहे का?',
+        faq1Text: 'होय. प्रक्रिया आदरयुक्त, खाजगी आणि सहायक पद्धतीने बनवली आहे, जेणेकरून तुम्हाला सुरक्षित आणि ऐकले गेले आहे असे वाटते.',
+        faq2Title: 'तुम्ही ऑनलाइन सेशन देतात का?',
+        faq2Text: 'होय, उपलब्धता आणि वैयक्तिक पसंतीनुसार ऑनलाइन सेशन आयोजित केले जाऊ शकतात.',
+        faq3Title: 'सेशन किती वेळाचा असतो?',
+        faq3Text: 'बहुतेक सेशन तुमच्या उद्दिष्टांनुसार आणि आरामाच्या अनुषंगाने मार्गदर्शक, सहायक संभाषणाच्या स्वरूपात आयोजित केले जातात.',
+        faq4Title: 'मी लवकर पहिले अपॉइंटमेंट बुक करू शकतो का?',
+        faq4Text: 'होय. WhatsApp किंवा संपर्क फॉर्मद्वारे तुम्ही प्रारंभिक सल्लामसलतासाठी विनंती पाठवू शकता.',
+        sectionCertificates: 'प्रमाणपत्रे',
+        sectionBook: 'सत्र बुक करा',
+        appointmentTitle: 'अपॉइंटमेंट मागा',
+        contactTitle: 'संपर्क तपशील',
+        contactWhatsApp: 'व्हॉट्सअॅप:',
+        contactCall: 'कॉल:',
+        contactEmail: 'ईमेल:',
+        contactLocation: 'स्थान:',
+        contactHours: 'वेळ:',
+        fieldName: 'पूर्ण नाव',
+        fieldEmail: 'ईमेल',
+        fieldPhone: 'फोन',
+        fieldService: 'सेवा',
+        selectService: 'सेवा निवडा',
+        optionCounselling: 'वैयक्तिक सल्ला',
+        optionStress: 'ताण व्यवस्थापन',
+        optionCareer: 'करिअर मार्गदर्शन',
+        optionWorkshop: 'प्रशिक्षण आणि कार्यशाळा',
+        fieldMessage: 'संदेश',
+        submitButton: 'विनंती पाठवा',
+        formStatusText: 'धन्यवाद! तुमची विनंती नोंदवली गेली आहे. पुष्टीसाठी कृपया WhatsApp किंवा ईमेलद्वारे सल्लागाराशी संपर्क करा.',
+        footerTitle: 'सल्लागार आणि प्रशिक्षणतज्ञ'
+      }
+    };
+
+    const setLanguage = (lang) => {
+      const selected = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (selected[key]) {
+          el.textContent = selected[key];
+        }
+      });
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      const placeholders = {
+        en: {
+          name: 'Your full name',
+          email: 'your@email.com',
+          phone: '+91 98765 43210',
+          message: 'Tell us how we can help you...'
+        },
+        hi: {
+          name: 'आपका पूरा नाम',
+          email: 'apna@email.com',
+          phone: '+91 98765 43210',
+          message: 'हमें बताइए कि हम आपकी कैसे मदद कर सकते हैं...'
+        },
+        mr: {
+          name: 'तुमचे पूर्ण नाव',
+          email: 'tuma@email.com',
+          phone: '+91 98765 43210',
+          message: 'आम्हाला सांगा की आम्ही तुमची कशी मदत करू शकतो...'
+        }
+      };
+
+      const p = placeholders[lang] || placeholders.en;
+      const inputs = document.querySelectorAll('input, textarea');
+      inputs.forEach((input) => {
+        if (input.name === 'name') input.placeholder = p.name;
+        if (input.name === 'email') input.placeholder = p.email;
+        if (input.name === 'phone') input.placeholder = p.phone;
+        if (input.name === 'message') input.placeholder = p.message;
+      });
+    };
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage('en');
+
     const form = document.getElementById('appointmentForm');
     const statusBox = document.getElementById('formStatus');
 
