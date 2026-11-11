@@ -572,11 +572,22 @@
       margin-top: 16px;
     }
     .cert-card {
+      display: block;
+      width: 100%;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
       box-shadow: 0 10px 18px rgba(13,36,67,0.04);
+      cursor: pointer;
+      padding: 0;
+      color: inherit;
+      text-align: left;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 25px rgba(13,36,67,0.08);
     }
     .cert-card img {
       width: 100%;
@@ -590,6 +601,58 @@
       text-align: center;
       color: var(--navy);
       font-size: 14px;
+    }
+
+    .cert-modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(5, 15, 25, 0.82);
+      z-index: 200;
+      padding: 24px;
+    }
+    .cert-modal.active {
+      display: flex;
+    }
+    .cert-modal-inner {
+      position: relative;
+      max-width: min(90vw, 980px);
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 24px 38px rgba(0,0,0,0.28);
+    }
+    .cert-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .cert-modal-img {
+      width: 100%;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 14px;
+      background: #f5f9ff;
+    }
+    .cert-modal-caption {
+      margin-top: 12px;
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .appointment-box {
@@ -967,18 +1030,54 @@
       <section class="certs" id="certificates">
         <div class="section-tag" data-i18n="sectionCertificates">Certificates</div>
         <div class="cert-grid">
-          <div class="cert-card"><img src="certificate%201.png" alt="Certificate 1" /><h4>Certificate 1</h4></div>
-          <div class="cert-card"><img src="certificate%202.png" alt="Certificate 2" /><h4>Certificate 2</h4></div>
-          <div class="cert-card"><img src="certificate%203.png" alt="Certificate 3" /><h4>Certificate 3</h4></div>
-          <div class="cert-card"><img src="certificate%204.png" alt="Certificate 4" /><h4>Certificate 4</h4></div>
-          <div class="cert-card"><img src="certificate%205.png" alt="Certificate 5" /><h4>Certificate 5</h4></div>
-          <div class="cert-card"><img src="certificate%206.png" alt="Certificate 6" /><h4>Certificate 6</h4></div>
-          <div class="cert-card"><img src="certificate%207.png" alt="Certificate 7" /><h4>Certificate 7</h4></div>
-          <div class="cert-card"><img src="certificate%208.png" alt="Certificate 8" /><h4>Certificate 8</h4></div>
-          <div class="cert-card"><img src="certificate%209.png" alt="Certificate 9" /><h4>Certificate 9</h4></div>
-          <div class="cert-card"><img src="certificate%2010.png" alt="Certificate 10" /><h4>Certificate 10</h4></div>
-          <div class="cert-card"><img src="certificate%2011.png" alt="Certificate 11" /><h4>Certificate 11</h4></div>
-          <div class="cert-card"><img src="certificate%2012.png" alt="Certificate 12" /><h4>Certificate 12</h4></div>
+          <button type="button" class="cert-card" data-image="certificate%201.png" data-title="Certificate 1">
+            <img src="certificate%201.png" alt="Certificate 1" />
+            <h4>Certificate 1</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%202.png" data-title="Certificate 2">
+            <img src="certificate%202.png" alt="Certificate 2" />
+            <h4>Certificate 2</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%203.png" data-title="Certificate 3">
+            <img src="certificate%203.png" alt="Certificate 3" />
+            <h4>Certificate 3</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%204.png" data-title="Certificate 4">
+            <img src="certificate%204.png" alt="Certificate 4" />
+            <h4>Certificate 4</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%205.png" data-title="Certificate 5">
+            <img src="certificate%205.png" alt="Certificate 5" />
+            <h4>Certificate 5</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%206.png" data-title="Certificate 6">
+            <img src="certificate%206.png" alt="Certificate 6" />
+            <h4>Certificate 6</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%207.png" data-title="Certificate 7">
+            <img src="certificate%207.png" alt="Certificate 7" />
+            <h4>Certificate 7</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%208.png" data-title="Certificate 8">
+            <img src="certificate%208.png" alt="Certificate 8" />
+            <h4>Certificate 8</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%209.png" data-title="Certificate 9">
+            <img src="certificate%209.png" alt="Certificate 9" />
+            <h4>Certificate 9</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%2010.png" data-title="Certificate 10">
+            <img src="certificate%2010.png" alt="Certificate 10" />
+            <h4>Certificate 10</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%2011.png" data-title="Certificate 11">
+            <img src="certificate%2011.png" alt="Certificate 11" />
+            <h4>Certificate 11</h4>
+          </button>
+          <button type="button" class="cert-card" data-image="certificate%2012.png" data-title="Certificate 12">
+            <img src="certificate%2012.png" alt="Certificate 12" />
+            <h4>Certificate 12</h4>
+          </button>
         </div>
       </section>
 
@@ -1045,6 +1144,14 @@
 
     <div class="floating-cta">
       <a href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">✆</a>
+    </div>
+
+    <div class="cert-modal" id="certModal" aria-hidden="true">
+      <div class="cert-modal-inner">
+        <button class="cert-close" type="button" aria-label="Close certificate preview">×</button>
+        <img class="cert-modal-img" id="certModalImage" src="" alt="Certificate preview" />
+        <div class="cert-modal-caption" id="certModalCaption"></div>
+      </div>
     </div>
 
     <footer class="footer">
@@ -1244,7 +1351,7 @@
         statThreeLabel: 'केंद्रित काळजी',
         sectionAbout: 'माझ्याबद्दल',
         aboutTitle: 'दररोजच्या आव्हानांसाठी कृपाळू मदत.',
-        aboutText1: 'मी अशा लोकांसोबत काम करतो जे स्वतःला अधिक खोल्या पद्धतीने समजून घेऊ इच्छितात, भावनिक ताण अधिक प्रभावीपणे व्यवस्थापित करू इच्छितात आणि अर्थपूर्ण भावनिक संतुलनासह पुढे जाऊ इच्छितात.',
+        aboutText1: 'मी अशा लोकांसोबत काम करतो जे स्वतःला अधिक खोल्या पद्धतीने समजून घेऊ इच्छितात, भावनिक ताण अधिक प्रभावीपणे व्यवस्थापित करू इच्छितात, आणि अर्थपूर्ण भावनिक संतुलनासह पुढे जाऊ इच्छितात.',
         aboutText2: 'माझा दृष्टीकोन सहानुभूती, व्यावहारिक मार्गदर्शन आणि आदरयुक्त संभाषणावर आधारित आहे, ज्यामुळे प्रत्येक व्यक्तीला ऐकले जाते, आधार मिळतो आणि जीवन, नोकरी आणि संबंधात महत्त्वपूर्ण प्रगती करण्यास प्रोत्साहन मिळते.',
         aboutExperience: 'सल्लामसलत, प्रशिक्षण आणि वैयक्तिक विकासात वर्षांपासून अनुभव असल्याने, मी भावनिक ओव्हरवेल्म, ताण, संबंधातील आव्हाने आणि जीवनातील संक्रमणे यांवर काम केले आहे.',
         aboutList1: 'सुरक्षित, गैर-न्यायपूर्ण जागेत वैयक्तिक सल्लामसलत',
@@ -1296,7 +1403,7 @@
         optionWorkshop: 'प्रशिक्षण आणि कार्यशाळा',
         fieldMessage: 'संदेश',
         submitButton: 'मागणी पाठवा',
-        formStatusText: 'धन्यवाद! तुमची विनंती नोंदली गेली आहे. पुष्टीसाठी कृपया व्हॉट्सअॅप किंवा ईमेलद्वारे सल्लागाराशी संपर्क करा.',
+        formStatusText: 'धन्यवाद! तुमची विनंती नोंदली गेली आहे. पुष्टीसाठी कृपया व्हॉट्���अॅप किंवा ईमेलद्वारे सल्लागाराशी संपर्क करा.',
         footerTitle: 'सल्लागार आणि प्रशिक्षण तज्ञ'
       }
     };
@@ -1351,6 +1458,35 @@
     });
 
     setLanguage('en');
+
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('certModalImage');
+    const modalCaption = document.getElementById('certModalCaption');
+    const modalClose = document.querySelector('.cert-close');
+
+    document.querySelectorAll('.cert-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        modalImg.src = card.dataset.image;
+        modalCaption.textContent = card.dataset.title || 'Certificate';
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeCertModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    modalClose.addEventListener('click', closeCertModal);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeCertModal();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('active')) {
+        closeCertModal();
+      }
+    });
 
     const form = document.getElementById('appointmentForm');
     const statusBox = document.getElementById('formStatus');
