@@ -136,17 +136,12 @@
       color: rgba(255,255,255,0.8);
       white-space: nowrap;
     }
-    .brand-mark {
-      display: none;
-    }
-
     .nav-wrap {
       display: flex;
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
     }
-
     .nav {
       display: flex;
       align-items: center;
@@ -173,32 +168,6 @@
     .nav .linkedin-btn {
       background: #0a66c2;
       border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 999px;
-      padding: 5px;
-    }
-    .lang-btn {
-      border: none;
-      background: transparent;
-      color: rgba(255,255,255,0.8);
-      font-weight: 700;
-      font-size: 12px;
-      border-radius: 999px;
-      padding: 7px 10px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .lang-btn.active {
-      background: rgba(255,255,255,0.14);
-      color: white;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
     }
 
     .hero {
@@ -239,7 +208,6 @@
       line-height: 1.8;
       max-width: 640px;
     }
-
     .cta-row {
       display: flex;
       gap: 14px;
@@ -279,7 +247,6 @@
       color: white;
       border: 1px solid rgba(255,255,255,0.2);
     }
-
     .stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
@@ -305,7 +272,6 @@
       text-transform: uppercase;
       color: rgba(255,255,255,0.75);
     }
-
     .profile-card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.12);
@@ -326,7 +292,6 @@
       padding: 30px 24px 40px;
       box-shadow: var(--shadow);
     }
-
     .section-tag {
       display: inline-block;
       background: rgba(45, 126, 245, 0.08);
@@ -339,7 +304,6 @@
       text-transform: uppercase;
       margin-bottom: 18px;
     }
-
     .story-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -392,7 +356,6 @@
       flex-shrink: 0;
       margin-top: 2px;
     }
-
     .quote-box {
       background: linear-gradient(135deg, #f2f7ff, #fff7e6);
       border: 1px solid rgba(45, 126, 245, 0.12);
@@ -415,7 +378,6 @@
       color: var(--muted);
       font-size: 0.96rem;
     }
-
     .highlights {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
@@ -439,11 +401,9 @@
       line-height: 1.7;
       font-size: 0.97rem;
     }
-
     .services, .process, .testimonials, .faq, .certs, .appointment-wrap {
       margin-top: 34px;
     }
-
     .service-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0,1fr));
@@ -480,7 +440,6 @@
       line-height: 1.7;
       font-size: 0.96rem;
     }
-
     .process-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
@@ -514,7 +473,6 @@
       line-height: 1.7;
       font-size: 0.96rem;
     }
-
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
@@ -540,7 +498,6 @@
       color: var(--navy);
       font-size: 0.92rem;
     }
-
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
@@ -574,15 +531,15 @@
     .cert-card {
       display: block;
       width: 100%;
-      background: var(--card);
+      padding: 0;
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 10px 18px rgba(13,36,67,0.04);
-      cursor: pointer;
-      padding: 0;
+      background: var(--card);
       color: inherit;
       text-align: left;
+      cursor: pointer;
+      box-shadow: 0 10px 18px rgba(13,36,67,0.04);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .cert-card:hover {
@@ -609,51 +566,100 @@
       display: none;
       align-items: center;
       justify-content: center;
-      background: rgba(5, 15, 25, 0.82);
-      z-index: 200;
-      padding: 24px;
+      padding: 22px;
+      background: rgba(5, 15, 25, 0.84);
+      z-index: 300;
+      overflow: hidden;
     }
     .cert-modal.active {
       display: flex;
     }
-    .cert-modal-inner {
+    .cert-modal-shell {
       position: relative;
-      max-width: min(90vw, 980px);
-      width: 100%;
+      width: min(96vw, 1100px);
+      max-height: 92vh;
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      box-shadow: 0 30px 50px rgba(0,0,0,0.28);
       padding: 18px;
-      box-shadow: 0 24px 38px rgba(0,0,0,0.28);
     }
-    .cert-close {
+    .cert-toolbar {
       position: absolute;
       top: 12px;
       right: 12px;
-      width: 38px;
-      height: 38px;
+      display: flex;
+      gap: 8px;
+      z-index: 2;
+    }
+    .cert-btn {
       border: none;
       border-radius: 50%;
-      background: rgba(255,255,255,0.15);
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.12);
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       cursor: pointer;
+      user-select: none;
+    }
+    .cert-btn:hover { background: rgba(255,255,255,0.2); }
+    .cert-modal-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 72vh;
+      max-height: calc(92vh - 80px);
+      overflow: hidden;
+      background: rgba(10, 30, 50, 0.18);
+      border-radius: 16px;
+      padding: 12px 0 0;
     }
     .cert-modal-img {
-      width: 100%;
-      max-height: 82vh;
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: calc(92vh - 130px);
       object-fit: contain;
-      border-radius: 14px;
-      background: #f5f9ff;
+      border-radius: 12px;
+      background: #f8fbff;
+      transform-origin: center center;
+      transition: transform 0.15s ease;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.14);
     }
     .cert-modal-caption {
-      margin-top: 12px;
-      text-align: center;
+      margin-top: 10px;
       color: white;
+      text-align: center;
       font-size: 0.9rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
+    .cert-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .cert-control-button {
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      padding: 10px 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .cert-control-button.primary {
+      background: linear-gradient(135deg, #5ea7ff, #1d6ef4);
+      border-color: rgba(255,255,255,0.12);
+    }
+    .cert-control-button:hover { filter: brightness(1.05); }
 
     .appointment-box {
       background: var(--card);
@@ -667,7 +673,6 @@
       color: var(--navy);
       font-size: clamp(1.7rem, 2vw, 2.4rem);
     }
-
     .contact-row {
       display: grid;
       grid-template-columns: 300px 1fr;
@@ -699,7 +704,6 @@
       font-size: 0.96rem;
     }
     .contact-list strong { color: var(--navy); }
-
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
@@ -753,30 +757,6 @@
       font-size: 14px;
       font-weight: 700;
     }
-
-    .floating-cta {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 30;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .floating-cta a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #25d366, #0dbf5d);
-      color: white;
-      box-shadow: 0 14px 22px rgba(22, 170, 90, 0.35);
-      font-size: 1.7rem;
-      font-weight: 800;
-    }
-
     .footer {
       background: var(--footer-bg);
       color: rgba(255,255,255,0.8);
@@ -794,7 +774,6 @@
       .faq-grid { grid-template-columns: 1fr; }
       .service-grid, .cert-grid, .highlights, .testimonial-grid, .process-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
-
     @media (max-width: 620px) {
       .page { width: min(100%, calc(100% - 16px)); }
       .nav-wrap { width: 100%; justify-content: space-between; }
@@ -802,11 +781,15 @@
       .topbar, .hero, .content { padding-left: 16px; padding-right: 16px; }
       .service-grid, .cert-grid, .highlights, .testimonial-grid, .process-grid, .faq-grid, .stats, .form-grid { grid-template-columns: 1fr; }
       .profile-card img { height: 330px; }
-      .floating-cta { right: 14px; bottom: 14px; }
       .brand { gap: 10px; }
       .brand-badge { width: 60px; height: 60px; }
       .brand-monogram { width: 40px; height: 40px; font-size: 1.8rem; }
       .brand-sub { letter-spacing: 0.08em; }
+      .cert-modal { padding: 12px; }
+      .cert-modal-shell { padding: 12px; }
+      .cert-toolbar { top: 8px; right: 8px; }
+      .cert-btn { width: 36px; height: 36px; }
+      .cert-modal-caption { font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -822,25 +805,19 @@
             </div>
           </div>
           <div class="brand-text">
-            <span class="brand-name" data-i18n="brandName">Ashish Yeshwantkar</span>
+            <span class="brand-name">Ashish Yeshwantkar</span>
             <span class="brand-sub">Counsellor | Trainer | Public Health Professional</span>
           </div>
         </div>
 
         <div class="nav-wrap">
           <nav class="nav" aria-label="Main navigation">
-            <a href="#about" data-i18n="navAbout">About</a>
-            <a href="#services" data-i18n="navServices">Services</a>
-            <a href="#certificates" data-i18n="navCertificates">Certificates</a>
-            <a class="primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener" data-i18n="navBook">Book Session</a>
-            <a class="linkedin-btn" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener" data-i18n="navLinkedin">LinkedIn</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#certificates">Certificates</a>
+            <a class="primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener">Book Session</a>
+            <a class="linkedin-btn" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener">LinkedIn</a>
           </nav>
-
-          <div class="lang-switcher" aria-label="Language selector">
-            <button class="lang-btn active" type="button" data-lang="en" aria-label="English">EN</button>
-            <button class="lang-btn" type="button" data-lang="hi" aria-label="Hindi">हिं</button>
-            <button class="lang-btn" type="button" data-lang="mr" aria-label="Marathi">मर</button>
-          </div>
         </div>
       </div>
     </header>
@@ -848,36 +825,33 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="hero-tag" data-i18n="heroTag">Counselling • Training • Wellbeing</div>
-          <h1 data-i18n="heroTitle">Guidance that helps you feel stronger, calmer, and more confident.</h1>
-          <div class="subtext" data-i18n="heroText">
+          <div class="hero-tag">Counselling • Training • Wellbeing</div>
+          <h1>Guidance that helps you feel stronger, calmer, and more confident.</h1>
+          <div class="subtext">
             I am Ashish Yeshwantkar, a counsellor and training professional committed to emotional wellbeing,
             stress management, personal growth, and positive change through compassionate, practical support.
           </div>
-
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20would%20like%20to%20request%20an%20appointment." target="_blank" rel="noopener" data-i18n="ctaAppointment">Request an Appointment</a>
-            <a class="btn btn-secondary" href="#services" data-i18n="ctaServices">Explore Services</a>
-            <a class="btn btn-ghost" href="mailto:ashishyeshwantkar23@gmail.com" data-i18n="ctaEmail">Email Me</a>
-            <a class="btn btn-linkedin" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener" data-i18n="ctaLinkedin">LinkedIn</a>
+            <a class="btn btn-primary" href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20would%20like%20to%20request%20an%20appointment." target="_blank" rel="noopener">Request an Appointment</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+            <a class="btn btn-ghost" href="mailto:ashishyeshwantkar23@gmail.com">Email Me</a>
+            <a class="btn btn-linkedin" href="https://www.linkedin.com/in/ashish-yeshwantkar-18195b128" target="_blank" rel="noopener">LinkedIn</a>
           </div>
-
           <div class="stats">
             <div class="stat-box">
-              <strong data-i18n="statOne">1:1</strong>
-              <span data-i18n="statOneLabel">Personal Support</span>
+              <strong>1:1</strong>
+              <span>Personal Support</span>
             </div>
             <div class="stat-box">
-              <strong data-i18n="statTwo">12+</strong>
-              <span data-i18n="statTwoLabel">Certifications</span>
+              <strong>12+</strong>
+              <span>Certifications</span>
             </div>
             <div class="stat-box">
-              <strong data-i18n="statThree">Wellbeing</strong>
-              <span data-i18n="statThreeLabel">Focused Care</span>
+              <strong>Wellbeing</strong>
+              <span>Focused Care</span>
             </div>
           </div>
         </div>
-
         <div class="profile-card">
           <img src="profile.jpg" alt="Ashish Yeshwantkar profile picture" />
         </div>
@@ -886,149 +860,133 @@
 
     <main class="content">
       <section id="about" class="story">
-        <div class="section-tag" data-i18n="sectionAbout">About</div>
+        <div class="section-tag">About</div>
         <div class="story-grid">
           <div class="panel about-box">
-            <h3 data-i18n="aboutTitle">Compassionate support for everyday challenges.</h3>
-            <p data-i18n="aboutText1">
-              I work with people who want to understand themselves more deeply, manage emotional stress more effectively,
-              and move forward with greater clarity and balance.
-            </p>
-            <p data-i18n="aboutText2">
-              My approach combines empathy, practical guidance, and respectful conversation so that each person feels heard,
-              supported, and encouraged to make meaningful progress in life, work, and relationships.
-            </p>
-            <p data-i18n="aboutExperience">
-              With years of experience in counselling, training, and personal development, I have supported individuals navigating emotional overwhelm, stress, relationship challenges, and life transitions. My work is grounded in empathy, awareness, and practical guidance—helping people not only understand themselves better, but also build healthier habits, stronger confidence, and a more balanced life.
-            </p>
+            <h3>Compassionate support for everyday challenges.</h3>
+            <p>I work with people who want to understand themselves more deeply, manage emotional stress more effectively, and move forward with greater clarity and balance.</p>
+            <p>My approach combines empathy, practical guidance, and respectful conversation so that each person feels heard, supported, and encouraged to make meaningful progress in life, work, and relationships.</p>
+            <p>With years of experience in counselling, training, and personal development, I have supported individuals navigating emotional overwhelm, stress, relationship challenges, and life transitions. My work is grounded in empathy, awareness, and practical guidance—helping people not only understand themselves better, but also build healthier habits, stronger confidence, and a more balanced life.</p>
             <ul class="trust-list">
-              <li data-i18n="aboutList1">Individual counselling in a safe, non-judgmental space</li>
-              <li data-i18n="aboutList2">Support for emotional wellness, stress, and life transitions</li>
-              <li data-i18n="aboutList3">Training solutions for personal and professional development</li>
+              <li>Individual counselling in a safe, non-judgmental space</li>
+              <li>Support for emotional wellness, stress, and life transitions</li>
+              <li>Training solutions for personal and professional development</li>
             </ul>
           </div>
-
           <div class="quote-box">
-            <p data-i18n="quoteText">“Real growth begins when we create space to pause, reflect, and understand what we truly need.”</p>
-            <strong data-i18n="quoteAuthor">Ashish Yeshwantkar</strong>
+            <p>“Real growth begins when we create space to pause, reflect, and understand what we truly need.”</p>
+            <strong>Ashish Yeshwantkar</strong>
           </div>
         </div>
 
         <div class="highlights">
           <div class="mini-card">
-            <h3 data-i18n="highlightTitle1">Emotional Support</h3>
-            <p data-i18n="highlightText1">Guidance for stress, overwhelm, relationship challenges, and personal wellbeing.</p>
+            <h3>Emotional Support</h3>
+            <p>Guidance for stress, overwhelm, relationship challenges, and personal wellbeing.</p>
           </div>
           <div class="mini-card">
-            <h3 data-i18n="highlightTitle2">Practical Guidance</h3>
-            <p data-i18n="highlightText2">Action-oriented support to build healthier habits and clearer thinking.</p>
+            <h3>Practical Guidance</h3>
+            <p>Action-oriented support to build healthier habits and clearer thinking.</p>
           </div>
           <div class="mini-card">
-            <h3 data-i18n="highlightTitle3">Positive Change</h3>
-            <p data-i18n="highlightText3">Focused sessions that help you regain confidence and move ahead with purpose.</p>
+            <h3>Positive Change</h3>
+            <p>Focused sessions that help you regain confidence and move ahead with purpose.</p>
           </div>
         </div>
       </section>
 
       <section id="services" class="services">
-        <div class="section-tag" data-i18n="sectionServices">Services</div>
+        <div class="section-tag">Services</div>
         <div class="service-grid">
           <article class="service-card">
             <div class="service-icon">01</div>
-            <h3 data-i18n="service1Title">Individual Counselling</h3>
-            <p data-i18n="service1Text">One-to-one support for emotional well-being, personal challenges, and life balance.</p>
+            <h3>Individual Counselling</h3>
+            <p>One-to-one support for emotional well-being, personal challenges, and life balance.</p>
           </article>
-
           <article class="service-card">
             <div class="service-icon">02</div>
-            <h3 data-i18n="service2Title">Stress Management</h3>
-            <p data-i18n="service2Text">Practical strategies to reduce tension, build resilience, and restore calm.</p>
+            <h3>Stress Management</h3>
+            <p>Practical strategies to reduce tension, build resilience, and restore calm.</p>
           </article>
-
           <article class="service-card">
             <div class="service-icon">03</div>
-            <h3 data-i18n="service3Title">Career Guidance</h3>
-            <p data-i18n="service3Text">Support to navigate uncertainty and make confident life and career decisions.</p>
+            <h3>Career Guidance</h3>
+            <p>Support to navigate uncertainty and make confident life and career decisions.</p>
           </article>
-
           <article class="service-card">
             <div class="service-icon">04</div>
-            <h3 data-i18n="service4Title">Training & Workshops</h3>
-            <p data-i18n="service4Text">Interactive learning experiences focused on growth, wellbeing, and confidence-building.</p>
+            <h3>Training & Workshops</h3>
+            <p>Interactive learning experiences focused on growth, wellbeing, and confidence-building.</p>
           </article>
         </div>
       </section>
 
       <section class="process">
-        <div class="section-tag" data-i18n="sectionProcess">How It Works</div>
+        <div class="section-tag">How It Works</div>
         <div class="process-grid">
           <div class="process-card">
             <div class="process-number">1</div>
-            <h3 data-i18n="process1Title">Share Your Need</h3>
-            <p data-i18n="process1Text">Start with a simple conversation about what you are feeling, facing, or trying to improve.</p>
+            <h3>Share Your Need</h3>
+            <p>Start with a simple conversation about what you are feeling, facing, or trying to improve.</p>
           </div>
-
           <div class="process-card">
             <div class="process-number">2</div>
-            <h3 data-i18n="process2Title">Build a Safe Plan</h3>
-            <p data-i18n="process2Text">We create a supportive path with clarity, empathy, and practical goal-setting.</p>
+            <h3>Build a Safe Plan</h3>
+            <p>We create a supportive path with clarity, empathy, and practical goal-setting.</p>
           </div>
-
           <div class="process-card">
             <div class="process-number">3</div>
-            <h3 data-i18n="process3Title">Move Forward</h3>
-            <p data-i18n="process3Text">With guided support and steady action, you can feel more confident and balanced.</p>
+            <h3>Move Forward</h3>
+            <p>With guided support and steady action, you can feel more confident and balanced.</p>
           </div>
         </div>
       </section>
 
       <section class="testimonials">
-        <div class="section-tag" data-i18n="sectionFeedback">Client Feedback</div>
+        <div class="section-tag">Client Feedback</div>
         <div class="testimonial-grid">
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p data-i18n="testimonial1">“The guidance was calm, thoughtful, and genuinely helpful. It made me feel heard and more confident about my next steps.”</p>
-            <strong data-i18n="testimonialAuthor">— Client</strong>
+            <p>“The guidance was calm, thoughtful, and genuinely helpful. It made me feel heard and more confident about my next steps.”</p>
+            <strong>— Client</strong>
           </div>
-
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p data-i18n="testimonial2">“The support I received helped me manage stress in a practical way and gave me clarity during a difficult phase.”</p>
-            <strong data-i18n="testimonialAuthor2">— Client</strong>
+            <p>“The support I received helped me manage stress in a practical way and gave me clarity during a difficult phase.”</p>
+            <strong>— Client</strong>
           </div>
-
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p data-i18n="testimonial3">“A compassionate and professional experience that felt personal, respectful, and empowering from the start.”</p>
-            <strong data-i18n="testimonialAuthor3">— Client</strong>
+            <p>“A compassionate and professional experience that felt personal, respectful, and empowering from the start.”</p>
+            <strong>— Client</strong>
           </div>
         </div>
       </section>
 
       <section class="faq">
-        <div class="section-tag" data-i18n="sectionFaq">FAQs</div>
+        <div class="section-tag">FAQs</div>
         <div class="faq-grid">
           <div class="faq-item">
-            <h3 data-i18n="faq1Title">Is counselling confidential?</h3>
-            <p data-i18n="faq1Text">Yes. The process is designed to be respectful, private, and supportive so you feel safe and heard.</p>
+            <h3>Is counselling confidential?</h3>
+            <p>Yes. The process is designed to be respectful, private, and supportive so you feel safe and heard.</p>
           </div>
           <div class="faq-item">
-            <h3 data-i18n="faq2Title">Do you offer online sessions?</h3>
-            <p data-i18n="faq2Text">Yes, sessions can be arranged based on availability and personal preference depending on your needs.</p>
+            <h3>Do you offer online sessions?</h3>
+            <p>Yes, sessions can be arranged based on availability and personal preference depending on your needs.</p>
           </div>
           <div class="faq-item">
-            <h3 data-i18n="faq3Title">How long is a session?</h3>
-            <p data-i18n="faq3Text">Most sessions are planned around a guided, supportive conversation tailored to your goals and comfort.</p>
+            <h3>How long is a session?</h3>
+            <p>Most sessions are planned around a guided, supportive conversation tailored to your goals and comfort.</p>
           </div>
           <div class="faq-item">
-            <h3 data-i18n="faq4Title">Can I book a first appointment quickly?</h3>
-            <p data-i18n="faq4Text">Yes. You can reach out through WhatsApp or the contact form to request an initial consultation.</p>
+            <h3>Can I book a first appointment quickly?</h3>
+            <p>Yes. You can reach out through WhatsApp or the contact form to request an initial consultation.</p>
           </div>
         </div>
       </section>
 
       <section class="certs" id="certificates">
-        <div class="section-tag" data-i18n="sectionCertificates">Certificates</div>
+        <div class="section-tag">Certificates</div>
         <div class="cert-grid">
           <button type="button" class="cert-card" data-image="certificate%201.png" data-title="Certificate 1">
             <img src="certificate%201.png" alt="Certificate 1" />
@@ -1082,432 +1040,225 @@
       </section>
 
       <section class="appointment-wrap" id="appointment">
-        <div class="section-tag" data-i18n="sectionBook">Book a Session</div>
+        <div class="section-tag">Book a Session</div>
         <div class="appointment-box">
-          <h3 data-i18n="appointmentTitle">Request an appointment</h3>
-
+          <h3>Request an appointment</h3>
           <div class="contact-row">
             <div class="contact-block">
-              <h4 data-i18n="contactTitle">Contact details</h4>
+              <h4>Contact details</h4>
               <ul class="contact-list">
-                <li><strong data-i18n="contactWhatsApp">WhatsApp:</strong> +91 77098 83011</li>
-                <li><strong data-i18n="contactCall">Call:</strong> +91 77098 83011</li>
-                <li><strong data-i18n="contactEmail">Email:</strong> ashishyeshwantkar23@gmail.com</li>
-                <li><strong data-i18n="contactLocation">Location:</strong> Hyderabad, Telangana, India</li>
-                <li><strong data-i18n="contactHours">Hours:</strong> Mon-Sat, 10:00 AM – 7:00 PM</li>
+                <li><strong>WhatsApp:</strong> +91 77098 83011</li>
+                <li><strong>Call:</strong> +91 77098 83011</li>
+                <li><strong>Email:</strong> ashishyeshwantkar23@gmail.com</li>
+                <li><strong>Location:</strong> Hyderabad, Telangana, India</li>
+                <li><strong>Hours:</strong> Mon-Sat, 10:00 AM – 6:00 PM</li>
               </ul>
             </div>
 
             <form id="appointmentForm">
               <div class="form-grid">
                 <label class="field">
-                  <span data-i18n="fieldName">Full Name</span>
+                  <span>Full Name</span>
                   <input type="text" name="name" placeholder="Your full name" required />
                 </label>
-
                 <label class="field">
-                  <span data-i18n="fieldEmail">Email</span>
+                  <span>Email</span>
                   <input type="email" name="email" placeholder="your@email.com" required />
                 </label>
-
                 <label class="field">
-                  <span data-i18n="fieldPhone">Phone</span>
+                  <span>Phone</span>
                   <input type="tel" name="phone" placeholder="+91 98765 43210" required />
                 </label>
-
                 <label class="field">
-                  <span data-i18n="fieldService">Service</span>
+                  <span>Service</span>
                   <select name="service" required>
-                    <option value="" data-i18n="selectService">Select a service</option>
-                    <option data-i18n="optionCounselling">Individual Counselling</option>
-                    <option data-i18n="optionStress">Stress Management</option>
-                    <option data-i18n="optionCareer">Career Guidance</option>
-                    <option data-i18n="optionWorkshop">Training & Workshops</option>
+                    <option value="">Select a service</option>
+                    <option value="Individual Counselling">Individual Counselling</option>
+                    <option value="Stress Management">Stress Management</option>
+                    <option value="Career Guidance">Career Guidance</option>
+                    <option value="Training & Workshops">Training & Workshops</option>
                   </select>
                 </label>
-
                 <label class="field full">
-                  <span data-i18n="fieldMessage">Message</span>
+                  <span>Message</span>
                   <textarea name="message" placeholder="Tell us how we can help you..." required></textarea>
                 </label>
               </div>
-
               <div class="submit-row">
-                <button class="submit-btn" type="submit" data-i18n="submitButton">Send Request</button>
+                <button class="submit-btn" type="submit">Send Request</button>
               </div>
-              <div id="formStatus" class="form-status" data-i18n="formStatusText">Thank you! Your request has been noted. Please contact the counsellor on WhatsApp or email for confirmation.</div>
+              <div id="formStatus" class="form-status">Thank you! Your request has been noted. Please contact the counsellor on WhatsApp or email for confirmation.</div>
             </form>
           </div>
         </div>
       </section>
     </main>
 
-    <div class="floating-cta">
-      <a href="https://wa.me/917709883011?text=Hello%20Ashish%2C%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">✆</a>
-    </div>
-
     <div class="cert-modal" id="certModal" aria-hidden="true">
-      <div class="cert-modal-inner">
-        <button class="cert-close" type="button" aria-label="Close certificate preview">×</button>
-        <img class="cert-modal-img" id="certModalImage" src="" alt="Certificate preview" />
-        <div class="cert-modal-caption" id="certModalCaption"></div>
+      <div class="cert-modal-shell">
+        <div class="cert-toolbar">
+          <button class="cert-btn" type="button" aria-label="Previous certificate" id="certPrev">&#10094;</button>
+          <button class="cert-btn" type="button" aria-label="Next certificate" id="certNext">&#10095;</button>
+          <button class="cert-btn" type="button" aria-label="Close certificate preview" id="certClose">&#10005;</button>
+        </div>
+
+        <div class="cert-modal-stage">
+          <img class="cert-modal-img" id="certModalImage" src="" alt="Certificate preview" />
+        </div>
+
+        <div class="cert-controls">
+          <button class="cert-control-button" type="button" id="zoomOutBtn" aria-label="Zoom out">−</button>
+          <button class="cert-control-button" type="button" id="zoomInBtn" aria-label="Zoom in">＋</button>
+          <a class="cert-control-button primary" id="downloadCertBtn" href="#" download>Download Certificate</a>
+          <button class="cert-control-button" type="button" id="closeCertBtn">Close</button>
+        </div>
+
+        <div class="cert-modal-caption" id="certModalCaption">Certificate</div>
       </div>
     </div>
 
     <footer class="footer">
-      <strong>Ashish Yeshwantkar</strong> | <span data-i18n="footerTitle">Counsellor & Training Professional</span>
+      <strong>Ashish Yeshwantkar</strong> | Counsellor & Training Professional
     </footer>
   </div>
 
   <script>
-    const translations = {
-      en: {
-        brandName: 'Ashish Yeshwantkar',
-        navAbout: 'About',
-        navServices: 'Services',
-        navCertificates: 'Certificates',
-        navBook: 'Book Session',
-        navLinkedin: 'LinkedIn',
-        heroTag: 'Counselling • Training • Wellbeing',
-        heroTitle: 'Guidance that helps you feel stronger, calmer, and more confident.',
-        heroText: 'I am Ashish Yeshwantkar, a counsellor and training professional committed to emotional wellbeing, stress management, personal growth, and positive change through compassionate, practical support.',
-        ctaAppointment: 'Request an Appointment',
-        ctaServices: 'Explore Services',
-        ctaEmail: 'Email Me',
-        ctaLinkedin: 'LinkedIn',
-        statOne: '1:1',
-        statOneLabel: 'Personal Support',
-        statTwo: '12+',
-        statTwoLabel: 'Certifications',
-        statThree: 'Wellbeing',
-        statThreeLabel: 'Focused Care',
-        sectionAbout: 'About',
-        aboutTitle: 'Compassionate support for everyday challenges.',
-        aboutText1: 'I work with people who want to understand themselves more deeply, manage emotional stress more effectively, and move forward with greater clarity and balance.',
-        aboutText2: 'My approach combines empathy, practical guidance, and respectful conversation so that each person feels heard, supported, and encouraged to make meaningful progress in life, work, and relationships.',
-        aboutExperience: 'With years of experience in counselling, training, and personal development, I have supported individuals navigating emotional overwhelm, stress, relationship challenges, and life transitions. My work is grounded in empathy, awareness, and practical guidance—helping people not only understand themselves better, but also build healthier habits, stronger confidence, and a more balanced life.',
-        aboutList1: 'Individual counselling in a safe, non-judgmental space',
-        aboutList2: 'Support for emotional wellness, stress, and life transitions',
-        aboutList3: 'Training solutions for personal and professional development',
-        quoteText: '“Real growth begins when we create space to pause, reflect, and understand what we truly need.”',
-        quoteAuthor: 'Ashish Yeshwantkar',
-        highlightTitle1: 'Emotional Support',
-        highlightText1: 'Guidance for stress, overwhelm, relationship challenges, and personal wellbeing.',
-        highlightTitle2: 'Practical Guidance',
-        highlightText2: 'Action-oriented support to build healthier habits and clearer thinking.',
-        highlightTitle3: 'Positive Change',
-        highlightText3: 'Focused sessions that help you regain confidence and move ahead with purpose.',
-        sectionServices: 'Services',
-        service1Title: 'Individual Counselling',
-        service1Text: 'One-to-one support for emotional well-being, personal challenges, and life balance.',
-        service2Title: 'Stress Management',
-        service2Text: 'Practical strategies to reduce tension, build resilience, and restore calm.',
-        service3Title: 'Career Guidance',
-        service3Text: 'Support to navigate uncertainty and make confident life and career decisions.',
-        service4Title: 'Training & Workshops',
-        service4Text: 'Interactive learning experiences focused on growth, wellbeing, and confidence-building.',
-        sectionProcess: 'How It Works',
-        process1Title: 'Share Your Need',
-        process1Text: 'Start with a simple conversation about what you are feeling, facing, or trying to improve.',
-        process2Title: 'Build a Safe Plan',
-        process2Text: 'We create a supportive path with clarity, empathy, and practical goal-setting.',
-        process3Title: 'Move Forward',
-        process3Text: 'With guided support and steady action, you can feel more confident and balanced.',
-        sectionFeedback: 'Client Feedback',
-        testimonial1: '“The guidance was calm, thoughtful, and genuinely helpful. It made me feel heard and more confident about my next steps.”',
-        testimonial2: '“The support I received helped me manage stress in a practical way and gave me clarity during a difficult phase.”',
-        testimonial3: '“A compassionate and professional experience that felt personal, respectful, and empowering from the start.”',
-        testimonialAuthor: '— Client',
-        testimonialAuthor2: '— Client',
-        testimonialAuthor3: '— Client',
-        sectionFaq: 'FAQs',
-        faq1Title: 'Is counselling confidential?',
-        faq1Text: 'Yes. The process is designed to be respectful, private, and supportive so you feel safe and heard.',
-        faq2Title: 'Do you offer online sessions?',
-        faq2Text: 'Yes, sessions can be arranged based on availability and personal preference depending on your needs.',
-        faq3Title: 'How long is a session?',
-        faq3Text: 'Most sessions are planned around a guided, supportive conversation tailored to your goals and comfort.',
-        faq4Title: 'Can I book a first appointment quickly?',
-        faq4Text: 'Yes. You can reach out through WhatsApp or the contact form to request an initial consultation.',
-        sectionCertificates: 'Certificates',
-        sectionBook: 'Book a Session',
-        appointmentTitle: 'Request an appointment',
-        contactTitle: 'Contact details',
-        contactWhatsApp: 'WhatsApp:',
-        contactCall: 'Call:',
-        contactEmail: 'Email:',
-        contactLocation: 'Location:',
-        contactHours: 'Hours:',
-        fieldName: 'Full Name',
-        fieldEmail: 'Email',
-        fieldPhone: 'Phone',
-        fieldService: 'Service',
-        selectService: 'Select a service',
-        optionCounselling: 'Individual Counselling',
-        optionStress: 'Stress Management',
-        optionCareer: 'Career Guidance',
-        optionWorkshop: 'Training & Workshops',
-        fieldMessage: 'Message',
-        submitButton: 'Send Request',
-        formStatusText: 'Thank you! Your request has been noted. Please contact the counsellor on WhatsApp or email for confirmation.',
-        footerTitle: 'Counsellor & Training Professional'
-      },
-      hi: {
-        brandName: 'अशिश येष्वंतकर',
-        navAbout: 'अस्व',
-        navServices: 'सेवाएँ',
-        navCertificates: 'प्रमाणपत्र',
-        navBook: 'बुक करें',
-        navLinkedin: 'लिंक्डइन',
-        heroTag: 'काउंसलिंग • ट्रेनिंग • वेलबीइंग',
-        heroTitle: 'ऐसी मार्गदर्शिका जो आपको मजबूत, शांत और अधिक आत्मविश्वासी बनाती है।',
-        heroText: 'मैं अशिश येष्वंतकर हूँ, एक परामर्शदाता और प्रशिक्षण विशेषज्ञ, जो भावनात्मक स्वास्थ्य, तनाव प्रबंधन, व्यक्तिगत विकास और सकारात्मक परिवर्तन के लिए सहानुभूतिपूर्ण और व्यावहारिक सहायता देता हूँ।',
-        ctaAppointment: 'अपॉइंटमेंट का अनुरोध करें',
-        ctaServices: 'सेवाएँ देखें',
-        ctaEmail: 'ईमेल करें',
-        ctaLinkedin: 'लिंक्डइन',
-        statOne: '1:1',
-        statOneLabel: 'व्यक्तिगत सहायता',
-        statTwo: '12+',
-        statTwoLabel: 'प्रमाणपत्र',
-        statThree: 'वेलबीइंग',
-        statThreeLabel: 'केंद्रित देखभाल',
-        sectionAbout: 'हमारे बारे में',
-        aboutTitle: 'हर रोज़ की चुनौतियों के लिए सहानुभूतिपूर्ण सहयोग।',
-        aboutText1: 'मैं उन लोगों के साथ काम करता हूँ जो अपनी समझ को गहराई से विकसित करना चाहते हैं, भावनात्मक तनाव को बेहतर ढंग से संभालना चाहते हैं, और स्पष्टता एवं संतुलन के साथ आगे बढ़ना चाहते हैं।',
-        aboutText2: 'मेरा दृष्टिकोण सहानुभूति, व्यावहारिक मार्गदर्शन और सम्मानपूर्ण संवाद पर आधारित है ताकि प्रत्येक व्यक्ति को सुना जाए, सहारा मिले और जीवन, कार्य और रिश्तों में सार्थक प्रगति करने के लिए प्रेरित किया जा सके।',
-        aboutExperience: 'काउंसलिंग, ट्रेनिंग और व्यक्तिगत विकास में वर्षों के अनुभव के साथ, मैंने भावनात्मक अत्यधिक दबाव, तनाव, रिश्तों की चुनौतियों और जीवन के संक्रमण का सामना करने वालों का सहयोग किया है।',
-        aboutList1: 'सुरक्षित, बिना निर्णयात्मक अंतरिक्ष में व्यक्तिगत परामर्श',
-        aboutList2: 'भावनात्मक स्वास्थ्य, तनाव और जीवन संक्रमण के लिए सहयोग',
-        aboutList3: 'व्यक्तिगत और व्यावसायिक विकास के लिए ट्रेनिंग समाधान',
-        quoteText: '“वास्तविक विकास तब शुरू होता है जब हम रुककर, प्रतिबिंबित करके और समझकर यह जानें कि हमें वास्तव में क्या चाहिए।”',
-        quoteAuthor: 'अशिश येष्वंतकर',
-        highlightTitle1: 'भावनात्मक सहयोग',
-        highlightText1: 'तनाव, अत्यधिक परेशानी, रिश्तों की चुनौतियों और व्यक्तिगत स्वास्थ्य के लिए मार्गदर्शन।',
-        highlightTitle2: 'व्यावहारिक मार्गदर्शन',
-        highlightText2: 'स्वस्थ आदतें और स्पष्ट सोच बनाने के लिए कार्य-उन्मुख सहायता।',
-        highlightTitle3: 'सकारात्मक परिवर्तन',
-        highlightText3: 'ऐसे सत्र जो आत्मविश्वास लौटाने और उद्देश्य के साथ आगे बढ़ने में मदद करते हैं।',
-        sectionServices: 'सेवाएँ',
-        service1Title: 'व्यक्तिगत परामर्श',
-        service1Text: 'भावनात्मक समृद्धि, व्यक्तिगत चुनौतियों और जीवन संतुलन के लिए एक-से-एक समर्थन।',
-        service2Title: 'तनाव प्रबंधन',
-        service2Text: 'तनाव कम करने, सहनशक्ति बढ़ाने और शांति पुनर्स्थापित करने के लिए व्यावहारिक रणनीतियाँ।',
-        service3Title: 'करियर मार्गदर्शन',
-        service3Text: 'अनिश्चितता से निपटने और आत्मविश्वासपूर्ण जीवन व करियर निर्णय लेने में सहायता।',
-        service4Title: 'ट्रेनिंग और कार्यशालाएँ',
-        service4Text: 'विकास, स्वास्थ्य और आत्मविश्वास निर्माण पर केंद्रित इंटरैक्टिव सीखने का अनुभव।',
-        sectionProcess: 'यह कैसे काम करता है',
-        process1Title: 'अपनी आवश्यकता साझा करें',
-        process1Text: 'आप क्या महसूस कर रहे हैं, सामना कर रहे हैं, या सुधार करना चाहते हैं, इस पर सरल बातचीत से शुरू करें।',
-        process2Title: 'सुरक्षित योजना बनाएं',
-        process2Text: 'हम स्पष्टता, सहानुभूति तथा व्यावहारिक लक्ष्य-निर्धारण के साथ एक सहायक मार्ग बनाते हैं।',
-        process3Title: 'आगे बढ़ें',
-        process3Text: 'मार्गदर्शन और स्थिर कार्रवाई के साथ, आप अधिक आत्मविश्वासी और संतुलित महसूस कर सकते हैं।',
-        sectionFeedback: 'ग्राहक प्रतिक्रिया',
-        sectionFaq: 'सामान्य प्रश्न',
-        sectionCertificates: 'प्रमाणपत्र',
-        sectionBook: 'सत्र बुक करें',
-        appointmentTitle: 'अपॉइंटमेंट का अनुरोध करें',
-        contactTitle: 'संपर्क विवरण',
-        contactWhatsApp: 'व्हाट्सऐप:',
-        contactCall: 'कॉल:',
-        contactEmail: 'ईमेल:',
-        contactLocation: 'स्थान:',
-        contactHours: 'समय:',
-        fieldName: 'पूरा नाम',
-        fieldEmail: 'ईमेल',
-        fieldPhone: 'फ़ोन',
-        fieldService: 'सेवा',
-        selectService: 'सेवा चुनें',
-        optionCounselling: 'व्यक्तिगत परामर्श',
-        optionStress: 'तनाव प्रबंधन',
-        optionCareer: 'करियर मार्गदर्शन',
-        optionWorkshop: 'ट्रेनिंग और कार्यशालाएँ',
-        fieldMessage: 'संदेश',
-        submitButton: 'अनुरोध भेजें',
-        formStatusText: 'धन्यवाद! आपका अनुरोध दर्ज कर लिया गया है। पुष्टि के लिए कृपया व्हाट्सऐप या ईमेल से परामर्शदाता से संपर्क करें।',
-        footerTitle: 'परामर्शदाता और प्रशिक्षण विशेषज्ञ'
-      },
-      mr: {
-        brandName: 'अशिष येष्वंतकर',
-        navAbout: 'माझ्याबद्दल',
-        navServices: 'सेवा',
-        navCertificates: 'प्रमाणपत्रे',
-        navBook: 'बुक करा',
-        navLinkedin: 'लिंक्डइन',
-        heroTag: 'सल्लाह • प्रशिक्षण • आरोग्य',
-        heroTitle: 'अशी मार्गदर्शकता जी तुम्हाला अधिक मजबूत, शांत आणि आत्मविश्वासपूर्ण बनवते.',
-        heroText: 'मी अशिष येष्वंतकर, एक सल्लागार आणि प्रशिक्षण तज्ञ आहे. भावनिक आरोग्य, ताण व्यवस्थापन, वैयक्तिक विकास आणि सकारात्मक बदलासाठी दयाळू, व्यावहारिक मदत देतो.',
-        ctaAppointment: 'अपॉइंटमेंट मागणी करा',
-        ctaServices: 'सेवा पहा',
-        ctaEmail: 'ईमेल करा',
-        ctaLinkedin: 'लिंक्डइन',
-        statOne: '1:1',
-        statOneLabel: 'व्यक्तिगत मदत',
-        statTwo: '12+',
-        statTwoLabel: 'प्रमाणपत्रे',
-        statThree: 'आरोग्य',
-        statThreeLabel: 'केंद्रित काळजी',
-        sectionAbout: 'माझ्याबद्दल',
-        aboutTitle: 'दररोजच्या आव्हानांसाठी कृपाळू मदत.',
-        aboutText1: 'मी अशा लोकांसोबत काम करतो जे स्वतःला अधिक खोल्या पद्धतीने समजून घेऊ इच्छितात, भावनिक ताण अधिक प्रभावीपणे व्यवस्थापित करू इच्छितात, आणि अर्थपूर्ण भावनिक संतुलनासह पुढे जाऊ इच्छितात.',
-        aboutText2: 'माझा दृष्टीकोन सहानुभूती, व्यावहारिक मार्गदर्शन आणि आदरयुक्त संभाषणावर आधारित आहे, ज्यामुळे प्रत्येक व्यक्तीला ऐकले जाते, आधार मिळतो आणि जीवन, नोकरी आणि संबंधात महत्त्वपूर्ण प्रगती करण्यास प्रोत्साहन मिळते.',
-        aboutExperience: 'सल्लामसलत, प्रशिक्षण आणि वैयक्तिक विकासात वर्षांपासून अनुभव असल्याने, मी भावनिक ओव्हरवेल्म, ताण, संबंधातील आव्हाने आणि जीवनातील संक्रमणे यांवर काम केले आहे.',
-        aboutList1: 'सुरक्षित, गैर-न्यायपूर्ण जागेत वैयक्तिक सल्लामसलत',
-        aboutList2: 'भावनिक आरोग्य, ताण आणि जीवन बदलांसाठी मदत',
-        aboutList3: 'वैयक्तिक आणि व्यावसायिक विकासासाठी प्रशिक्षण उपाय',
-        quoteText: '“वास्तविक विकास तेव्हाच सुरू होतो जेव्हा आम्ही थांबतो, चिंतन करतो आणि समजून घेतो की आम्हाला खरंच काय आवश्यक आहे.”',
-        quoteAuthor: 'अशिष येष्वंतकर',
-        highlightTitle1: 'भावनिक मदत',
-        highlightText1: 'ताण, ओव्हरवेल्म, संबंधातील आव्हाने आणि वैयक्तिक आरोग्यासाठी मार्गदर्शन.',
-        highlightTitle2: 'व्यावहारिक मार्गदर्शन',
-        highlightText2: 'चांगल्या सवयी आणि स्पष्ट विचारसरणीसाठी कृतीमुखी मदत.',
-        highlightTitle3: 'सकारात्मक बदल',
-        highlightText3: 'असलेले सत्र जे आत्मविश्वास परत देतात आणि हेतूने पुढे जाण्यास मदत करतात.',
-        sectionServices: 'सेवा',
-        service1Title: 'वैयक्तिक सल्लामसलत',
-        service1Text: 'भावनिक आरोग्य, वैयक्तिक आव्हाने आणि जीवन समतोलासाठी एक-ते-एक मदत.',
-        service2Title: 'ताण व्यवस्थापन',
-        service2Text: 'ताण कमी करण्यासाठी, लवचिकता वाढवण्यासाठी आणि शांतता परत मिळवण्यासाठी व्यावहारिक रणनीती.',
-        service3Title: 'करिअर मार्गदर्शन',
-        service3Text: 'अनिश्चिततेवर मात करण्यासाठी आणि आत्मविश्वासपूर्ण जीवन व करिअर निर्णय घेण्यासाठी मदत.',
-        service4Title: 'प्रशिक्षण आणि कार्यशाळा',
-        service4Text: 'विकास, आरोग्य आणि आत्मविश्वास बांधणीवर केंद्रित परस्परसंवादी शिक्षण अनुभव.',
-        sectionProcess: 'हे कसे कार्य करते',
-        process1Title: 'आपली गरज सांगा',
-        process1Text: 'आपण काय अनुभवत आहात, समोरील आव्हान, किंवा सुधारणा करू इच्छित आहात, याबाबत साधी संभाषण सुरू करा.',
-        process2Title: 'सुरक्षित योजना तयार करा',
-        process2Text: 'आम्ही स्पष्टता, सहानुभूती आणि व्यावहारिक उद्देश-स्थापनासह एक आधारभूत मार्ग तयार करतो.',
-        process3Title: 'पुढे जा',
-        process3Text: 'मार्गदर्शन आणि सातत्यपूर्ण कृतीने, आपण अधिक आत्मविश्वास आणि संतुलित वाटू शकता.',
-        sectionFeedback: 'ग्राहक प्रतिक्रिया',
-        sectionFaq: 'वारंवार विचारले जाणारे प्रश्न',
-        sectionCertificates: 'प्रमाणपत्रे',
-        sectionBook: 'सत्र बुक करा',
-        appointmentTitle: 'अपॉइंटमेंट मागणी करा',
-        contactTitle: 'संपर्क तपशील',
-        contactWhatsApp: 'व्हॉट्सअॅप:',
-        contactCall: 'कॉल:',
-        contactEmail: 'ईमेल:',
-        contactLocation: 'स्थान:',
-        contactHours: 'वेळ:',
-        fieldName: 'पूर्ण नाव',
-        fieldEmail: 'ईमेल',
-        fieldPhone: 'फोन',
-        fieldService: 'सेवा',
-        selectService: 'सेवा निवडा',
-        optionCounselling: 'वैयक्तिक सल्लामसलत',
-        optionStress: 'ताण व्यवस्थापन',
-        optionCareer: 'करिअर मार्गदर्शन',
-        optionWorkshop: 'प्रशिक्षण आणि कार्यशाळा',
-        fieldMessage: 'संदेश',
-        submitButton: 'मागणी पाठवा',
-        formStatusText: 'धन्यवाद! तुमची विनंती नोंदली गेली आहे. पुष्टीसाठी कृपया व्हॉट्���अॅप किंवा ईमेलद्वारे सल्लागाराशी संपर्क करा.',
-        footerTitle: 'सल्लागार आणि प्रशिक्षण तज्ञ'
-      }
-    };
+    const certCards = [...document.querySelectorAll('.cert-card')];
+    const modal = document.getElementById('certModal');
+    const modalImage = document.getElementById('certModalImage');
+    const modalCaption = document.getElementById('certModalCaption');
+    const prevBtn = document.getElementById('certPrev');
+    const nextBtn = document.getElementById('certNext');
+    const closeBtn = document.getElementById('certClose');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const downloadBtn = document.getElementById('downloadCertBtn');
+    const closeControlBtn = document.getElementById('closeCertBtn');
 
-    function setLanguage(lang) {
-      const selected = translations[lang] || translations.en;
-      document.documentElement.lang = lang;
-      document.querySelectorAll('[data-i18n]').forEach((el) => {
-        const key = el.dataset.i18n;
-        if (selected[key]) {
-          el.textContent = selected[key];
-        }
-      });
+    let currentIndex = 0;
+    let zoomFactor = 1;
+    const minZoom = 1;
+    const maxZoom = 3;
 
-      document.querySelectorAll('.lang-btn').forEach((btn) => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-
-      const placeholders = {
-        en: {
-          name: 'Your full name',
-          email: 'your@email.com',
-          phone: '+91 98765 43210',
-          message: 'Tell us how we can help you...'
-        },
-        hi: {
-          name: 'आपका पूरा नाम',
-          email: 'aapka@email.com',
-          phone: '+91 98765 43210',
-          message: 'हमें बताएं कि हम आपकी कैसे मदद कर सकते हैं...'
-        },
-        mr: {
-          name: 'तुमचे पूर्ण नाव',
-          email: 'tumcha@email.com',
-          phone: '+91 98765 43210',
-          message: 'आम्हाला सांगा की आम्ही तुम्हाला कसे मदत करू शकतो...'
-        }
-      };
-
-      const p = placeholders[lang] || placeholders.en;
-      const inputs = document.querySelectorAll('input, textarea');
-      inputs.forEach((input) => {
-        if (input.name === 'name') input.placeholder = p.name;
-        if (input.name === 'email') input.placeholder = p.email;
-        if (input.name === 'phone') input.placeholder = p.phone;
-        if (input.name === 'message') input.placeholder = p.message;
-      });
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
     }
 
-    document.querySelectorAll('.lang-btn').forEach((btn) => {
-      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-    });
+    function setZoom(value) {
+      zoomFactor = clamp(value, minZoom, maxZoom);
+      modalImage.style.transform = `scale(${zoomFactor})`;
+      modalImage.style.cursor = zoomFactor > 1 ? 'grab' : 'default';
+    }
 
-    setLanguage('en');
+    function resetZoom() {
+      setZoom(1);
+    }
 
-    const modal = document.getElementById('certModal');
-    const modalImg = document.getElementById('certModalImage');
-    const modalCaption = document.getElementById('certModalCaption');
-    const modalClose = document.querySelector('.cert-close');
+    function openCertificate(index) {
+      currentIndex = (index + certCards.length) % certCards.length;
+      const currentCard = certCards[currentIndex];
+      const imageSrc = currentCard.dataset.image;
+      const title = currentCard.dataset.title || 'Certificate';
 
-    document.querySelectorAll('.cert-card').forEach((card) => {
-      card.addEventListener('click', () => {
-        modalImg.src = card.dataset.image;
-        modalCaption.textContent = card.dataset.title || 'Certificate';
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-      });
-    });
+      modalImage.src = imageSrc;
+      modalImage.alt = title;
+      modalCaption.textContent = title;
+      downloadBtn.href = imageSrc;
+      downloadBtn.setAttribute('download', title.replace(/\s+/g, '-').toLowerCase() + '.png');
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      resetZoom();
+    }
 
-    function closeCertModal() {
+    function closeCertificate() {
       modal.classList.remove('active');
       modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      resetZoom();
     }
 
-    modalClose.addEventListener('click', closeCertModal);
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) closeCertModal();
+    certCards.forEach((card, index) => {
+      card.addEventListener('click', () => openCertificate(index));
     });
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && modal.classList.contains('active')) {
-        closeCertModal();
+
+    prevBtn.addEventListener('click', () => openCertificate(currentIndex - 1));
+    nextBtn.addEventListener('click', () => openCertificate(currentIndex + 1));
+    closeBtn.addEventListener('click', closeCertificate);
+    closeControlBtn.addEventListener('click', closeCertificate);
+    zoomInBtn.addEventListener('click', () => setZoom(zoomFactor + 0.25));
+    zoomOutBtn.addEventListener('click', () => setZoom(zoomFactor - 0.25));
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeCertificate();
       }
     });
+
+    document.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('active')) return;
+      if (event.key === 'Escape') closeCertificate();
+      if (event.key === 'ArrowRight') openCertificate(currentIndex + 1);
+      if (event.key === 'ArrowLeft') openCertificate(currentIndex - 1);
+      if (event.key === '+' || event.key === '=') setZoom(zoomFactor + 0.25);
+      if (event.key === '-' || event.key === '_') setZoom(zoomFactor - 0.25);
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+    let touchStartDistance = null;
+    let touchStartZoom = 1;
+
+    modal.addEventListener('touchstart', (event) => {
+      if (event.touches.length === 2) {
+        const [first, second] = event.touches;
+        touchStartDistance = Math.hypot(second.clientX - first.clientX, second.clientY - first.clientY);
+        touchStartZoom = zoomFactor;
+      } else if (event.touches.length === 1) {
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+        touchStartTime = Date.now();
+      }
+    }, { passive: true });
+
+    modal.addEventListener('touchmove', (event) => {
+      if (event.touches.length === 2 && touchStartDistance) {
+        const [first, second] = event.touches;
+        const currentDistance = Math.hypot(second.clientX - first.clientX, second.clientY - first.clientY);
+        if (touchStartDistance > 0) {
+          const nextZoom = touchStartZoom * (currentDistance / touchStartDistance);
+          setZoom(nextZoom);
+        }
+      }
+    }, { passive: true });
+
+    modal.addEventListener('touchend', (event) => {
+      if (event.changedTouches.length === 1 && zoomFactor <= 1.1) {
+        const endX = event.changedTouches[0].clientX;
+        const endY = event.changedTouches[0].clientY;
+        const deltaX = endX - touchStartX;
+        const deltaY = endY - touchStartY;
+        const deltaTime = Date.now() - touchStartTime;
+
+        if (Math.abs(deltaX) > 60 && Math.abs(deltaX) > Math.abs(deltaY) && deltaTime < 500) {
+          if (deltaX < 0) openCertificate(currentIndex + 1);
+          if (deltaX > 0) openCertificate(currentIndex - 1);
+        }
+      }
+      touchStartDistance = null;
+      touchStartZoom = 1;
+    }, { passive: true });
 
     const form = document.getElementById('appointmentForm');
     const statusBox = document.getElementById('formStatus');
-
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const formData = new FormData(form);
-      const name = (formData.get('name') || '').toString().trim();
-      const service = (formData.get('service') || '').toString().trim();
-      const phone = (formData.get('phone') || '').toString().trim();
-      const email = (formData.get('email') || '').toString().trim();
-      const message = (formData.get('message') || '').toString().trim();
-
-      const text = encodeURIComponent(
-        `Hello Ashish, this is ${name}. I want to request a ${service} session.\n\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`
-      );
-
-      window.open(`https://wa.me/917709883011?text=${text}`, '_blank');
-      statusBox.style.display = 'block';
-      form.reset();
-    });
+    if (form && statusBox) {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        statusBox.style.display = 'block';
+        form.reset();
+      });
+    }
   </script>
 </body>
 </html>
