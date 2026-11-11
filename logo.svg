@@ -1,0 +1,42 @@
+<svg width="240" height="180" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="30" y1="20" x2="205" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2B2"/>
+      <stop offset="0.12" stop-color="#F6D77A"/>
+      <stop offset="0.35" stop-color="#DFAF3D"/>
+      <stop offset="0.52" stop-color="#F8E08A"/>
+      <stop offset="0.74" stop-color="#D6992A"/>
+      <stop offset="1" stop-color="#F7D36C"/>
+    </linearGradient>
+    <linearGradient id="green" x1="115" y1="35" x2="170" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7DB64"/>
+      <stop offset="0.5" stop-color="#5BAA48"/>
+      <stop offset="1" stop-color="#1B6B3A"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M30 94C30 52.0264 64.0264 18 106 18H134C175.974 18 210 52.0264 210 94C210 130.451 181.268 159.939 146.7 161.531L133 162H107L93.3 161.531C58.7321 159.939 30 130.451 30 94Z" stroke="url(#gold)" stroke-width="11"/>
+    <path d="M42 116L72 55H90L120 123L150 55H168L138 116H118L90 67L62 116H42Z" fill="url(#gold)"/>
+    <path d="M80 118L115 59H138L174 118H152L140 98H113L101 118H80ZM112 81H138L124 63L112 81Z" fill="url(#gold)" opacity="0.96"/>
+    <path d="M127 98L154 126L133 141L110 117L127 98Z" fill="url(#gold)"/>
+
+    <g transform="translate(124 26)">
+      <path d="M18 18C18 10 24 0 32 0C40 0 46 8 46 18C46 28 40 36 32 36C24 36 18 28 18 18Z" fill="url(#gold)"/>
+      <path d="M23 29C17 25 11 20 9 12C6 6 11 0 18 2C25 4 31 8 37 16C26 18 23 23 23 29Z" fill="url(#green)"/>
+      <path d="M47 26C47 18 53 10 62 10C70 10 76 17 76 26C76 35 71 42 62 42C53 42 47 35 47 26Z" fill="url(#gold)"/>
+      <path d="M47 32C53 38 57 46 59 55C48 56 38 50 33 42C40 38 43 34 47 32Z" fill="url(#green)"/>
+      <path d="M62 41C69 43 76 49 81 58C73 63 62 64 52 60C53 52 56 46 62 41Z" fill="url(#green)"/>
+      <path d="M36 14C42 12 49 12 55 16C45 20 39 26 35 35C30 29 30 20 36 14Z" fill="url(#green)"/>
+      <circle cx="33" cy="18" r="6" fill="#F3DE7F"/>
+      <circle cx="59" cy="18" r="6" fill="#F3DE7F"/>
+      <circle cx="46" cy="38" r="7" fill="#F3DE7F"/>
+    </g>
+
+    <path d="M118 34C132 33 138 41 140 56C135 60 130 61 124 61C117 49 115 41 118 34Z" fill="url(#green)"/>
+    <path d="M146 68C159 68 170 77 172 91C168 96 162 99 154 99C146 89 143 81 146 68Z" fill="url(#green)"/>
+  </g>
+</svg>
